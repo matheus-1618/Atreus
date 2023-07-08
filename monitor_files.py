@@ -24,7 +24,7 @@ processes = psutil.process_iter()
 for process in processes:
     try:
         pid = process.pid
-        cmd = f"Handle.exe -accepteula -p {9648}"
+        cmd = f"Handle.exe -accepteula -p {pid}"
         output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
         print(f"Files open by PID {pid}:\n{output}")
     except Exception as e:
