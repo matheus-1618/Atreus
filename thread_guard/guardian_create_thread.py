@@ -2,6 +2,7 @@ import ctypes
 from ctypes import wintypes
 import psutil
 import time
+import threading
 
 # Constants
 PROCESS_ALL_ACCESS = 0x1F0FFF
@@ -47,7 +48,8 @@ def HookProc(nCode, wParam, lParam):
             process_id = ctypes.windll.kernel32.GetProcessId(ctypes.windll.kernel32.GetCurrentProcess())
             process = psutil.Process(process_id)
             process_name = process.name()
-            print(f"CreateRemoteThread called in process: {process_name}")
+            message = f"CreateRemoteThread called in process: {process_name}"
+            user32.MessageBoxW(None, message, "CreateRemoteThread Detected", 0)
     return user32.CallNextHookEx(g_hHook, nCode, wParam, lParam)
 
 # Function to set the hook
@@ -59,10 +61,8 @@ def set_hook():
 def remove_hook():
     user32.UnhookWindowsHookEx(g_hHook)
 
-# Get the list of running process IDs using psutil
-process_ids = [proc.pid for proc in psutil.process_iter()]
-
-for process_id in process_ids:
+# Function to observe process in a separate thread
+def observe_process(process_id):
     # Open the process
     hProcess = kernel32.OpenProcess(PROCESS_ALL_ACCESS, False, process_id)
     if hProcess:
@@ -71,10 +71,24 @@ for process_id in process_ids:
         set_hook()
 
         # Wait for the hook to trigger (e.g., wait for user input)
-        #input("Press Enter to continue...")
-        time.sleep(5)
+        time.sleep(1)
+        
         # Remove the hook
         remove_hook()
 
         # Close the process handle
         kernel32.CloseHandle(hProcess)
+
+# Get the list of running process IDs using psutil
+process_ids = [proc.pid for proc in psutil.process_iter()]
+
+# Create a thread for each process
+threads = []
+for process_id in process_ids:
+    thread = threading.Thread(target=observe_process, args=(process_id,))
+    threads.append(thread)
+    thread.start()
+
+# Wait for all threads to complete
+for thread in threads:
+    thread.join()

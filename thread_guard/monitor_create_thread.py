@@ -16,7 +16,7 @@ CreateRemoteThread.restype = wintypes.HANDLE
 CreateRemoteThread.argtypes = [
     wintypes.HANDLE,  # hProcess
     wintypes.LPVOID,  # lpThreadAttributes
-    wintypes.SIZE_T,  # dwStackSize
+    wintypes.SIZE,  # dwStackSize
     wintypes.LPVOID,  # lpStartAddress
     wintypes.LPVOID,  # lpParameter
     wintypes.DWORD,   # dwCreationFlags
