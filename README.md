@@ -4,7 +4,7 @@
 
 Anti-Ransomware Ryuk software.
 
-Disclaimer: Not intendend to be a production Counter Measure, only a good approach to identify and mitigate Ryuk actions.
+Disclaimer: Not intended to be a production Counter Measure, only a good approach to identify and mitigate Ryuk actions.
 </div>
 
 
