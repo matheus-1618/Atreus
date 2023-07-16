@@ -16,7 +16,10 @@ class PROCESSENTRY32(ctypes.Structure):
         ('th32ParentProcessID', wintypes.DWORD),
         ('pcPriClassBase', wintypes.LONG),
         ('dwFlags', wintypes.DWORD),
-        ('szExeFile', ctypes.c_char * 260)
+        ('szExeFile', ctypes.c_char * 260),
+        ('szProcessPath', ctypes.c_char * 260),
+        ('dwNumThreads', wintypes.DWORD),
+        ('dwNumHandles', wintypes.DWORD)
     ]
 
 def monitor_processes():
@@ -40,12 +43,21 @@ def monitor_processes():
 
     # Iterate over processes
     while success:
-        print("Process Name:", pe32.szExeFile.decode())
-        print("Process ID:", pe32.th32ProcessID)
-        print("Parent Process ID:", pe32.th32ParentProcessID)
+        process_name = pe32.szExeFile.decode()
+        process_path = pe32.szProcessPath.decode()
+        process_id = pe32.th32ProcessID
+        parent_process_id = pe32.th32ParentProcessID
+        num_threads = pe32.cntThreads
+        num_handles = pe32.cntUsage
+
+        print("Process Name:", process_name)
+        print("Process ID:", process_id)
+        print("Parent Process ID:", parent_process_id)
+        print("Process Path:", process_path)
+        print("Number of Threads:", num_threads)
+        print("Number of Handles:", num_handles)
         print("-----------------------------")
 
-        # Get the next process entry
         success = kernel32.Process32Next(snapshot, ctypes.byref(pe32))
 
     # Close the snapshot handle
