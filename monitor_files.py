@@ -10,9 +10,9 @@ def get_open_files(process):
     try:
         pid = process.pid
         name = process.name()
-        cmd = f"Handle.exe -accepteula -p {pid}"
+        cmd = f"Handle64.exe -accepteula -p {pid}"
         output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
-        files = [line.strip().split(':', 1)[1].strip().split(" ")[-1] for line in output.splitlines() if ':' in line]
+        files = [line.strip().split(':', 1)[1].strip().split(" ")[-1].split("\\")[-1] for line in output.splitlines() if ':' in line]
         return name, files
     except Exception as e:
         return None
