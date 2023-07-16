@@ -1,22 +1,6 @@
 import psutil
-import urllib.request
-import zipfile
-import os
 import subprocess
 import concurrent.futures
-
-# Download and extract ListDlls utility
-url = 'https://download.sysinternals.com/files/ListDlls.zip'
-file_name = 'ListDlls.zip'
-
-try:
-    urllib.request.urlretrieve(url, file_name)
-    with zipfile.ZipFile(file_name, 'r') as zip_ref:
-        zip_ref.extractall()
-    os.remove(file_name)
-except Exception as e:
-    print(f"Error downloading and extracting ListDlls utility: {e}")
-    exit()
 
 # Function to get DLLs for a process
 def get_dlls(pid):

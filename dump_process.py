@@ -1,6 +1,3 @@
-import urllib.request
-import zipfile
-import os
 import subprocess
 import psutil
 # Get the list of running processes

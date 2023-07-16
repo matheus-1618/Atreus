@@ -1,6 +1,3 @@
-import urllib.request
-import zipfile
-import os
 import subprocess
 import concurrent.futures
 

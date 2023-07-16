@@ -1,7 +1,4 @@
-import os
 import psutil
-import urllib.request
-import zipfile
 import subprocess
 import concurrent.futures
 

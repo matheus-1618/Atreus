@@ -11,6 +11,7 @@ def SearchEvents(LogName, EventId, count=20):
     for evt in win32evtlog.EvtNext(ResultSet, count):
         res = xmltodict.parse(win32evtlog.EvtRender(evt, 1))
         #took attention in events like 8. Take in mind CreateRemoteThread
+        # 11 are related to files created, here we're looking for Ryuk ransom note
         eventid = int(res["Event"]["System"]["EventID"])
         if eventid in [8,11]:
             EventData = {}
