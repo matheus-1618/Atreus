@@ -4,30 +4,6 @@ import os
 import subprocess
 import concurrent.futures
 
-def get_sigcheck():
-    if not os.path.exists('Sigcheck'):
-        # Download and extract Sigcheck utility
-        url = 'https://download.sysinternals.com/files/Sigcheck.zip'
-        file_name = 'Sigcheck.zip'
-        extract_folder = 'Sigcheck'
-        try:
-            urllib.request.urlretrieve(url, file_name)
-            with zipfile.ZipFile(file_name, 'r') as zip_ref:
-                zip_ref.extractall(extract_folder)
-            os.remove(file_name)
-        except Exception as e:
-            print(f"Error downloading and extracting Sigcheck utility: {e}")
-            exit()
-        finally:
-            return True
-    return False
-
-# Check if Sigcheck utility is available or download it
-if get_sigcheck():
-    print("Sigcheck utility downloaded successfully.")
-else:
-    print("Sigcheck utility already exists.")
-
 # Define the command to execute Sigcheck
 command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula","-s", "C:\\Users\\Public"]
 

@@ -5,19 +5,6 @@ import os
 import subprocess
 import concurrent.futures
 
-# Download and extract Handle utility
-url = 'https://download.sysinternals.com/files/Handle.zip'
-file_name = 'Handle.zip'
-
-try:
-    urllib.request.urlretrieve(url, file_name)
-    with zipfile.ZipFile(file_name, 'r') as zip_ref:
-        zip_ref.extractall()
-    os.remove(file_name)
-except Exception as e:
-    print(f"Error downloading and extracting Handle utility: {e}")
-    exit()
-
 # Function to get open files for a process
 def get_open_files(process):
     try:

@@ -5,20 +5,6 @@ import zipfile
 import subprocess
 import concurrent.futures
 
-# Download and extract PSTools utility
-url = 'https://download.sysinternals.com/files/PSTools.zip'
-file_name = 'PSTools.zip'
-extract_folder = 'PSTools'
-
-try:
-    urllib.request.urlretrieve(url, file_name)
-    with zipfile.ZipFile(file_name, 'r') as zip_ref:
-        zip_ref.extractall(extract_folder)
-    os.remove(file_name)
-except Exception as e:
-    print(f"Error downloading and extracting PSTools utility: {e}")
-    exit()
-
 # Get the list of all process IDs
 processes = psutil.process_iter()
 pids = [process.pid for process in processes]

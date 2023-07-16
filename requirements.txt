@@ -1,3 +1,2 @@
 xmltodict
-zipfile
 winreg
