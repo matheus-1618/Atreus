@@ -2,10 +2,10 @@ import urllib.request
 import zipfile
 import os
 import subprocess
-
+import concurrent.futures
 
 def get_sigcheck():
-    if os.path.exists('Sigcheck'):
+    if not os.path.exists('Sigcheck'):
         # Download and extract Sigcheck utility
         url = 'https://download.sysinternals.com/files/Sigcheck.zip'
         file_name = 'Sigcheck.zip'
@@ -21,13 +21,19 @@ def get_sigcheck():
         finally:
             return True
     return False
-get_sigcheck()
+
+# Check if Sigcheck utility is available or download it
+if get_sigcheck():
+    print("Sigcheck utility downloaded successfully.")
+else:
+    print("Sigcheck utility already exists.")
+
 # Define the command to execute Sigcheck
-command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula", "C:\\Users\\Public"]
+command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula","-s", "C:\\Users\\Public"]
 
 try:
     # Execute the command and capture the output
-    output = subprocess.check_output(command,input="y", stderr=subprocess.STDOUT, universal_newlines=True)
+    output = subprocess.check_output(command, input="y", stderr=subprocess.STDOUT, universal_newlines=True)
     #print(f"Sigcheck output:\n{output}")
     print(output.split("\n"))
 except subprocess.CalledProcessError as e:
@@ -57,4 +63,18 @@ except subprocess.CalledProcessError as e:
         file_dict[file_path] = file_info
 
     print(file_dict)
+
+# Function to execute Sigcheck and capture the output
+def execute_sigcheck(command):
+    try:
+        output = subprocess.check_output(command, input="y", stderr=subprocess.STDOUT, universal_newlines=True)
+        return output
+    except subprocess.CalledProcessError as e:
+        return str(e)
+
+# Execute Sigcheck in parallel using threads
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    # Submit the tasks
+    futures = [executor.submit(execute_sigcheck, command) for _ in range(5)]  # Submit 5 tasks as an example
+
    
