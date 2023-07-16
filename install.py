@@ -7,7 +7,7 @@ import subprocess
 def get_sysmon():
     def install_sysmon(sysmon_path):
         try:
-            subprocess.run([sysmon_path, "-accepteula", "-i"], check=True)
+            subprocess.run([sysmon_path, "-accepteula", "-i","sysmonconfig.xml"], check=True)
             print("Sysmon installation completed successfully.")
         except subprocess.CalledProcessError as e:
             print(f"Sysmon installation failed: {e}")
@@ -26,7 +26,7 @@ def get_sysmon():
         exit()
 
     # Path to the Sysmon installer executable
-    sysmon_path = os.path.join(extract_folder, 'Sysmon64.exe')
+    sysmon_path = os.path.join(extract_folder, 'Sysmon.exe')
 
     # Call the function to install Sysmon
     install_sysmon(sysmon_path)

@@ -1,6 +1,6 @@
 import win32evtlog
 import xmltodict
-
+#eventvwr.msc
 def SearchEvents(LogName, EventId, count=1):
     EventLog = win32evtlog.EvtOpenLog(LogName, 1, None)
 
@@ -10,6 +10,7 @@ def SearchEvents(LogName, EventId, count=1):
     EventList = []
     for evt in win32evtlog.EvtNext(ResultSet, count):
         res = xmltodict.parse(win32evtlog.EvtRender(evt, 1))
+        #took attention in events like 8. Take in mind CreateRemoteThread
         print(res["Event"]["System"]["EventID"])
         EventData = {}
         for e in res['Event']['EventData']['Data']:
