@@ -31,6 +31,7 @@ def get_sysmon():
     # Call the function to install Sysmon
     install_sysmon(sysmon_path)
 
+
 def get_pstools():
     # Download and extract PSTools utility
     if not os.path.exists('PSTools'):
@@ -49,6 +50,7 @@ def get_pstools():
             return False
     return True
 
+
 def get_sigcheck():
     if not os.path.exists('Sigcheck'):
         # Download and extract Sigcheck utility
@@ -65,6 +67,7 @@ def get_sigcheck():
             print(f"Error downloading and extracting Sigcheck utility: {e}")
             return False
     return True
+
 
 def get_procdump():
     if not os.path.exists('procdump.exe'):
@@ -83,6 +86,7 @@ def get_procdump():
             return False
     return True
 
+
 def get_handle():
     # Download and extract Handle utility
     if not os.path.exists('Handle.exe'):
@@ -98,7 +102,8 @@ def get_handle():
         except Exception as e:
             print(f"Error downloading and extracting Handle utility: {e}")
             return False
-    return True      
+    return True
+
 
 def get_listdlls():
     # Download and extract ListDlls utility
@@ -116,3 +121,12 @@ def get_listdlls():
             print(f"Error downloading and extracting ListDlls utility: {e}")
             return False
     return True
+
+
+# Call all the functions
+get_sysmon()
+get_pstools()
+get_sigcheck()
+get_procdump()
+get_handle()
+get_listdlls()
