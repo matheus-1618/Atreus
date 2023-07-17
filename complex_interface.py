@@ -3,6 +3,7 @@ import tkinter.messagebox
 import customtkinter
 from PIL import Image
 import os
+from monitor_registry import check_registry
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
 
@@ -13,7 +14,7 @@ class App(customtkinter.CTk):
 
         # configure window
         self.title("Atreus")
-        self.geometry(f"{1100}x{580}")
+        self.geometry(f"{1200}x{680}")
         
         
 
@@ -163,7 +164,8 @@ class App(customtkinter.CTk):
         customtkinter.set_widget_scaling(new_scaling_float)
 
     def sidebar_button_event(self):
-        print("sidebar_button click")
+        check_registry()
+        #print("sidebar_button click")
 
 
 if __name__ == "__main__":
