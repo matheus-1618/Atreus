@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+*.json
+*.spec
 # C extensions
 *.so
 
@@ -17,6 +19,8 @@ eggs/
 lib/
 lib64/
 parts/
+dist/
+build/
 sdist/
 var/
 wheels/

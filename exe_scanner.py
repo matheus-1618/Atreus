@@ -1,21 +1,13 @@
+import os
 import subprocess
 import concurrent.futures
+import json
 
 # Define the command to execute Sigcheck
-command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula","-s", "C:\\Users\\Public"]
+command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula"]
 
-try:
-    # Execute the command and capture the output
-    output = subprocess.check_output(command, input="y", stderr=subprocess.STDOUT, universal_newlines=True)
-    #print(f"Sigcheck output:\n{output}")
-    print(output.split("\n"))
-except subprocess.CalledProcessError as e:
-    #print(f"Error executing Sigcheck (Exit code {e.returncode}):")
-    #print(e.output)
-    lines = e.output.strip().split('\n')
-
-    file_dict = {}
-
+def fill_dict(output, file_dict):
+    lines = output.strip().split('\n')
     file_info = {}
     file_path = ""
 
@@ -34,20 +26,49 @@ except subprocess.CalledProcessError as e:
     # Add the last file info
     if file_info:
         file_dict[file_path] = file_info
+    return file_dict
 
-    print(file_dict)
+def filter_dict(mapping):
+    filter_dict = {}
+    for key in mapping:
+        try:
+            detected, total = mapping[key]["VT detection"].split("/")
+            detected, total = int(detected), int(total)
+            if detected / total > 0.3:
+                filter_dict[key] = mapping[key]
+        except:
+            pass
+    return filter_dict
 
-# Function to execute Sigcheck and capture the output
-def execute_sigcheck(command):
+def execute_sigcheck(file_path):
     try:
-        output = subprocess.check_output(command, input="y", stderr=subprocess.STDOUT, universal_newlines=True)
-        return output
+        output = subprocess.check_output(command + [file_path], input="y", stderr=subprocess.STDOUT, universal_newlines=True)
+        return fill_dict(output, {})
     except subprocess.CalledProcessError as e:
-        return str(e)
+        return fill_dict(e.output, {})
 
-# Execute Sigcheck in parallel using threads
-with concurrent.futures.ThreadPoolExecutor() as executor:
-    # Submit the tasks
-    futures = [executor.submit(execute_sigcheck, command) for _ in range(5)]  # Submit 5 tasks as an example
+def process_directory(directories):
+    file_dict = {}
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        for directory in directories:
+            files = [file for file in os.listdir(directory) if os.path.isfile(os.path.join(directory, file))]
+            for file in files:
+                print(file)
+                file_path = os.path.join(directory, file)
+                file_dict.update(executor.submit(execute_sigcheck, file_path).result())
+    return file_dict
 
-   
+# Specify the starting directory
+directories =  ["C:\\Users\\Public",os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop"),os.path.join(os.path.join(os.environ["USERPROFILE"]), "Downloads")]
+
+# Call the function to process the directory
+result_dict = process_directory(directories)
+
+# Filter the resulting dictionary
+filtered_dict = filter_dict(result_dict)
+json_file_path = "excluded_files.json"
+
+# Write the filtered_dict to the JSON file
+with open(json_file_path, "w") as json_file:
+    json.dump(filtered_dict, json_file)
+#print(filtered_dict)

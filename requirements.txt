@@ -1,2 +1,5 @@
 xmltodict
-winreg
+tk
+customtkinter
+Pillow
+pyinstaller
