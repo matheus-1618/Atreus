@@ -3,6 +3,12 @@ import zipfile
 import os
 import subprocess
 
+# Create a folder named "bin" if it doesn't exist
+if not os.path.exists('bin'):
+    os.mkdir('bin')
+
+# Set the current working directory to the "bin" folder
+os.chdir('bin')
 
 def get_sysmon():
     def install_sysmon(sysmon_path):
