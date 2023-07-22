@@ -1,6 +1,5 @@
 import winreg
 
-
 def check_registry():
     key_path = r"SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
     value_name = "svchos"

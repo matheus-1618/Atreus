@@ -3,3 +3,5 @@ tk
 customtkinter
 Pillow
 pyinstaller
+psutil
+pywin32

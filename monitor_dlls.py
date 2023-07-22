@@ -1,39 +1,34 @@
 import psutil
 import subprocess
 import concurrent.futures
+class MonitorDlls:
+    def __init__(self) -> None:
+        self.process_dlls = {}
 
-# Function to get DLLs for a process
-def get_dlls(pid):
-    try:
-        cmd = f"ListDlls.exe -accepteula {pid}"
-        output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
-        dlls = [line.strip().split()[-1].split("\\")[-1] for line in output.splitlines() if line.startswith("0x")][1:]
-        return pid, dlls
-    except Exception as e:
-        return None
+    def __get_dlls(self,pid):
+        try:
+            cmd = f"bin\\ListDlls.exe -accepteula {pid}"
+            output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
+            dlls = [line.strip().split()[-1].split("\\")[-1] for line in output.splitlines() if line.startswith("0x")][1:]
+            self.process_dlls[pid] = dlls
+        except Exception as e:
+            return f"Error executing ListDlls for PID {pid}: {e}"
 
-# Get the list of all process IDs
-processes = psutil.process_iter()
-pids = [process.pid for process in processes]
+    def get_all_process_dlls(self):
+        return self.process_dlls
+    
+    def get_dlls_from_process(self,pid):
+        self.__get_dlls(pid)
+        return self.process_dlls[pid]
+    
+    def get_details_from_all_processes(self):
+        processes = psutil.process_iter()
+        pids = [process.pid for process in processes]
+        # Execute pslist in parallel using threads
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            # Submit the tasks
+            futures = [executor.submit(self.__get_dlls, pid) for pid in pids]
+            # Process the results as they become available
+            for future in concurrent.futures.as_completed(futures):
+                pass
 
-# Dictionary to store DLLs for each process
-dlls_by_process = {}
-
-# Execute get_dlls function in parallel using threads
-with concurrent.futures.ThreadPoolExecutor() as executor:
-    futures = [executor.submit(get_dlls, pid) for pid in pids]
-
-    # Process the results as they become available
-    for future in concurrent.futures.as_completed(futures):
-        result = future.result()
-        if result:
-            pid, dlls = result
-            dlls_by_process[pid] = dlls
-
-# Print the DLLs for each process
-for pid, dlls in dlls_by_process.items():
-    print(f"DLLs for PID {pid}:")
-    print(dlls)
-#    for dll in dlls:
-#        print(dll.split("\\")[-1])
-    print()

@@ -4,7 +4,7 @@ import concurrent.futures
 import json
 
 # Define the command to execute Sigcheck
-command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula"]
+command = ["bin\\Sigcheck\\sigcheck64.exe", "-v", "-accepteula"]
 
 def fill_dict(output, file_dict):
     lines = output.strip().split('\n')
@@ -53,22 +53,22 @@ def process_directory(directories):
         for directory in directories:
             files = [file for file in os.listdir(directory) if os.path.isfile(os.path.join(directory, file))]
             for file in files:
-                print(file)
                 file_path = os.path.join(directory, file)
                 file_dict.update(executor.submit(execute_sigcheck, file_path).result())
     return file_dict
 
-# Specify the starting directory
-directories =  ["C:\\Users\\Public",os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop"),os.path.join(os.path.join(os.environ["USERPROFILE"]), "Downloads")]
+if __name__ == "__main__":
 
-# Call the function to process the directory
-result_dict = process_directory(directories)
+    # Specify the starting directory
+    directories =  ["C:\\Users\\Public",os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop"),os.path.join(os.path.join(os.environ["USERPROFILE"]), "Downloads")]
 
-# Filter the resulting dictionary
-filtered_dict = filter_dict(result_dict)
-json_file_path = "excluded_files.json"
+    # Call the function to process the directory
+    result_dict = process_directory(directories)
 
-# Write the filtered_dict to the JSON file
-with open(json_file_path, "w") as json_file:
-    json.dump(filtered_dict, json_file)
-#print(filtered_dict)
+    # Filter the resulting dictionary
+    filtered_dict = filter_dict(result_dict)
+    json_file_path = "excluded_files.json"
+
+    # Write the filtered_dict to the JSON file
+    with open(json_file_path, "w") as json_file:
+        json.dump(filtered_dict, json_file)
