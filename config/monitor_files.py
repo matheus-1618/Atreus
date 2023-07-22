@@ -9,7 +9,7 @@ class MonitorFiles:
     # Function to get open files for a process
     def __get_open_files(self,pid):
         try:
-            cmd = f"Handle64.exe -accepteula -p {pid}"
+            cmd = f"config\\Handle64.exe -accepteula -p {pid}"
             output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
             files = [line.strip().split(':', 1)[1].strip().split(" ")[-1].split("\\")[-1] for line in output.splitlines() if ':' in line]
             return pid, files

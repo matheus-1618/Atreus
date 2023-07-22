@@ -4,7 +4,7 @@ import concurrent.futures
 import json
 
 # Define the command to execute Sigcheck
-command = ["Sigcheck\\sigcheck64.exe", "-v", "-accepteula"]
+command = ["config\\Sigcheck\\sigcheck64.exe", "-v", "-accepteula"]
 
 def fill_dict(output, file_dict):
     lines = output.strip().split('\n')

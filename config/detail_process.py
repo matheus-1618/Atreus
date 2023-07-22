@@ -12,7 +12,7 @@ class MonitorProcess:
     # Function to execute pslist and capture the output
     def __execute_pslist(self,pid):
         try:
-            cmd = f"PSTools\\pslist.exe -accepteula {pid}"
+            cmd = f"config\\PSTools\\pslist.exe -accepteula {pid}"
             output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
             keys,values = output.split("\n")[7:][0].split(),output.split("\n")[7:][1].split()
             details = {key: value for key, value in zip(keys, values)}
