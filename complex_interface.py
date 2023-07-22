@@ -3,10 +3,9 @@ import tkinter.messagebox
 import customtkinter
 from PIL import Image
 import os
-from monitor_registry import check_registry
+from config.monitor_registry import check_registry
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
-
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -16,8 +15,6 @@ class App(customtkinter.CTk):
         self.title("Atreus")
         self.geometry(f"{1200}x{680}")
         
-        
-
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
         self.grid_columnconfigure((2, 3), weight=0)

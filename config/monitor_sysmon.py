@@ -16,7 +16,7 @@ class MonitorSysmon:
     def __init__(self) -> None:
         pass
 
-    def searchEvents(self,LogName, EventId, count=20):
+    def __searchEvents(self,LogName, EventId, count=20)->list:
         EventLog = win32evtlog.EvtOpenLog(LogName, 1, None)
 
         # Adjust the count parameter based on the total number of records
@@ -43,9 +43,9 @@ class MonitorSysmon:
                 EventList.append(EventData)
         return EventList
 
-    def monitor_files_created(self):
+    def monitor_files_created(self,count=20)->list:
         pids = []
-        Events = self.searchEvents(SYSMON_OPERATIONAL, FILE_CREATED)
+        Events = self.__searchEvents(SYSMON_OPERATIONAL, FILE_CREATED,count)
         for event in Events:
             if event["TargetFilename"].split(r"\\")[-1] == RANSOM_NOTE:
                 process_name = event['Image'].split(r'\\')[-1]
@@ -53,9 +53,9 @@ class MonitorSysmon:
                 pids.append(int(event["ProcessId"]))
         return pids
 
-    def monitor_create_remote_thread(self):
+    def monitor_create_remote_thread(self)->list:
         pairs = []
-        Events = self.searchEvents(SYSMON_OPERATIONAL, CREATE_REMOTE_THREAD)
+        Events = self.__searchEvents(SYSMON_OPERATIONAL, CREATE_REMOTE_THREAD)
         for event in Events:
             pair_map = {}
             if event["StartFunction"] != 'CtrlRoutine':

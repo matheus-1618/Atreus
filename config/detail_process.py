@@ -12,7 +12,7 @@ class MonitorProcess:
     # Function to execute pslist and capture the output
     def __execute_pslist(self,pid):
         try:
-            cmd = f"bin\\PSTools\\pslist.exe -accepteula {pid}"
+            cmd = f"PSTools\\pslist.exe -accepteula {pid}"
             output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
             keys,values = output.split("\n")[7:][0].split(),output.split("\n")[7:][1].split()
             details = {key: value for key, value in zip(keys, values)}
@@ -21,13 +21,14 @@ class MonitorProcess:
             return f"Error executing pslist for PID {pid}: {e}"
 
     def get_all_process_details(self):
+        self.__get_details_from_all_processes()
         return self.process_details
     
     def get_details_from_process(self,pid):
         self.__execute_pslist(pid)
         return self.process_details[pid]
     
-    def get_details_from_all_processes(self):
+    def __get_details_from_all_processes(self):
         processes = psutil.process_iter()
         pids = [process.pid for process in processes]
         # Execute pslist in parallel using threads

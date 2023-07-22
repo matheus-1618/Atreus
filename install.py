@@ -4,11 +4,11 @@ import os
 import subprocess
 
 # Create a folder named "bin" if it doesn't exist
-if not os.path.exists('bin'):
-    os.mkdir('bin')
+if not os.path.exists('config'):
+    os.mkdir('config')
 
 # Set the current working directory to the "bin" folder
-os.chdir('bin')
+os.chdir('config')
 
 def get_sysmon():
     def install_sysmon(sysmon_path):
@@ -128,11 +128,11 @@ def get_listdlls():
             return False
     return True
 
-
-# Call all the functions
-get_sysmon()
-get_pstools()
-get_sigcheck()
-get_procdump()
-get_handle()
-get_listdlls()
+if __name__ == "__main__":
+    # Call all the functions
+    get_sysmon()
+    get_pstools()
+    get_sigcheck()
+    get_procdump()
+    get_handle()
+    get_listdlls()
