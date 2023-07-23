@@ -89,7 +89,6 @@ def main():
                 futures = [executor.submit(terminate_suspect_process, event["TargetPID"]) for event in processes]
                 concurrent.futures.wait(futures)
             # Show the popup message after the finish of files
-            sleep(15)
             show_popup_message()
         sleep(1)
 if __name__ == "__main__":
