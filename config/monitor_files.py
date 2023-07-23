@@ -36,12 +36,12 @@ class MonitorFiles:
 
         # Execute get_open_files function in parallel using threads
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = [executor.submit(self.__get_open_files, process) for process in processes]
+            futures = [executor.submit(self.__get_open_files, process.pid) for process in processes]
 
             # Process the results as they become available
             for future in concurrent.futures.as_completed(futures):
                 result = future.result()
-                if result:
+                if result and result[0]!=None:
                     pid, files = result
                     self.__set_files_by_process(pid,files)
 
