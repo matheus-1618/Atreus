@@ -24,6 +24,8 @@ class MonitorFiles:
             self.files_by_process[pid] = files
 
     def get_opened_files(self,pid):
+        _,files = self.__get_open_files(pid)
+        self.__set_files_by_process(pid,files)
         return self.files_by_process[pid]
     
     def get_all_opened_files(self):
