@@ -25,6 +25,7 @@ class Controller:
         return self.monitor_process.get_details_from_process(pid)
     
     def detail_all_process(self)->dict:
+        print("Scaning all processes...\n")
         return self.monitor_process.get_all_process_details()
     
     def dlls_from_process(self,pid)->list:
@@ -68,5 +69,4 @@ class Controller:
     def kill_process(self,pid)->bool:
         if self.process_manager.is_process_running(pid):
             return self.process_manager.kill_process(pid)
-    
     

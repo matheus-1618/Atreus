@@ -5,3 +5,4 @@ Pillow
 pyinstaller
 psutil
 pywin32
+prettytable
