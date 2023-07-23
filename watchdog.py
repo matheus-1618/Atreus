@@ -90,6 +90,6 @@ def main():
                 concurrent.futures.wait(futures)
             # Show the popup message after the finish of files
             show_popup_message()
-        sleep(1)
+        sleep(.1)
 if __name__ == "__main__":
     main()
