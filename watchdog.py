@@ -2,6 +2,7 @@ from controller import Controller
 import ctypes
 import os
 import psutil
+import sys
 from time import sleep
 
 controller = Controller()
@@ -12,8 +13,19 @@ def hide_console_window():
 def high_privileges():
     process = psutil.Process(os.getpid())
     process.nice(psutil.HIGH_PRIORITY_CLASS)
-    
-if __name__ == "__main__":
+
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except AttributeError:
+        return False
+
+def main():
+    if not is_admin():
+        print("This script requires administrator privileges to run.")
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
     hide_console_window()
     high_privileges()
     while True:
@@ -22,4 +34,6 @@ if __name__ == "__main__":
             for event in processes:
                 controller.kill_process(event["SourcePID"])
                 controller.kill_process(event["TargetPID"])
-        sleep(5)
+        sleep(1)
+if __name__ == "__main__":
+    main()
