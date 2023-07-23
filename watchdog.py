@@ -73,8 +73,18 @@ def terminate_suspect_process(pid):
     except Exception as e:
         print(f"Error for PID {pid}: {e}")
         return False
-        
+    
+def are_lists_equal(list1, list2):
+    if len(list1) != len(list2):
+        return False
+
+    for item1 in list1:
+        if item1 not in list2:
+            return False
+
+    return True 
 def main():
+    processes_handled = []
     if not is_admin():
         print("This script requires administrator privileges to run.")
         ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
@@ -82,11 +92,17 @@ def main():
     hide_console_window()
     high_privileges()
     while True:
+        suspect_processes = []
         processes = controller.trace_create_remote_thread_call()
-        if len(processes) > 0:
-            terminate_suspect_process(processes[0]["SourcePID"])
+        if not are_lists_equal(processes, processes_handled):
+            suspect_processes = [process for process in processes if process not in processes_handled]
+            processes_handled = processes.copy()
+        else:
+            suspect_processes = []
+        if len(suspect_processes) > 0:
+            terminate_suspect_process(suspect_processes[0]["SourcePID"])
             with concurrent.futures.ThreadPoolExecutor() as executor:
-                futures = [executor.submit(terminate_suspect_process, event["TargetPID"]) for event in processes]
+                futures = [executor.submit(terminate_suspect_process, event["TargetPID"]) for event in suspect_processes]
                 concurrent.futures.wait(futures)
             # Show the popup message after the finish of files
             show_popup_message()

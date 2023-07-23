@@ -1,7 +1,6 @@
 import win32evtlog
 import xmltodict
 import json
-from collections import Counter
 
 #eventvwr.msc
 RANSOM_NOTE = "RyukReadMe.txt"
@@ -17,28 +16,6 @@ SYSMON_OPERATIONAL = 'Microsoft-Windows-Sysmon/Operational'
 class MonitorSysmon:
     def __init__(self) -> None:
         pass
-    
-    @staticmethod
-    def save_list(self,list):
-        with open("create_remote_thread_calls.json", "w") as file:
-            json.dump(list, file)
-
-    @staticmethod
-    def open_list():
-        with open("create_remote_thread_calls.json", "r") as file:
-            loaded_list = json.load(file)
-        return loaded_list
-    
-    @staticmethod
-    def are_lists_equal(list1, list2):
-        if len(list1) != len(list2):
-            return False
-
-        count1 = Counter(map(tuple, list1))
-        count2 = Counter(map(tuple, list2))
-
-        return count1 == count2
-        
 
     def __searchEvents(self,LogName, EventId, count=20)->list:
         EventLog = win32evtlog.EvtOpenLog(LogName, 1, None)
@@ -88,9 +65,6 @@ class MonitorSysmon:
                 pair_map["SourcePID"] = int(event['SourceProcessId'])
                 pair_map["TargetPID"] = int(event['TargetProcessId'])
                 pairs.append(pair_map)
-        if self.are_lists_equal(pairs,self.open_list()):
-            return []
-        self.save_list(pairs)
         return pairs
 
     
