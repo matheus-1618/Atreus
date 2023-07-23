@@ -9,7 +9,7 @@ class InteractiveController:
         self.controller = Controller()
 
     def print_options(self):
-        print("Choose an action:")
+        print("\nChoose an action:")
         print("1. Dump process by PID")
         print("2. Get process details by PID")
         print("3. Get details of all running processes")
@@ -30,14 +30,20 @@ class InteractiveController:
             self.controller.dump_process(pid)
         elif option == "2":
             pid = int(input("Enter the PID of the process to get details: "))
-            print(self.controller.detail_process(pid))
+            process_detail = self.controller.detail_process(pid)
+            tab = PrettyTable(list(process_detail.keys()))
+            tab.add_row(list(process_detail.values()))
+            print(tab)
         elif option == "3":
             print("\nScanning all processes...\n")
             processes_details = self.controller.detail_all_process()
-            tab = PrettyTable(list(list(processes_details.values())[0].keys()))
-            for process_detail in processes_details:
-                tab.add_row(list(process_detail.values()))
-            print(tab)
+            table = PrettyTable(list(list(processes_details.values())[0].keys()))
+            for process_detail in processes_details.values():
+                try:
+                    table.add_row(list(process_detail.values()))
+                except:
+                    pass
+            print(table)
         elif option == "4":
             pid = int(input("Enter the PID of the process to get DLLs from: "))
             print(self.controller.dlls_from_process(pid))
@@ -71,7 +77,7 @@ class InteractiveController:
     def run(self):
         while True:
             self.print_options()
-            option = input("Enter the option number: ")
+            option = input("\nEnter the option number: ")
             self.execute_action(option)
 
 def is_admin():
