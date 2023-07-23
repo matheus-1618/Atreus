@@ -7,6 +7,7 @@ from time import sleep
 import concurrent.futures
 from prettytable import PrettyTable
 import tkinter as tk
+import tkinter.messagebox as tkmb
 
 controller = Controller()
 if not os.path.exists('logs'):
@@ -40,15 +41,14 @@ def is_admin():
         return False
     
 def show_popup_message():
-    popup_window = tk.Toplevel()
-    popup_window.title("Popup")
-    popup_window.geometry("300x100")
-
-    label = tk.Label(popup_window, text="Ryuk threat hunted, logs available", font=("Helvetica", 14))
-    label.pack(pady=20)
-
-    # Automatically hide the popup after 3000 milliseconds (3 seconds)
-    popup_window.after(30000, popup_window.destroy)
+    icon_path = os.path.abspath("assets\\atreus.ico")
+    window = tk.Tk()
+    # change title bar icon
+    window.iconbitmap(icon_path)
+    window.withdraw()
+    # same icon is also set for the message box
+    tkmb.showwarning(title='Atreus',
+                      message="Ryuk threat hunted, logs and dumps available in Atreus root folder")
 
 def terminate_suspect_process(pid):
     try:
