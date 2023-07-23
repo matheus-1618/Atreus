@@ -46,10 +46,12 @@ class InteractiveController:
                 except:
                     pass
             print(table)
+            input("\nPress enter to continue...")
         elif option == "4":
             pid = int(input("Enter the PID of the process to get DLLs from: "))
             print(self.controller.dlls_from_process(pid))
         elif option == "5":
+            print("\nScanning all processes...\n")
             print(self.controller.dlls_from_all_processes())
         elif option == "6":
             print("Registry scan result:", self.controller.scan_registry())
@@ -70,6 +72,7 @@ class InteractiveController:
             pid = int(input("Enter the PID of the process to get opened files: "))
             print(self.controller.files_opened_from_process(pid))
         elif option == "11":
+            print("\nScanning all processes...\n")
             print(self.controller.files_opened_from_all_processes())
         elif option == "12":
             pid = int(input("Enter the PID of the process to suspend: "))
