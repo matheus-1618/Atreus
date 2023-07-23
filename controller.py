@@ -35,6 +35,12 @@ class Controller:
     def dlls_from_all_processes(self)->dict:
         return self.monitor_dlls.get_all_process_dlls()
     
+    def files_opened_from_process(self,pid)->list:
+        return self.monitor_files.get_opened_files(pid)
+    
+    def files_opened_from_all_processes(self)->dict:
+        return self.monitor_files.get_all_opened_files()
+    
     def scan_registry(self)->bool:
         return check_registry()
 

@@ -16,17 +16,17 @@ class MonitorFiles:
         except Exception as e:
             return None,None
 
-    def set_files_by_process(self,pid,files):
+    def __set_files_by_process(self,pid,files):
         if pid in self.files_by_process:
             self.files_by_process[pid].extend(files)
             self.files_by_process[pid] = list(set(self.files_by_process[pid]))
         else:
             self.files_by_process[pid] = files
 
-    def get_open_files(self,pid):
+    def get_opened_files(self,pid):
         return self.files_by_process[pid]
     
-    def get_all_open_files(self):
+    def get_all_opened_files(self):
         self.__scan_processes_handles()
         return self.files_by_process
     
@@ -43,6 +43,6 @@ class MonitorFiles:
                 result = future.result()
                 if result:
                     pid, files = result
-                    self.set_files_by_process(pid,files)
+                    self.__set_files_by_process(pid,files)
 
 

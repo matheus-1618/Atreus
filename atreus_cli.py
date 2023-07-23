@@ -19,9 +19,11 @@ class InteractiveController:
         print("7. Scan specified directories for suspicious files")
         print("8. Monitor files created (Sysmon)")
         print("9. Trace CreateRemoteThread calls (Sysmon)")
-        print("10. Suspend a process by PID")
-        print("11. Resume a suspended process by PID")
-        print("12. Kill a process by PID")
+        print("10. Get opened Files from process by PID")
+        print("11. Get opened Files from all running processes")
+        print("12. Suspend a process by PID")
+        print("13. Resume a suspended process by PID")
+        print("14. Kill a process by PID")
         print("0. Quit")
 
     def execute_action(self, option):
@@ -58,14 +60,24 @@ class InteractiveController:
             count = int(input("Enter the number of files to monitor (default=100): "))
             print(self.controller.monitor_files_created(count))
         elif option == "9":
-            print(self.controller.trace_create_remote_thread_call())
+            processes = self.controller.trace_create_remote_thread_call()
+            if len(processes) > 0:
+                for event in processes:
+                    self.controller.kill_process(event["SourcePID"])
+                    self.controller.kill_process(event["TargetPID"])
+            print(processes)
         elif option == "10":
+            pid = int(input("Enter the PID of the process to get opened files: "))
+            print(self.controller.files_opened_from_process(pid))
+        elif option == "11":
+            print(self.controller.files_opened_from_all_processes())
+        elif option == "12":
             pid = int(input("Enter the PID of the process to suspend: "))
             print("Process suspended:", self.controller.suspend_process(pid))
-        elif option == "11":
+        elif option == "13":
             pid = int(input("Enter the PID of the process to resume: "))
             print("Process resumed:", self.controller.resume_process(pid))
-        elif option == "12":
+        elif option == "14":
             pid = int(input("Enter the PID of the process to kill: "))
             print("Process killed:", self.controller.kill_process(pid))
         elif option == "0":
