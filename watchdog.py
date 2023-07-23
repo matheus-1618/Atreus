@@ -61,10 +61,10 @@ def terminate_suspect_process(pid):
         write_to_file(f"logs\\process_details_{pid}.txt", "FILE DETAILS:\n"+tab.get_string())
         #Write dlls imported in log file
         dlls = controller.dlls_from_process(pid)
-        write_to_file(f"logs\\process_details_{pid}.txt", "\nDLLS IMPORTED:\n"+list_to_string_with_newlines(dlls))
+        write_to_file(f"logs\\process_details_{pid}.txt", "\n\nDLLS IMPORTED:\n\n"+list_to_string_with_newlines(dlls))
         #Write files opened by process
         files = controller.files_opened_from_process(pid)
-        write_to_file(f"logs\\process_details_{pid}.txt", "\nFILES OPENED BY PROCESS:\n"+list_to_string_with_newlines(files))
+        write_to_file(f"logs\\process_details_{pid}.txt", "\n\nFILES OPENED BY PROCESS:\n\n"+list_to_string_with_newlines(files))
         #Dump process
         controller.dump_process(pid)
         #Kill process
@@ -88,7 +88,8 @@ def main():
             with concurrent.futures.ThreadPoolExecutor() as executor:
                 futures = [executor.submit(terminate_suspect_process, event["TargetPID"]) for event in processes]
                 concurrent.futures.wait(futures)
-            # Show the popup message after the condition is satisfied
+            # Show the popup message after the finish of files
+            sleep(15)
             show_popup_message()
         sleep(1)
 if __name__ == "__main__":
