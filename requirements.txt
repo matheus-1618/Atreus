@@ -6,3 +6,4 @@ pyinstaller
 psutil
 pywin32
 prettytable
+schedule

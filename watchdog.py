@@ -83,6 +83,7 @@ def are_lists_equal(list1, list2):
             return False
 
     return True 
+
 def main():
     processes_handled = []
     if not is_admin():
