@@ -7,6 +7,20 @@ Anti-Ransomware Ryuk software.
 Disclaimer: Not intended to be a production Counter Measure, only a good approach to identify and mitigate Ryuk actions.
 </div>
 
+## Build
+:warning: Python required
+To Build Atreus, follow the steps above:
+
+```bash
+python -m venv env
+venv_name\Scripts\activate
+pip install -r requirements.txt
+python install.py
+pyinstaller --onefile watchdog.py
+pyinstaller --onefile trace_registry.py
+pyinstaller --onefile trace_suspect_files.py
+```
+Enter in the **dist/** folder, and copy the executables files on the Atreus root folder. Execute them.
 
 ## About
 Ryuk is a Ransomware from Hermes family, and has some typical behaviours analysed in this [research](www.google.com), such as:

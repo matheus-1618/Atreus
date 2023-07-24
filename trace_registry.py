@@ -5,6 +5,7 @@ import tkinter.messagebox as tkmb
 import ctypes
 import psutil
 import os
+import time
 import sys
 
 def show_popup_message():
@@ -57,3 +58,5 @@ if __name__ == "__main__":
     while True:
         if check_registry():
             delete_registry_value()
+        time.sleep(5)
+        

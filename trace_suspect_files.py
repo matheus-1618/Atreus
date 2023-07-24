@@ -6,8 +6,8 @@ import os
 from controller import Controller
 import schedule
 import time
+import concurrent.futures
 import json
-import multiprocessing
 
 controller = Controller()
 
@@ -103,19 +103,20 @@ def show_popup(files):
     root.mainloop()
 
 def run_job():
+    scan_files()
     # Schedule the job to run every 1 minutes
     schedule.every(1).minutes.do(scan_files)
 
     # Run the job continuously
     while True:
         schedule.run_pending()
-        time.sleep(.1)
+        time.sleep(1)
 
 def read_json_file(filename):
     try:
         with open(filename, "r") as file:
             data = json.load(file)
-            if data is None or data == {}:
+            if not data:  # Check if the data is empty or None
                 print(f"JSON file '{filename}' is empty.")
                 return False
             return data
@@ -139,12 +140,13 @@ if __name__ == "__main__":
     hide_console_window()
     high_privileges()
 
-    # Create a new process for the job
-    job_process = multiprocessing.Process(target=run_job)
-    # Start the process
-    job_process.start()
+    # Create a ThreadPoolExecutor with max_workers=1
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+        # Schedule the job to run every 1 minutes using submit method of ThreadPoolExecutor
+        executor.submit(run_job)
 
-    while True:
-        suspect_files = read_json_file("suspected_files.json")
-        if suspect_files:
-            show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
+        while True:
+            suspect_files = read_json_file("suspected_files.json")
+            if suspect_files:
+                show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
+            time.sleep(1)
