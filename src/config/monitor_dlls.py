@@ -7,7 +7,7 @@ class MonitorDlls:
 
     def __get_dlls(self,pid):
         try:
-            cmd = f"config\\ListDlls.exe -accepteula {pid}"
+            cmd = f"src\\config\\ListDlls.exe -accepteula {pid}"
             output = subprocess.check_output(cmd, shell=True, universal_newlines=True)
             dlls = [line.strip().split()[-1].split("\\")[-1] for line in output.splitlines() if line.startswith("0x")][1:]
             self.process_dlls[pid] = dlls

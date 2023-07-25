@@ -1,12 +1,12 @@
 
-from config.monitor_dlls import *
-from config.monitor_files import *
-from config.monitor_sysmon import *
+from config.monitor_dlls import MonitorDlls
+from config.monitor_files import MonitorFiles
+from config.monitor_sysmon import MonitorSysmon
 from config.monitor_registry import check_registry
 from config.exe_scanner import *
 from config.dump_process import *
-from config.detail_process import *
-from config.process_manager import *
+from config.detail_process import MonitorProcess
+from config.process_manager import ProcessManager
 from psutil import Process
 
 class Controller:

@@ -7,7 +7,7 @@ def dump_process(pid)->str:
         os.mkdir('dump')
 
     dump_file = f"dump\\Process_{pid}.dmp"
-    command = f"config\\procdump -ma -accepteula {pid} {dump_file}"
+    command = f"src\\config\\procdump -ma -accepteula {pid} {dump_file}"
     try:
         subprocess.run(command, shell=True, check=True)
         return f"Memory dump created for process with PID {pid}"

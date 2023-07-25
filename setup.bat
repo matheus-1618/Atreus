@@ -76,7 +76,12 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-REM Step 7: Deactivate the virtual environment (optional, if you want to exit the virtual environment after running the scripts)
+REM Step 7: Delete all .spec files in the current directory
+for %%i in (*.spec) do (
+    del "%%i"
+)
+
+REM Step 8: Deactivate the virtual environment (optional, if you want to exit the virtual environment after running the scripts)
 deactivate
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred while deactivating the virtual environment.

@@ -2,13 +2,15 @@ import urllib.request
 import zipfile
 import os
 import subprocess
+import ctypes
+import sys
 
-# Create a folder named "bin" if it doesn't exist
-if not os.path.exists('config'):
-    os.mkdir('config')
+# Create a folder named "config" if it doesn't exist
+if not os.path.exists('src\\config'):
+    os.mkdir('src\\config')
 
-# Set the current working directory to the "bin" folder
-os.chdir('config')
+# Set the current working directory to the "config" folder
+os.chdir('src\\config')
 
 def get_sysmon():
     def install_sysmon(sysmon_path):
@@ -127,8 +129,16 @@ def get_listdlls():
             print(f"Error downloading and extracting ListDlls utility: {e}")
             return False
     return True
-
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except AttributeError:
+        return False
 if __name__ == "__main__":
+    if not is_admin():
+        print("This script requires administrator privileges to run.")
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
     # Call all the functions
     get_sysmon()
     get_pstools()
