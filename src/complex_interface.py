@@ -20,7 +20,7 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure((2, 3), weight=0)
         self.grid_rowconfigure((0, 1, 2), weight=1)
         
-        image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "assets")
+        image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..\\assets")
         self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "atreus.png")), size=(250, 150))
         self.after(200, lambda :self.iconbitmap(os.path.join(image_path, "atreus.ico")))
         

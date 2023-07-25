@@ -41,7 +41,7 @@ def is_admin():
         return False
     
 def show_popup_message():
-    icon_path = os.path.abspath("assets\\atreus.ico")
+    icon_path = os.path.abspath("..\\assets\\atreus.ico")
     window = tk.Tk()
     # change title bar icon
     window.iconbitmap(icon_path)
