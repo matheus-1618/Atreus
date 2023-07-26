@@ -57,11 +57,11 @@ def show_popup(files):
     root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
     # Set the icon for the window
-    icon_path = "..\\assets\\atreus.ico"
+    icon_path = "assets\\atreus.ico"
     root.iconbitmap(icon_path)
 
     # Load the image and resize it to fit the window
-    image_path = "..\\assets\\atreus.png"
+    image_path = "assets\\atreus.png"
     image = Image.open(image_path)
     image = image.resize((100, 100))
     image = ImageTk.PhotoImage(image)
