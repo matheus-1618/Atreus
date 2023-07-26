@@ -3,7 +3,6 @@ from config.monitor_registry import check_registry
 import tkinter as tk
 import tkinter.messagebox as tkmb
 import ctypes
-import psutil
 import os
 import time
 import sys

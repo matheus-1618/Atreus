@@ -4,6 +4,8 @@ import os
 import subprocess
 import ctypes
 import sys
+import tkinter as tk
+import tkinter.messagebox as tkmb
 from utils import is_admin
 
 # Create a folder named "config" if it doesn't exist
@@ -130,6 +132,16 @@ def get_listdlls():
             print(f"Error downloading and extracting ListDlls utility: {e}")
             return False
     return True
+
+def show_popup_message():
+    icon_path = os.path.abspath("assets\\atreus.ico")
+    window = tk.Tk()
+    # change title bar icon
+    window.iconbitmap(icon_path)
+    window.withdraw()
+    # same icon is also set for the message box
+    tkmb.showinfo(title='Atreus',
+                      message="Atreus dependencies installed!")
 
 if __name__ == "__main__":
     if not is_admin():

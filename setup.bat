@@ -61,7 +61,7 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-pyinstaller --onefile --distpath . --icon assets\atreus.png src\complex_interface.py
+pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\complex_interface.py
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred during the PyInstaller build for complex_interface.py.
     REM You can add further actions or error handling here if needed.

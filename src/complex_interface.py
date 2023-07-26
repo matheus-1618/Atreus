@@ -22,13 +22,8 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure((2, 3), weight=0)
         self.grid_rowconfigure((0, 1, 2), weight=1)
         
-        # Get the base path when running as an executable or as a script
-        if getattr(sys, 'frozen', False):
-            # Running as executable
-            base_path = sys._MEIPASS
-        else:
-            # Running as script
-            base_path = os.path.dirname(os.path.abspath(__file__))
+        # Get the base path of the executable or script
+        base_path = os.path.dirname(os.path.abspath(sys.argv[0]))
 
         # Join the base path with the "assets" folder name
         image_path = os.path.join(base_path, "assets")

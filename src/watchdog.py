@@ -1,7 +1,6 @@
 from controller import Controller
 import ctypes
 import os
-import psutil
 import sys
 from time import sleep
 import concurrent.futures

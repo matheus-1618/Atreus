@@ -1,14 +1,13 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-import psutil
 import ctypes
 import os
 from controller import Controller
 import schedule
 import time
 import concurrent.futures
-import json
-from utils import hide_console_window, high_privileges,list_to_string_with_newlines,string_with_newlines_to_list,read_json_file,clear_json_file
+import sys
+from utils import is_admin, hide_console_window, high_privileges,list_to_string_with_newlines,string_with_newlines_to_list,read_json_file,clear_json_file
 
 controller = Controller()
 
@@ -102,6 +101,10 @@ def run_job():
 
 
 if __name__ == "__main__":
+    if not is_admin():
+        print("This script requires administrator privileges to run.")
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
     hide_console_window()
     high_privileges()
 
@@ -110,8 +113,8 @@ if __name__ == "__main__":
         # Schedule the job to run every 1 minutes using submit method of ThreadPoolExecutor
         executor.submit(run_job)
 
-    while True:
-        suspect_files = read_json_file("suspected_files.json")
-        if suspect_files:
-            show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
-        time.sleep(1)
+        while True:
+            suspect_files = read_json_file("suspected_files.json")
+            if suspect_files:
+                show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
+            time.sleep(1)
