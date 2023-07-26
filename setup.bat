@@ -29,25 +29,25 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 REM Step 5: Run PyInstaller for specific .py files
-pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\install.py
+pyinstaller  --onefile --distpath . --icon assets\atreus.png src\install.py
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred during the PyInstaller build for install.py.
     exit /b 1
 )
 
-pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\trace_registry.py
+pyinstaller  --onefile --distpath . --icon assets\atreus.png src\trace_registry.py
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred during the PyInstaller build for trace_registry.py.
     exit /b 1
 )
 
-pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\watchdog.py
+pyinstaller  --onefile --distpath . --icon assets\atreus.png src\watchdog.py
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred during the PyInstaller build for watchdog.py.
     exit /b 1
 )
 
-pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\trace_suspect_files.py
+pyinstaller  --onefile --distpath . --icon assets\atreus.png src\trace_suspect_files.py
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred during the PyInstaller build for trace_suspect_files.py.
     exit /b 1
