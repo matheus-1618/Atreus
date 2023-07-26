@@ -3,7 +3,9 @@ import tkinter.messagebox
 import customtkinter
 from PIL import Image
 import os
+import sys
 from config.monitor_registry import check_registry
+
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
 
@@ -20,11 +22,19 @@ class App(customtkinter.CTk):
         self.grid_columnconfigure((2, 3), weight=0)
         self.grid_rowconfigure((0, 1, 2), weight=1)
         
-        current_path = os.path.dirname(os.path.abspath(__file__))
-        # Join the current path with the "assets" folder name
-        image_path = os.path.join(current_path, "assets")
+        # Get the base path when running as an executable or as a script
+        if getattr(sys, 'frozen', False):
+            # Running as executable
+            base_path = sys._MEIPASS
+        else:
+            # Running as script
+            base_path = os.path.dirname(os.path.abspath(__file__))
+
+        # Join the base path with the "assets" folder name
+        image_path = os.path.join(base_path, "assets")
         self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "atreus.png")), size=(250, 150))
-        self.after(200, lambda :self.iconbitmap(os.path.join(image_path, "atreus.ico")))
+        self.after(200, lambda: self.iconbitmap(os.path.join(image_path, "atreus.ico")))
+        
         
         # create sidebar frame with widgets
         self.sidebar_frame = customtkinter.CTkFrame(self, width=140, corner_radius=0)

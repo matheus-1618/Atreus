@@ -4,6 +4,7 @@ import os
 import subprocess
 import ctypes
 import sys
+from utils import is_admin
 
 # Create a folder named "config" if it doesn't exist
 if not os.path.exists('src\\config'):
@@ -129,11 +130,7 @@ def get_listdlls():
             print(f"Error downloading and extracting ListDlls utility: {e}")
             return False
     return True
-def is_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except AttributeError:
-        return False
+
 if __name__ == "__main__":
     if not is_admin():
         print("This script requires administrator privileges to run.")

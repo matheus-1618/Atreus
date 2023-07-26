@@ -8,16 +8,9 @@ import schedule
 import time
 import concurrent.futures
 import json
+from utils import hide_console_window, high_privileges,list_to_string_with_newlines,string_with_newlines_to_list,read_json_file,clear_json_file
 
 controller = Controller()
-
-def hide_console_window():
-    console_window = ctypes.windll.kernel32.GetConsoleWindow()
-    ctypes.windll.user32.ShowWindow(console_window, 0)
-
-def high_privileges():
-    process = psutil.Process(os.getpid())
-    process.nice(psutil.HIGH_PRIORITY_CLASS)
 
 def remove(files):
     files = string_with_newlines_to_list(files)
@@ -36,11 +29,6 @@ def remove(files):
 def scan_files():
     controller.scan_files()
 
-def list_to_string_with_newlines(input_list):
-    return '\n'.join(str(item) for item in input_list)
-
-def string_with_newlines_to_list(input_string):
-    return input_string.split('\n')
 
 def show_popup(files):
     # Create the main Tkinter window
@@ -49,7 +37,7 @@ def show_popup(files):
 
     # Set the window size and position it in the center of the screen
     window_width = 400
-    window_height = 290
+    window_height = 320
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     x = (screen_width - window_width) // 2
@@ -112,29 +100,6 @@ def run_job():
         schedule.run_pending()
         time.sleep(1)
 
-def read_json_file(filename):
-    try:
-        with open(filename, "r") as file:
-            data = json.load(file)
-            if not data:  # Check if the data is empty or None
-                print(f"JSON file '{filename}' is empty.")
-                return False
-            return data
-    except FileNotFoundError:
-        print(f"File '{filename}' not found.")
-        return False
-    except json.JSONDecodeError:
-        print(f"Error decoding JSON from file '{filename}'.")
-        return False
-
-def clear_json_file(filename):
-    try:
-        with open(filename, "w") as file:
-            json.dump({}, file)
-        return True
-    except Exception as e:
-        print(f"Error clearing JSON file '{filename}': {e}")
-        return False
 
 if __name__ == "__main__":
     hide_console_window()
@@ -145,8 +110,8 @@ if __name__ == "__main__":
         # Schedule the job to run every 1 minutes using submit method of ThreadPoolExecutor
         executor.submit(run_job)
 
-        while True:
-            suspect_files = read_json_file("suspected_files.json")
-            if suspect_files:
-                show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
-            time.sleep(1)
+    while True:
+        suspect_files = read_json_file("suspected_files.json")
+        if suspect_files:
+            show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
+        time.sleep(1)

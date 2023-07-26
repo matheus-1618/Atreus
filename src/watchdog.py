@@ -8,37 +8,11 @@ import concurrent.futures
 from prettytable import PrettyTable
 import tkinter as tk
 import tkinter.messagebox as tkmb
+from utils import is_admin, hide_console_window, high_privileges, list_to_string_with_newlines, write_to_file, are_lists_equal
 
 controller = Controller()
 if not os.path.exists('logs'):
     os.mkdir('logs')
-
-def write_to_file(filename, content):
-    try:
-        # Open the file in append mode
-        with open(filename, "a") as file:
-            file.write(content)
-    except FileNotFoundError:
-        # If the file doesn't exist, create it and write the content
-        with open(filename, "w") as file:
-            file.write(content)
-            
-def list_to_string_with_newlines(input_list):
-    return '\n'.join(str(item) for item in input_list)
-
-def hide_console_window():
-    console_window = ctypes.windll.kernel32.GetConsoleWindow()
-    ctypes.windll.user32.ShowWindow(console_window, 0)
-
-def high_privileges():
-    process = psutil.Process(os.getpid())
-    process.nice(psutil.HIGH_PRIORITY_CLASS)
-
-def is_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except AttributeError:
-        return False
     
 def show_popup_message():
     icon_path = os.path.abspath("assets\\atreus.ico")
@@ -73,16 +47,6 @@ def terminate_suspect_process(pid):
     except Exception as e:
         print(f"Error for PID {pid}: {e}")
         return False
-    
-def are_lists_equal(list1, list2):
-    if len(list1) != len(list2):
-        return False
-
-    for item1 in list1:
-        if item1 not in list2:
-            return False
-
-    return True 
 
 def main():
     processes_handled = []

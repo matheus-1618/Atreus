@@ -7,6 +7,7 @@ import psutil
 import os
 import time
 import sys
+from utils import is_admin, hide_console_window, high_privileges
 
 def show_popup_message():
     icon_path = os.path.abspath("assets\\atreus.ico")
@@ -17,14 +18,7 @@ def show_popup_message():
     # same icon is also set for the message box
     tkmb.showinfo(title='Atreus',
                       message="Ryuk registry of persistence removed")
-    
-def hide_console_window():
-    console_window = ctypes.windll.kernel32.GetConsoleWindow()
-    ctypes.windll.user32.ShowWindow(console_window, 0)
 
-def high_privileges():
-    process = psutil.Process(os.getpid())
-    process.nice(psutil.HIGH_PRIORITY_CLASS)
 
 def delete_registry_value():
     key_path = r"SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
@@ -41,11 +35,6 @@ def delete_registry_value():
     except Exception as e:
         print(f"An error occurred while deleting the registry value: {e}")
 
-def is_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except AttributeError:
-        return False
     
 if __name__ == "__main__":
     if not is_admin():
