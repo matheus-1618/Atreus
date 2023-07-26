@@ -53,9 +53,9 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\complex_interface.py
+pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\atreus.py
 IF %ERRORLEVEL% NEQ 0 (
-    echo An error occurred during the PyInstaller build for complex_interface.py.
+    echo An error occurred during the PyInstaller build for atreus.py.
     exit /b 1
 )
 
@@ -78,3 +78,9 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
+REM Step 9: Delete the env folder
+rmdir /s /q env
+IF %ERRORLEVEL% NEQ 0 (
+    echo An error occurred while deleting the build folder.
+    exit /b 1
+)
