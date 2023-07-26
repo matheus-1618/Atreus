@@ -56,6 +56,7 @@ def show_popup(files):
     # Function to close the popup window and call the ignore function
     def on_ignore():
         root.destroy()
+        controller.kill_process(os.getpid())
 
     # Function to close the popup window and call the remove function
     def on_remove():

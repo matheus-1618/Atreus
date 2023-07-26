@@ -155,3 +155,4 @@ if __name__ == "__main__":
     get_procdump()
     get_handle()
     get_listdlls()
+    show_popup_message()
