@@ -16,11 +16,6 @@ To Build Atreus, follow the steps above:
 setup.bat
 ```
 
-Execute with Administrator privilegies:
-```bash
-install.exe
-```
-
 ## About
 Ryuk is a Ransomware from Hermes family, and has some typical behaviours analysed in this [research](www.google.com), such as:
 * Multi-thread, calling CreateRemoteThread

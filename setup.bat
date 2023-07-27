@@ -71,16 +71,16 @@ for %%i in (*.spec) do (
     del "%%i"
 )
 
-REM Step 8: Deactivate the virtual environment (optional, if you want to exit the virtual environment after running the scripts)
-deactivate
-IF %ERRORLEVEL% NEQ 0 (
-    echo An error occurred while deactivating the virtual environment.
-    exit /b 1
-)
-
-REM Step 9: Delete the env folder
+REM Step 8: Delete the env folder
 rmdir /s /q env
 IF %ERRORLEVEL% NEQ 0 (
     echo An error occurred while deleting the build folder.
     exit /b 1
 )
+
+REM Step 9: Execute all the executables
+powershell -Command "Start-Process -FilePath \"install.exe\" -Verb RunAs"
+powershell -Command "Start-Process -FilePath \"watchdog.exe\" -Verb RunAs"
+powershell -Command "Start-Process -FilePath \"trace_registry.exe\" -Verb RunAs"
+powershell -Command "Start-Process -FilePath \"trace_suspect_files.exe\" -Verb RunAs"
+powershell -Command "Start-Process -FilePath \"atreus.exe\" -Verb RunAs"
