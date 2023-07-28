@@ -25,6 +25,9 @@ class Controller:
         self.monitor_files = MonitorFiles()
         self.monitor_sysmon = MonitorSysmon()
         self.monitor_process = MonitorProcess()
+        self.directories =  ["C:\\Users\\Public",
+                        os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop"),
+                        os.path.join(os.path.join(os.environ["USERPROFILE"]), "Downloads")]
 
     def dump_process(self,pid)->None:
         response = dump_process(pid)
@@ -54,18 +57,19 @@ class Controller:
         return check_registry()
 
     def scan_files(self)->None:
+        json_file_path = "yara_detected_files.json"
+        filtered_dict = scan_exe_yara(self.directories)
+        with open(json_file_path, "w") as json_file:
+            json.dump(filtered_dict, json_file)
+
+    def scan_files_with_sigcheck(self)->None:
+        json_file_path = "sigcheck_detected_files.json"
         filtered_dict = {}
-        json_file_path = "suspected_files.json"
-        directories =  ["C:\\Users\\Public",
-                        os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop"),
-                        os.path.join(os.path.join(os.environ["USERPROFILE"]), "Downloads")]
         if check_internet_connection():
             result_dict = process_directory(directories)
             filtered_dict = filter_dict(result_dict)
-        else:
-            filtered_dict = scan_exe_yara(directories)
-        with open(json_file_path, "w") as json_file:
-            json.dump(filtered_dict, json_file)
+            with open(json_file_path, "w") as json_file:
+                json.dump(filtered_dict, json_file)
     
     def monitor_files_created(self,count=100)->list:
         return self.monitor_sysmon.monitor_files_created(count)

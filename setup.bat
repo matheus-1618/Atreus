@@ -47,9 +47,9 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-pyinstaller  --onefile --distpath . --icon assets\atreus.png src\trace_suspect_files.py
+pyinstaller  --onefile --distpath . --icon assets\atreus.png src\trace_executables.py
 IF %ERRORLEVEL% NEQ 0 (
-    echo An error occurred during the PyInstaller build for trace_suspect_files.py.
+    echo An error occurred during the PyInstaller build for trace_executables.py.
     exit /b 1
 )
 
@@ -82,6 +82,6 @@ REM Step 9: Execute all the executables
 powershell -Command "Start-Process -FilePath \"install.exe\" -Verb RunAs -Wait"
 powershell -Command "Start-Process -FilePath \"watchdog.exe\" -Verb RunAs"
 powershell -Command "Start-Process -FilePath \"trace_registry.exe\" -Verb RunAs"
-powershell -Command "Start-Process -FilePath \"trace_suspect_files.exe\" -Verb RunAs"
+powershell -Command "Start-Process -FilePath \"trace_executables.exe\" -Verb RunAs"
 powershell -Command "Start-Process -FilePath \"atreus.exe\" -Verb RunAs"
 

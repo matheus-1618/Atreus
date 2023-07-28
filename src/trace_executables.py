@@ -28,15 +28,17 @@ def remove(files):
 def scan_files():
     controller.scan_files()
 
+def scan_files_sigcheck():
+    controller.scan_files_with_sigcheck()
 
-def show_popup(files):
+def show_popup(files,type):
     # Create the main Tkinter window
     root = tk.Tk()
-    root.title("Atreus")
+    root.title(f"Atreus--{type} detection")
 
     # Set the window size and position it in the center of the screen
     window_width = 400
-    window_height = 320
+    window_height = 290 + len(string_with_newlines_to_list(files))*15
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     x = (screen_width - window_width) // 2
@@ -90,16 +92,21 @@ def show_popup(files):
     # Run the Tkinter main loop
     root.mainloop()
 
-def run_job():
+def yara_scan():
     scan_files()
-    # Schedule the job to run every 1 minutes
     schedule.every(1).minutes.do(scan_files)
-
     # Run the job continuously
     while True:
         schedule.run_pending()
         time.sleep(1)
 
+def sigcheck_scan():
+    scan_files_sigcheck()
+    schedule.every(3).minutes.do(scan_files_sigcheck)
+    # Run the job continuously
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
 if __name__ == "__main__":
     if not is_admin():
@@ -110,12 +117,16 @@ if __name__ == "__main__":
     high_privileges()
 
     # Create a ThreadPoolExecutor with max_workers=1
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         # Schedule the job to run every 1 minutes using submit method of ThreadPoolExecutor
-        executor.submit(run_job)
+        executor.submit(yara_scan)
+        executor.submit(sigcheck_scan)
 
         while True:
-            suspect_files = read_json_file("suspected_files.json")
-            if suspect_files:
-                show_popup(list_to_string_with_newlines(list(suspect_files.keys())))
+            sigcheck_files = read_json_file("sigcheck_detected_files.json")
+            yara_detected_files = read_json_file("yara_detected_files.json")
+            if sigcheck_files:
+                show_popup(list_to_string_with_newlines(list(sigcheck_files.keys())), "Sigcheck")
+            elif yara_detected_files:
+                show_popup(list_to_string_with_newlines(list(yara_detected_files.keys())), "Yara")
             time.sleep(1)
