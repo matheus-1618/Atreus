@@ -1,30 +1,42 @@
-rule Ryuk_Dropper{
+rule ryuk_dropper{
    meta:
-      description = "Detects Ryuk dropper binary"
-      author = "Colin Cowie"
+      description = "Aim to detect Ryuk dropper"
    strings:
-      $s1 = "\\users\\Public\\window.bat" ascii wide
-      $s2 = "Main Invoked" ascii wide
-      $s3 = "somedll.dll" ascii wide
-      $s4 = "vssadmin resize shadowstorage" ascii wide
-      $s5 = "InvokeMainViaCRT" ascii wide
+      $s1 = "REG ADD" wide
+      $s2 = "\"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"" wide
+      $s3 = "/v \"svchos\"" wide
+      $s4 = "/t REG_SZ" wide
+      $s5 = "/d \"" wide
+      $s6 = "No system is safe" ascii wide
+      $s7 = "vssadmin resize shadowstorage" ascii wide
+      $s8 = "UNIQUE_ID_DO_NOT_REMOVE" ascii wide
    condition:
-      3 of them
+      pe.is_pe and
+      all of them and
+      pe.is_32bit() and
+      pe.imports("Kernel32.dll", "IsDebuggerPresent") and
+      pe.imports("Shell32.dll", "ShellExecuteW") 
 }
 
-rule Ryuk_Payload{
+rule ryuk_exe{
    meta:
-      description = "Detects Ryuk payload binary"
-      author = "Colin Cowie"
+      description = "Aim to detect Ryuk executable"
    strings:
-      $s1 = "UNIQUE_ID_DO_NOT_REMOVE" ascii wide
-      $s2 = ".RYK" ascii wide
-      $s3 = "RyukReadMe.txt" ascii wide
-      $s4 = "fg4tgf4f3.dll" ascii wide
-      $s5 = "2 files we unlock for free"
-      $s6 = "Backups were either encrypted"
-      $s7 = "HERMES"
-      $s8 = "AhnLab"
+      $s1 = "REG ADD" wide
+      $s2 = "\"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\"" wide
+      $s3 = "/v \"svchos\"" wide
+      $s4 = "/t REG_SZ" wide
+      $s5 = "/d \"" wide
+      $s6 = "RyukReadMe.txt" wide 
+      $s7 = "SeDebugPrivilege" wide 
+      $s8 = "stop Antivirus /y" wide ascii
+      $s9 = "RSA1" wide ascii
+
    condition:
-      4 of them
+      pe.is_pe and
+      all of them and
+      pe.imports("Kernel32.dll", "CreateRemoteThread") and
+      pe.imports("Kernel32.dll", "WriteProcessMemory") and
+      pe.imports("Kernel32.dll", "GetProcAddress") and 
+      pe.imports("Kernel32.dll", "LoadLibraryA")
 }
