@@ -11,7 +11,7 @@ from utils import is_admin, hide_console_window, high_privileges,list_to_string_
 
 controller = Controller()
 
-def remove(files):
+def remove(files, json_name):
     files = string_with_newlines_to_list(files)
     for file_path in files:
         try:
@@ -23,7 +23,7 @@ def remove(files):
             print(f"Access denied. You may need administrator privileges to delete the file.")
         except Exception as e:
             print(f"An error occurred while deleting the file: {e}")
-    clear_json_file("suspected_files.json")
+    clear_json_file(json_name)
 
 def scan_files():
     controller.scan_files()
@@ -31,7 +31,7 @@ def scan_files():
 def scan_files_sigcheck():
     controller.scan_files_with_sigcheck()
 
-def show_popup(files,type):
+def show_popup(files,type, json_name):
     # Create the main Tkinter window
     root = tk.Tk()
     root.title(f"Atreus--{type} detection")
@@ -58,11 +58,11 @@ def show_popup(files,type):
     # Function to close the popup window and call the ignore function
     def on_ignore():
         root.destroy()
-        controller.kill_process(os.getpid())
+        time.sleep(100)
 
     # Function to close the popup window and call the remove function
     def on_remove():
-        remove(files)
+        remove(files,json_name)
         root.destroy()
 
     # Create a frame to hold the label and image
@@ -126,7 +126,7 @@ if __name__ == "__main__":
             sigcheck_files = read_json_file("sigcheck_detected_files.json")
             yara_detected_files = read_json_file("yara_detected_files.json")
             if sigcheck_files:
-                show_popup(list_to_string_with_newlines(list(sigcheck_files.keys())), "Sigcheck")
-            elif yara_detected_files:
-                show_popup(list_to_string_with_newlines(list(yara_detected_files.keys())), "Yara")
+                show_popup(list_to_string_with_newlines(list(sigcheck_files.keys())), "Sigcheck", "sigcheck_detected_files.json")
+            if yara_detected_files:
+                show_popup(list_to_string_with_newlines(list(yara_detected_files.keys())), "Yara","yara_detected_files.json")
             time.sleep(1)
