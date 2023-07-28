@@ -1,3 +1,5 @@
+import "pe"
+
 rule ryuk_dropper{
    meta:
       description = "Aim to detect Ryuk dropper"
