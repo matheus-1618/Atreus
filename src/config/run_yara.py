@@ -3,7 +3,7 @@ import os
 
 def scan_exe_yara(directories):
     files = {}
-    rules = yara.compile(r"config\rule.yar")
+    rules = yara.compile(r"src\config\rule.yar")
     for target_directory in directories:
         for file_name in os.listdir(target_directory):
             file_path = os.path.join(target_directory, file_name)
