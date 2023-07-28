@@ -7,3 +7,5 @@ psutil
 pywin32
 prettytable
 schedule
+yara-python
+requests

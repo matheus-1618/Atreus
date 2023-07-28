@@ -7,7 +7,16 @@ from config.exe_scanner import *
 from config.dump_process import *
 from config.detail_process import MonitorProcess
 from config.process_manager import ProcessManager
+from config.run_yara import scan_exe_yara
 from psutil import Process
+import requests
+
+def check_internet_connection():
+    try:
+        response = requests.get("http://www.google.com", timeout=5)
+        return response.status_code == 200
+    except requests.RequestException:
+        return False
 
 class Controller:
     def __init__(self) -> None:
@@ -45,12 +54,17 @@ class Controller:
         return check_registry()
 
     def scan_files(self)->None:
+        filtered_dict = {}
         directories =  ["C:\\Users\\Public",
                         os.path.join(os.path.join(os.environ["USERPROFILE"]), "Desktop"),
                         os.path.join(os.path.join(os.environ["USERPROFILE"]), "Downloads")]
-        result_dict = process_directory(directories)
-        filtered_dict = filter_dict(result_dict)
-        json_file_path = "suspected_files.json"
+        if check_internet_connection():
+            result_dict = process_directory(directories)
+            filtered_dict = filter_dict(result_dict)
+            json_file_path = "suspected_files.json"
+        else:
+            filtered_dict = scan_exe_yara(directories)
+            
         with open(json_file_path, "w") as json_file:
             json.dump(filtered_dict, json_file)
     

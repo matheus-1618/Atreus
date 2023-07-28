@@ -79,8 +79,9 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 REM Step 9: Execute all the executables
-powershell -Command "Start-Process -FilePath \"install.exe\" -Verb RunAs"
+powershell -Command "Start-Process -FilePath \"install.exe\" -Verb RunAs -Wait"
 powershell -Command "Start-Process -FilePath \"watchdog.exe\" -Verb RunAs"
 powershell -Command "Start-Process -FilePath \"trace_registry.exe\" -Verb RunAs"
 powershell -Command "Start-Process -FilePath \"trace_suspect_files.exe\" -Verb RunAs"
 powershell -Command "Start-Process -FilePath \"atreus.exe\" -Verb RunAs"
+
