@@ -127,9 +127,10 @@ class App(customtkinter.CTk):
         self.slider_2.configure(command=self.progressbar_3.set)
         self.progressbar_1.configure(mode="indeterminnate")
         self.progressbar_1.start()
-        processes_details = self.controller.detail_all_process()
-        table = PrettyTable(list(list(processes_details.values())[0].keys()))
-        self.textbox.insert("0.0", processes_details)
+        process_detail = self.controller.detail_process(os.getpid())
+        tab = PrettyTable(list(process_detail.keys()))
+        tab.add_row(list(process_detail.values()))
+        self.textbox.insert("0.0", tab)
         self.seg_button_1.configure(values=["CTkSegmentedButton", "Value 2", "Value 3"])
         self.seg_button_1.set("Value 2")
 
@@ -155,10 +156,12 @@ class App(customtkinter.CTk):
     def update(self):
         #current_text = self.textbox.get("1.0", tkinter.END)
         # Check if the file has changed
-        processes_details = self.controller.detail_all_process()
-        table = PrettyTable(list(list(processes_details.values())[0].keys()))
-        self.textbox.insert("1.0", table)
-        self.after(5000, self.update)
+        process_detail = self.controller.detail_process(os.getpid())
+        tab = PrettyTable(list(process_detail.keys()))
+        tab.add_row(list(process_detail.values()))
+        self.textbox.delete("1.0", tkinter.END)
+        self.textbox.insert("1.0", tab)
+        self.after(3000, self.update)
         
 if __name__ == "__main__":
     app = App()
