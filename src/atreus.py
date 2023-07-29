@@ -49,7 +49,7 @@ class App(customtkinter.CTk):
         self.sidebar_button_1.grid(row=1, column=0, padx=20, pady=10)
         self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame,text="Run Static Scan", command=self.static_event)
         self.sidebar_button_2.grid(row=2, column=0, padx=20, pady=10)
-        self.sidebar_button_3 = customtkinter.CTkButton(self.sidebar_frame,text="Run Registry Scan" command=self.registry_event)
+        self.sidebar_button_3 = customtkinter.CTkButton(self.sidebar_frame, command=self.registry_event)
         self.sidebar_button_3.grid(row=3, column=0, padx=20, pady=10)
         self.appearance_mode_label = customtkinter.CTkLabel(self.sidebar_frame, text="Appearance Mode:", anchor="w")
         self.appearance_mode_label.grid(row=5, column=0, padx=20, pady=(10, 0))
@@ -109,16 +109,17 @@ class App(customtkinter.CTk):
         self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="About Ryuk")
         self.scrollable_frame.grid(row=1, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
-        #self.scrollable_frame_switches = []
-        #for i in range(5):
-        #    switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=f"CTkSwitch {i}")
-        #    switch.grid(row=i, column=0, padx=10, pady=(0, 20))
-        #    self.scrollable_frame_switches.append(switch)
+        self.scrollable_frame_switches = []
+        for i in range(5):
+            switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=f"CTkSwitch {i}")
+            switch.grid(row=i, column=0, padx=10, pady=(0, 20))
+            self.scrollable_frame_switches.append(switch)
 
 
-        # set default values)
-        #self.scrollable_frame_switches[0].select()
-        #self.scrollable_frame_switches[4].select()
+        # set default values
+        self.sidebar_button_3.configure(state="disabled", text="Run registry Scan")
+        self.scrollable_frame_switches[0].select()
+        self.scrollable_frame_switches[4].select()
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
         self.optionmenu_1.set("CTkOptionmenu")
