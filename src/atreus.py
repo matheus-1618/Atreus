@@ -160,7 +160,8 @@ class App(customtkinter.CTk):
     @staticmethod
     def is_process_running(process_name):
             try:
-                result = subprocess.run(['tasklist', '/FI', f'IMAGENAME eq {process_name}', '/NH'], capture_output=True, text=True)
+                result = subprocess.run(['tasklist', '/FI', f'IMAGENAME eq {process_name}', '/NH'], 
+                        capture_output=True, text=True, creationflags=subprocess.CREATE_NO_WINDOW)
                 output = result.stdout.strip()
                 return process_name.lower() in output.lower()
             except Exception as e:
