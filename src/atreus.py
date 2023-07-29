@@ -17,7 +17,7 @@ customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "gr
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
-        self.check_file_changes()
+        self.first_update()
         self.controller = Controller()
         
 
@@ -45,11 +45,11 @@ class App(customtkinter.CTk):
         self.sidebar_frame.grid_rowconfigure(4, weight=1)
         self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="",image=self.logo_image,compound="left", font=customtkinter.CTkFont(size=20, weight="bold"))
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
-        self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame,text="Activate Watchdog", command=self.sidebar_button_event)
+        self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame,text="Activate Watchdog", command=self.watchodg_event)
         self.sidebar_button_1.grid(row=1, column=0, padx=20, pady=10)
-        self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame,text="Run Static Scan", command=self.sidebar_button_event)
+        self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame,text="Run Static Scan", command=self.static_event)
         self.sidebar_button_2.grid(row=2, column=0, padx=20, pady=10)
-        self.sidebar_button_3 = customtkinter.CTkButton(self.sidebar_frame, command=self.sidebar_button_event)
+        self.sidebar_button_3 = customtkinter.CTkButton(self.sidebar_frame, command=self.registry_event)
         self.sidebar_button_3.grid(row=3, column=0, padx=20, pady=10)
         self.appearance_mode_label = customtkinter.CTkLabel(self.sidebar_frame, text="Appearance Mode:", anchor="w")
         self.appearance_mode_label.grid(row=5, column=0, padx=20, pady=(10, 0))
@@ -145,15 +145,29 @@ class App(customtkinter.CTk):
         new_scaling_float = int(new_scaling.replace("%", "")) / 100
         customtkinter.set_widget_scaling(new_scaling_float)
 
-    def sidebar_button_event(self):
+    def watchdog_event(self):
+        self.sidebar_button_1.configure(state="disabled", text="Watchdog Running")
         def run_as_admin():
             ctypes.windll.shell32.ShellExecuteW(None, "runas", "watchdog.exe", None, None, 1)
         thread = threading.Thread(target=run_as_admin)
         thread.start() 
-        self.sidebar_button_1.configure(state="disabled", text="Watchdog Running")
-        #print("sidebar_button click")
         
-    def check_file_changes(self):
+    def static_event(self):
+        self.sidebar_button_2.configure(state="disabled", text="Static scanning")
+        def run_as_admin():
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", "trace_executables.exe", None, None, 1)
+        thread = threading.Thread(target=run_as_admin)
+        thread.start() 
+
+    def registry_event(self):
+        self.sidebar_button_3.configure(state="disabled", text="Registry scanning")
+        def run_as_admin():
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", "trace_registry.exe", None, None, 1)
+        thread = threading.Thread(target=run_as_admin)
+        thread.start() 
+        
+        
+    def first_update(self):
         # Schedule the function to run again after 5 seconds
         self.after(1000, self.update)
         
@@ -169,13 +183,25 @@ class App(customtkinter.CTk):
                 return False
         
     def update(self):
-        process_name = "watchdog.exe"
+        watchdog_name = "watchdog.exe"
+        trace_executables_name = "trace_executables.exe"
+        trace_registry_name = "trace_registry.exe"
         #current_text = self.textbox.get("1.0", tkinter.END)
         # Check if the file has changed
-        if self.is_process_running(process_name):
+        if self.is_process_running(watchdog_name):
             self.sidebar_button_1.configure(state="disabled", text="Watchdog Running")
         else:
             self.sidebar_button_1.configure(state="enabled", text="Activate Watchdog")
+
+        if self.is_process_running(trace_executables_name):
+            self.sidebar_button_2.configure(state="disabled", text="Static scanning")
+        else:
+            self.sidebar_button_2.configure(state="enabled", text="Run Static scan")
+
+        if self.is_process_running(trace_registry_name):
+            self.sidebar_button_3.configure(state="disabled", text="Registry scanning")
+        else:
+            self.sidebar_button_3.configure(state="enabled", text="Run Registry scan")
             
         process_detail = self.controller.detail_process(os.getpid())
         tab = PrettyTable(list(process_detail.keys()))
