@@ -5,6 +5,8 @@ from PIL import Image
 import os
 import sys
 from config.monitor_registry import check_registry
+from prettytable import PrettyTable
+from controller import *
 
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
@@ -13,6 +15,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         self.check_file_changes()
+        self.controller = Controller()
         
 
         # configure window
@@ -124,7 +127,9 @@ class App(customtkinter.CTk):
         self.slider_2.configure(command=self.progressbar_3.set)
         self.progressbar_1.configure(mode="indeterminnate")
         self.progressbar_1.start()
-        self.textbox.insert("0.0", "No ryuk files identified")
+        processes_details = self.controller.detail_all_process()
+        table = PrettyTable(list(list(processes_details.values())[0].keys()))
+        self.textbox.insert("0.0", processes_details)
         self.seg_button_1.configure(values=["CTkSegmentedButton", "Value 2", "Value 3"])
         self.seg_button_1.set("Value 2")
 
@@ -148,9 +153,11 @@ class App(customtkinter.CTk):
         self.after(1000, self.update)
         
     def update(self):
-        current_text = self.textbox.get("1.0", tkinter.END)
+        #current_text = self.textbox.get("1.0", tkinter.END)
         # Check if the file has changed
-        self.textbox.insert("1.0", current_text+"oiiii\n")
+        processes_details = self.controller.detail_all_process()
+        table = PrettyTable(list(list(processes_details.values())[0].keys()))
+        self.textbox.insert("1.0", table)
         self.after(5000, self.update)
         
 if __name__ == "__main__":
