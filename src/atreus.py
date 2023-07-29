@@ -96,35 +96,62 @@ class App(customtkinter.CTk):
         self.seg_button_1.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
         self.progressbar_1 = customtkinter.CTkProgressBar(self.slider_progressbar_frame)
         self.progressbar_1.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-        self.progressbar_2 = customtkinter.CTkProgressBar(self.slider_progressbar_frame)
-        self.progressbar_2.grid(row=2, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
+      
         self.slider_1 = customtkinter.CTkSlider(self.slider_progressbar_frame, from_=0, to=1, number_of_steps=4)
         self.slider_1.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-        self.slider_2 = customtkinter.CTkSlider(self.slider_progressbar_frame, orientation="vertical")
-        self.slider_2.grid(row=0, column=1, rowspan=5, padx=(10, 10), pady=(10, 10), sticky="ns")
-        self.progressbar_3 = customtkinter.CTkProgressBar(self.slider_progressbar_frame, orientation="vertical")
-        self.progressbar_3.grid(row=0, column=2, rowspan=5, padx=(10, 20), pady=(10, 10), sticky="ns")
+       
+      
 
         # create scrollable frame
-        self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="About Ryuk")
-        self.scrollable_frame.grid(row=1, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
-        self.scrollable_frame.grid_columnconfigure(0, weight=1)
-        self.scrollable_frame_switches = []
-        for i in range(5):
-            switch = customtkinter.CTkSwitch(master=self.scrollable_frame, text=f"CTkSwitch {i}")
-            switch.grid(row=i, column=0, padx=10, pady=(0, 20))
-            self.scrollable_frame_switches.append(switch)
+        #self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="About Ryuk")
+        #self.scrollable_frame.grid(row=1, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
+        #self.scrollable_frame.grid_columnconfigure(0, weight=1)
+        #self.textbox1 = customtkinter.CTkTextbox(master=self.scrollable_frame,height=250)
+        #self.textbox1.grid(padx=(0, 0), pady=(0, 0), sticky="nsew")
+        #self.textbox1.insert("0.0",ryuk_ransomware_description)
+        ryuk_ransomware_description = """Ryuk ransomware is a sophisticated and notorious strain of ransomware that emerged in August 2018. It is known for its highly targeted attacks on large organizations, especially in the corporate and government sectors. Ryuk is believed to be operated by a cybercrime group known as Wizard Spider.
 
+The primary purpose of Ryuk ransomware is to encrypt the victim's files, making them inaccessible. Once the files are encrypted, Ryuk displays a ransom note, typically in a "RyukReadMe.txt" file, containing instructions on how to pay the ransom to obtain the decryption key.
 
+Key characteristics of Ryuk ransomware include:
+
+1. Targeted Attacks: Ryuk targets specific organizations and infects their systems after gaining unauthorized access. These attacks often follow an initial infection by other malware, such as TrickBot or Emotet, which are used to gain a foothold in the network.
+
+2. High Ransom Demands: Ryuk's ransom demands are usually significantly higher than those of other ransomware strains. This is because the attackers tailor the ransom amount based on the victim's perceived ability to pay, often demanding millions of dollars.
+
+3. Manual Execution: Ryuk is often manually deployed by the attackers, enabling them to assess the network's value and select the most critical systems to target.
+
+4. Custom Encryption: Ryuk employs a sophisticated encryption algorithm to lock files, making it challenging to decrypt them without the unique decryption key held by the attackers.
+
+5. Evolving Tactics: The Ryuk ransomware is continually evolving, with the attackers refining their techniques to evade detection and increase their success rate.
+
+It's important to note that paying the ransom does not guarantee that the attackers will provide the decryption key or that the files will be recovered. Moreover, it encourages and funds further criminal activities. To defend against ransomware attacks like Ryuk, organizations should focus on proactive cybersecurity measures, such as regular data backups, robust security protocols, and employee training to prevent phishing and social engineering attacks."""
+
+        
+        self.tabview1 = customtkinter.CTkTabview(self, width=250,height=300)
+        self.tabview1.grid(row=1, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
+        self.tabview1.add("Ryuk Ransomware")
+        self.tabview1.add("About Atreus")
+        self.tabview1.tab("Ryuk Ransomware").grid_columnconfigure(0, weight=1)  # configure grid of individual tabs
+        self.tabview1.tab("About Atreus").grid_columnconfigure(0, weight=1)
+        #self.label_tab_3 = customtkinter.CTkLabel(self.tabview1.tab("Ryuk Ransomware"), text=ryuk_ransomware_description)
+        self.textbox1 = customtkinter.CTkTextbox(master=self.tabview1.tab("Ryuk Ransomware"),height=300)
+        self.textbox1.grid(padx=(0, 0), pady=(0, 0), sticky="nsew")
+        self.textbox1.insert("0.0",ryuk_ransomware_description)
+        
+        #self.label_tab_3.grid(row=0, column=0, padx=20, pady=20)
+        self.label_tab_4 = customtkinter.CTkLabel(self.tabview1.tab("About Atreus"), text="Atreus")
+        self.label_tab_4.grid(row=0, column=0, padx=20, pady=20)
+        #
+        
+    
         # set default values
         self.sidebar_button_3.configure(state="disabled", text="Run registry Scan")
-        self.scrollable_frame_switches[0].select()
-        self.scrollable_frame_switches[4].select()
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
         self.optionmenu_1.set("CTkOptionmenu")
-        self.slider_1.configure(command=self.progressbar_2.set)
-        self.slider_2.configure(command=self.progressbar_3.set)
+        #self.slider_1.configure(command=self.progressbar_2.set)
+        #self.slider_2.configure(command=self.progressbar_3.set)
         self.progressbar_1.configure(mode="indeterminnate")
         self.progressbar_1.start()
         process_detail = self.controller.detail_process(os.getpid())
