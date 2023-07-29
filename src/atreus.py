@@ -7,6 +7,9 @@ import sys
 from config.monitor_registry import check_registry
 from prettytable import PrettyTable
 from controller import *
+import threading
+import ctypes
+
 
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
@@ -129,6 +132,7 @@ class App(customtkinter.CTk):
         self.textbox.insert("0.0", tab)
         self.seg_button_1.configure(values=["CTkSegmentedButton", "Value 2", "Value 3"])
         self.seg_button_1.set("Value 2")
+        
 
     def open_input_dialog_event(self):
         dialog = customtkinter.CTkInputDialog(text="Type in a number:", title="CTkInputDialog")
@@ -142,16 +146,36 @@ class App(customtkinter.CTk):
         customtkinter.set_widget_scaling(new_scaling_float)
 
     def sidebar_button_event(self):
-        check_registry()
+        def run_as_admin():
+            ctypes.windll.shell32.ShellExecuteW(None, "runas", "watchdog.exe", None, None, 1)
+        thread = threading.Thread(target=run_as_admin)
+        thread.start() 
+        self.sidebar_button_1.configure(state="disabled", text="Watchdog Running")
         #print("sidebar_button click")
         
     def check_file_changes(self):
         # Schedule the function to run again after 5 seconds
         self.after(1000, self.update)
         
+    @staticmethod
+    def is_process_running(process_name):
+            try:
+                result = subprocess.run(['tasklist', '/FI', f'IMAGENAME eq {process_name}', '/NH'], capture_output=True, text=True)
+                output = result.stdout.strip()
+                return process_name.lower() in output.lower()
+            except Exception as e:
+                print(f"Error checking process status: {e}")
+                return False
+        
     def update(self):
+        process_name = "watchdog.exe"
         #current_text = self.textbox.get("1.0", tkinter.END)
         # Check if the file has changed
+        if self.is_process_running(process_name):
+            self.sidebar_button_1.configure(state="disabled", text="Watchdog Running")
+        else:
+            self.sidebar_button_1.configure(state="enabled", text="Activate Watchdog")
+            
         process_detail = self.controller.detail_process(os.getpid())
         tab = PrettyTable(list(process_detail.keys()))
         tab.add_row(list(process_detail.values()))
