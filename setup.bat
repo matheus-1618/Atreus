@@ -1,4 +1,5 @@
 @echo off
+echo Installing Atreus dependencies and running it
 
 REM Step 1: Install virtualenv via pip
 pip install virtualenv

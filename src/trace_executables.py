@@ -116,9 +116,7 @@ if __name__ == "__main__":
     hide_console_window()
     high_privileges()
 
-    # Create a ThreadPoolExecutor with max_workers=1
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-        # Schedule the job to run every 1 minutes using submit method of ThreadPoolExecutor
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         executor.submit(yara_scan)
         executor.submit(sigcheck_scan)
 
