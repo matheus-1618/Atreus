@@ -3,8 +3,8 @@
 <img src='assets/atreus.png' style="width:25rem;"/>
 
 # Anti Ryuk Ransomware for Windows.
-
-### Disclaimer: Not intended to be a production Counter Measure, only a good approach to identify and mitigate Ryuk actions.
+> [!WARNING]  
+> ### Disclaimer: Not intended to be a production Counter Measure, only a good approach to identify and mitigate Ryuk actions.
 </div>
 
 ## Build
@@ -43,7 +43,8 @@ Ryuk is a highly targeted and dangerous strain of ransomware known for its devas
 
 Developed as a result of extensive undergraduate research at my university, Atreus aims to provide an additional layer of defense against Ryuk and its malicious activities.
 
-It uses the power of [sysinternals](https://learn.microsoft.com/en-us/sysinternals/) to **monitor**, **trace**, **detail** and **list** informations about API's calls, processes and files all over the OS, facilitating the identification and mitigation of potentital Ryuks Threats.
+> [!NOTE]  
+> It uses the power of [sysinternals](https://learn.microsoft.com/en-us/sysinternals/) to **monitor**, **trace**, **detail** and **list** informations about API's calls, processes and files all over the OS, facilitating the identification and mitigation of potentital Ryuks Threats.
 
 <div align="center" >
   
