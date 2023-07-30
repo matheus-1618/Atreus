@@ -9,7 +9,8 @@ from prettytable import PrettyTable
 from controller import *
 import threading
 import ctypes
-
+from functools import partial
+import subprocess
 
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
@@ -42,7 +43,7 @@ class App(customtkinter.CTk):
         self.sidebar_frame.grid(row=0, column=0, rowspan=4, sticky="nsew")
         self.sidebar_frame.grid_rowconfigure(4, weight=1)
         self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="",image=self.logo_image,compound="left", font=customtkinter.CTkFont(size=20, weight="bold"))
-        self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
+        self.logo_label.grid(row=0, column=0, padx=30, pady=(20, 10))
         self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame,text="Activate Watchdog", command=self.watchdog_event)
         self.sidebar_button_1.grid(row=1, column=0, padx=20, pady=10)
         self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame,text="Run Static Scan", command=self.static_event)
@@ -69,16 +70,18 @@ class App(customtkinter.CTk):
         self.tabview.add("Files")
         self.tabview.tab("Logs").grid_columnconfigure(0, weight=1)  # configure grid of individual tabs
         self.tabview.tab("Dumps").grid_columnconfigure(0, weight=1)
+        self.tabview.tab("Files").grid_columnconfigure(0, weight=1)
 
-        self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("Logs"), dynamic_resizing=False,
-                                                        values=["Value 1", "Value 2", "Value Long Long Long"])
-        self.optionmenu_1.grid(row=0, column=0, padx=20, pady=(20, 10))
-        self.string_input_button = customtkinter.CTkButton(self.tabview.tab("Logs"), text="Open CTkInputDialog",
-                                                           command=self.open_input_dialog_event)
-        self.string_input_button.grid(row=2, column=0, padx=20, pady=(10, 10))
-        self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("Dumps"), text="CTkLabel on Tab 2")
-        self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
+        #Logs files
+        self.look_for_logs()
+        
+        #Dumps files
+        self.look_for_dumps()
 
+        #Suspected files
+        self.look_for_files()
+        
+        #Progress Bar
         self.progressbar_1 = customtkinter.CTkProgressBar(self)
         self.progressbar_1.grid(row=1, column=1, padx=(20, 10), pady=(20, 10), sticky="ew")
       
@@ -101,6 +104,32 @@ Key characteristics of Ryuk ransomware include:
 
 It's important to note that paying the ransom does not guarantee that the attackers will provide the decryption key or that the files will be recovered. Moreover, it encourages and funds further criminal activities. To defend against ransomware attacks like Ryuk, organizations should focus on proactive cybersecurity measures, such as regular data backups, robust security protocols, and employee training to prevent phishing and social engineering attacks."""
 
+        atreus_description = """
+Atreus Anti-Ransomware: Your Defense Against Ryuk Ransomware
+
+Atreus is a open-source anti-ransomware software specifically designed to protect against the notorious Ryuk ransomware. Ryuk is a highly targeted and dangerous strain of ransomware known for its devastating attacks on large organizations. Developed as a result of extensive undergraduate research at my university, Atreus aims to provide an additional layer of defense against Ryuk and its malicious activities.
+
+Key Features of Atreus Anti-Ransomware:
+
+1. Detecting Suspicious "CreateRemoteThread" Calls:
+
+Atreus keeps a vigilant eye on system processes, especially monitoring for suspicious "CreateRemoteThread" calls. These calls are commonly associated with Ryuk's attempt to inject its malicious code into other processes, enabling the ransomware to spread and cause widespread damage. By identifying and alerting about such behavior, Atreus helps you detect and respond to potential Ryuk attacks early on.
+
+2. Detecting Registry Changes for Persistence:
+
+Ryuk relies on modifying registry settings to maintain persistence on infected systems, ensuring that it remains active even after system reboots. Atreus is equipped with advanced monitoring capabilities that can detect and flag any unauthorized changes to critical registry entries, allowing you to identify potential ransomware activity and take immediate action.
+
+3. Detecting Suspected Files with YARA Rules:
+
+Utilizing the power of YARA rules, Atreus employs customizable and intelligent pattern matching techniques to identify files that exhibit characteristics of Ryuk ransomware. These YARA rules are regularly updated to reflect the latest attack patterns and signatures used by Ryuk, ensuring a proactive defense against evolving threats.
+
+4. Non-Production Solution:
+
+Atreus is designed as a research and educational tool rather than a production-grade security solution. While it provides valuable insights into Ryuk ransomware detection, we encourage users to complement Atreus with other enterprise-grade security measures to create a comprehensive defense strategy.
+
+
+(Note: Atreus is not intended for commercial use and should be treated as an educational and research tool. It is provided as-is without warranties or guarantees.)
+"""
         
         self.tabview1 = customtkinter.CTkTabview(self, width=250,height=300)
         self.tabview1.grid(row=2, column=1, padx=(20, 10), pady=(10, 0), sticky="nsew")
@@ -115,21 +144,23 @@ It's important to note that paying the ransom does not guarantee that the attack
         
         self.textbox2 = customtkinter.CTkTextbox(master=self.tabview1.tab("About Atreus"),height=300)
         self.textbox2.grid(padx=(0, 0), pady=(0, 0), sticky="nsew")
-        self.textbox2.insert("0.0",ryuk_ransomware_description)
-        #self.label_tab_3.grid(row=0, column=0, padx=20, pady=20)
+        self.textbox2.insert("0.0",atreus_description)
         
         # set default values
-        self.appearance_mode_optionemenu.set("Dark")
+        self.appearance_mode_optionemenu.set("System")
         self.scaling_optionemenu.set("100%")
-        self.optionmenu_1.set("CTkOptionmenu")
+
 
         self.progressbar_1.configure(mode="indeterminnate")
         self.progressbar_1.start()
         
 
-    def open_input_dialog_event(self):
-        dialog = customtkinter.CTkInputDialog(text="Type in a number:", title="CTkInputDialog")
-        print("CTkInputDialog:", dialog.get_input())
+    def open_file(self,name):
+        file_path = fr'logs\{name}'
+        try:
+            subprocess.run(['notepad', file_path], check=True)
+        except subprocess.CalledProcessError:
+            print("Error: Unable to open the file in Notepad.")
 
     def change_appearance_mode_event(self, new_appearance_mode: str):
         customtkinter.set_appearance_mode(new_appearance_mode)
@@ -159,10 +190,95 @@ It's important to note that paying the ransom does not guarantee that the attack
         thread = threading.Thread(target=run_as_admin)
         thread.start() 
         
-        
     def first_update(self):
         # Schedule the function to run again after 5 seconds
         self.after(1000, self.update)
+
+    def look_for_logs(self):
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(self.tabview.tab("Logs"))
+        self.scrollable_frame.grid(row=0, column=0, padx=(0, 0), pady=(0, 0), sticky="nsew")
+        logs_list = self.get_files_in_logs_directory("logs")
+        self.logs_buttons = []
+        self.logs_names = []
+        if len(logs_list)>0:
+            for i,bt in enumerate(logs_list):
+                self.logs_names.append(bt)
+                button = customtkinter.CTkButton(self.scrollable_frame, text=self.logs_names[i],
+                                                               command=partial(self.open_file,self.logs_names[i]))
+                button.grid(row=i, column=0,padx=(100, 20), pady=(20, 0))
+                self.logs_buttons.append(button)
+        else:
+            button = customtkinter.CTkButton(self.scrollable_frame, text="No logs available",state="disabled")
+            button.grid(row=0, column=0,padx=(100, 20), pady=(20, 0))
+
+    def look_for_dumps(self):
+        self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("Dumps"))
+        self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
+        self.scrollable_frame1 = customtkinter.CTkScrollableFrame(self.tabview.tab("Dumps"))
+        self.scrollable_frame1.grid(row=0, column=0, padx=(0, 0), pady=(0, 0), sticky="nsew")
+        dumps_list = self.get_files_in_logs_directory("dump")
+        self.dump_buttons = []
+        self.dump_names = []
+        if len(dumps_list)>0:
+            for i,bt in enumerate(dumps_list):
+                self.dump_names.append(bt)
+                button = customtkinter.CTkButton(self.scrollable_frame1, text=self.dump_names[i],state="disabled")
+                button.grid(row=i, column=0,padx=(100, 20), pady=(20, 0))
+                self.dump_buttons.append(button)
+        else:
+            button = customtkinter.CTkButton(self.scrollable_frame1, text="No dumps available")
+            button.grid(row=0, column=0,padx=(100, 20), pady=(20, 0))
+    def look_for_files(self):
+        self.scrollable_frame2 = customtkinter.CTkScrollableFrame(self.tabview.tab("Files"))
+        self.scrollable_frame2.grid(row=0, column=0, padx=(0, 0), pady=(0, 0), sticky="nsew")
+        list1 = self.get_json_keys("sigcheck_detected_files.json")
+        list2 = self.get_json_keys("yara_detected_files.json")
+        files_list = list(set(list1) | set(list2))
+        self.files_buttons = []
+        self.files_names = []
+        if len(files_list)>0:
+            for i,bt in enumerate(files_list):
+                self.files_names.append(bt)
+                button = customtkinter.CTkButton(self.scrollable_frame2, text=self.files_names[i])
+                button.grid(row=i, column=0,padx=(100, 20), pady=(20, 0))
+                self.files_buttons.append(button)
+        else:
+            button = customtkinter.CTkButton(self.scrollable_frame2, text="No suspected files detected")
+            button.grid(row=0, column=0,padx=(100, 20), pady=(20, 0))
+        
+
+    @staticmethod
+    def get_json_keys(json_file_name):
+        keys_list = []
+
+        try:
+            with open(json_file_name, 'r') as json_file:
+                try:
+                    data = json.load(json_file)
+                    if isinstance(data, dict):
+                        keys_list = list(data.keys())
+                except json.JSONDecodeError:
+                    print(f"Error: Unable to decode JSON from {json_file_name}.")
+        except FileNotFoundError:
+            print(f"Error: {json_file_name} not found.")
+
+        return keys_list
+
+    @staticmethod
+    def get_files_in_logs_directory(directory_name):
+        files_list = []
+        current_directory = os.getcwd()
+        logs_directory = os.path.join(current_directory, directory_name)
+        if not os.path.exists(logs_directory) or not os.path.isdir(logs_directory):
+            print("The 'logs' directory does not exist.")
+            return files_list
+        try:
+            files_list = os.listdir(logs_directory)
+        except OSError as e:
+            print(f"Error while accessing files in the 'logs' directory: {e}")
+            return files_list
+
+        return files_list
         
     @staticmethod
     def is_process_running(process_name):
@@ -179,8 +295,7 @@ It's important to note that paying the ransom does not guarantee that the attack
         watchdog_name = "watchdog.exe"
         trace_executables_name = "trace_executables.exe"
         trace_registry_name = "trace_registry.exe"
-        #current_text = self.textbox.get("1.0", tkinter.END)
-        # Check if the file has changed
+        #Checking if processes are running
         if self.is_process_running(watchdog_name):
             self.sidebar_button_1.configure(state="disabled", text="Watchdog Running")
         else:
@@ -196,11 +311,13 @@ It's important to note that paying the ransom does not guarantee that the attack
         else:
             self.sidebar_button_3.configure(state="enabled", text="Run Registry scan")
             
-        #process_detail = self.controller.detail_process(os.getpid())
-        #tab = PrettyTable(list(process_detail.keys()))
-        #tab.add_row(list(process_detail.values()))
-        #self.textbox.delete("1.0", tkinter.END)
-        #self.textbox.insert("1.0", tab)
+        #Checking Logs List
+        self.look_for_logs()            
+        #Checking dumps
+        self.look_for_dumps()
+        #Checking files
+        self.look_for_files()
+            
         self.after(3000, self.update)
         
 if __name__ == "__main__":
