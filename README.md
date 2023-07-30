@@ -9,7 +9,6 @@
 
 ## Build
 
-
 > [!IMPORTANT]  
 > To build Atreus you only need **Python 3.7>** installed and configured as an **environment variable**.
 
@@ -19,7 +18,7 @@ To Build Atreus, run the command below
 setup.bat
 ```
 
-## About Ryuk
+## [About Ryuk](ryuk_data)
 Ryuk ransomware is a sophisticated and notorious strain of ransomware that emerged in August 2018. 
 It is known for its highly targeted attacks on large organizations, especially in the corporate and financial sectors. 
 
@@ -35,6 +34,19 @@ It has some typical behaviours analysed in this [research](www.google.com), such
 * Change of the registry keys using "svcho" for persistence
 * Dropping it's executable in the "C:/Users/<user_name>/Public" folder
 
+You can see more about Ryuk in the [ryuk_data](ryuk_data) folder, where you can see:
+* Strings decoded and encoded in the dropper and payload;
+* Ransom Note;
+* Process Injection Routine in C++ used by Ryuk, discovered with Reverse Engineer with Xdbg64 and Snowman;
+* Encryptation process, with data such as the Encryptation routine in C++ and ASM, the RSA1 key imported in my analysis and the CryptImportKey routine.
+
+> [!WARNING]    
+> The threat analysed here is [available in Malware Baazar](https://bazaar.abuse.ch/browse.php?search=sha256%3A23F8AA94FFB3C08A62735FE7FEE5799880A8F322CE1D55EC49A13A3F85312DB2). Don't execute it in your host. Create a sandbox VirtualMachine in **VirtualBox**, **Paralells** or **VMWare** and take care about the execution of this ransomware, such as:
+> 
+> * Do not connect any host network during the execution to avoid connection with C&C;
+> * Keep the virtualizer software updated;
+> * Use a host OS different of the virtualized (e.g Linux as Host, and Windows in VM) to mitigate possible evasion;
+
 ## How Atreus work
 
 Atreus is a open-source anti-ransomware software specifically designed to protect against the notorious Ryuk ransomware. 
@@ -44,7 +56,7 @@ Ryuk is a highly targeted and dangerous strain of ransomware known for its devas
 Developed as a result of extensive undergraduate research at my university, Atreus aims to provide an additional layer of defense against Ryuk and its malicious activities.
 
 > [!NOTE]  
-> It uses the power of [sysinternals](https://learn.microsoft.com/en-us/sysinternals/) to **monitor**, **trace**, **detail** and **list** informations about API's calls, processes and files all over the OS, facilitating the identification and mitigation of potentital Ryuks Threats.
+> It uses the power of [Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) to **monitor**, **trace**, **detail** and **list** informations about API's calls, processes and files all over the OS, facilitating the identification and mitigation of potentital Ryuks Threats.
 
 <div align="center" >
   
