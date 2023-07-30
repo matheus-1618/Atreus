@@ -20,10 +20,9 @@ class App(customtkinter.CTk):
         self.first_update()
         self.controller = Controller()
         
-
         # configure window
         self.title("Atreus")
-        self.geometry(f"{1200}x{680}")
+        self.geometry(f"{700}x{680}")
         
         # configure grid layout (4x4)
         self.grid_columnconfigure(1, weight=1)
@@ -37,7 +36,6 @@ class App(customtkinter.CTk):
         image_path = os.path.join(base_path, "assets")
         self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "atreus.png")), size=(250, 150))
         self.after(200, lambda: self.iconbitmap(os.path.join(image_path, "atreus.ico")))
-        
         
         # create sidebar frame with widgets
         self.sidebar_frame = customtkinter.CTkFrame(self, width=140, corner_radius=0)
@@ -64,13 +62,8 @@ class App(customtkinter.CTk):
 
         self.main_button_1 = customtkinter.CTkButton(master=self, fg_color="transparent", border_width=2, 
                                                      text_color=("gray10", "#DCE4EE"))
-        # create textbox
-        self.textbox = customtkinter.CTkTextbox(self, width=250)
-        self.textbox.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
-
-        # create tabview
         self.tabview = customtkinter.CTkTabview(self, width=250)
-        self.tabview.grid(row=0, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
+        self.tabview.grid(row=0, column=1, padx=(20, 10), pady=(20, 0), sticky="nsew")
         self.tabview.add("Logs")
         self.tabview.add("Dumps")
         self.tabview.add("Files")
@@ -86,29 +79,10 @@ class App(customtkinter.CTk):
         self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("Dumps"), text="CTkLabel on Tab 2")
         self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
 
-
-        # create slider and progressbar frame
-        self.slider_progressbar_frame = customtkinter.CTkFrame(self, fg_color="transparent")
-        self.slider_progressbar_frame.grid(row=1, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
-        self.slider_progressbar_frame.grid_columnconfigure(0, weight=1)
-        self.slider_progressbar_frame.grid_rowconfigure(4, weight=1)
-        self.seg_button_1 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
-        self.seg_button_1.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-        self.progressbar_1 = customtkinter.CTkProgressBar(self.slider_progressbar_frame)
-        self.progressbar_1.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-      
-        self.slider_1 = customtkinter.CTkSlider(self.slider_progressbar_frame, from_=0, to=1, number_of_steps=4)
-        self.slider_1.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-       
+        self.progressbar_1 = customtkinter.CTkProgressBar(self)
+        self.progressbar_1.grid(row=1, column=1, padx=(20, 10), pady=(20, 10), sticky="ew")
       
 
-        # create scrollable frame
-        #self.scrollable_frame = customtkinter.CTkScrollableFrame(self, label_text="About Ryuk")
-        #self.scrollable_frame.grid(row=1, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
-        #self.scrollable_frame.grid_columnconfigure(0, weight=1)
-        #self.textbox1 = customtkinter.CTkTextbox(master=self.scrollable_frame,height=250)
-        #self.textbox1.grid(padx=(0, 0), pady=(0, 0), sticky="nsew")
-        #self.textbox1.insert("0.0",ryuk_ransomware_description)
         ryuk_ransomware_description = """Ryuk ransomware is a sophisticated and notorious strain of ransomware that emerged in August 2018. It is known for its highly targeted attacks on large organizations, especially in the corporate and government sectors. Ryuk is believed to be operated by a cybercrime group known as Wizard Spider.
 
 The primary purpose of Ryuk ransomware is to encrypt the victim's files, making them inaccessible. Once the files are encrypted, Ryuk displays a ransom note, typically in a "RyukReadMe.txt" file, containing instructions on how to pay the ransom to obtain the decryption key.
@@ -129,37 +103,28 @@ It's important to note that paying the ransom does not guarantee that the attack
 
         
         self.tabview1 = customtkinter.CTkTabview(self, width=250,height=300)
-        self.tabview1.grid(row=1, column=2, padx=(20, 10), pady=(20, 0), sticky="nsew")
+        self.tabview1.grid(row=2, column=1, padx=(20, 10), pady=(10, 0), sticky="nsew")
         self.tabview1.add("Ryuk Ransomware")
         self.tabview1.add("About Atreus")
         self.tabview1.tab("Ryuk Ransomware").grid_columnconfigure(0, weight=1)  # configure grid of individual tabs
         self.tabview1.tab("About Atreus").grid_columnconfigure(0, weight=1)
-        #self.label_tab_3 = customtkinter.CTkLabel(self.tabview1.tab("Ryuk Ransomware"), text=ryuk_ransomware_description)
+  
         self.textbox1 = customtkinter.CTkTextbox(master=self.tabview1.tab("Ryuk Ransomware"),height=300)
         self.textbox1.grid(padx=(0, 0), pady=(0, 0), sticky="nsew")
         self.textbox1.insert("0.0",ryuk_ransomware_description)
         
+        self.textbox2 = customtkinter.CTkTextbox(master=self.tabview1.tab("About Atreus"),height=300)
+        self.textbox2.grid(padx=(0, 0), pady=(0, 0), sticky="nsew")
+        self.textbox2.insert("0.0",ryuk_ransomware_description)
         #self.label_tab_3.grid(row=0, column=0, padx=20, pady=20)
-        self.label_tab_4 = customtkinter.CTkLabel(self.tabview1.tab("About Atreus"), text="Atreus")
-        self.label_tab_4.grid(row=0, column=0, padx=20, pady=20)
-        #
         
-    
         # set default values
-        self.sidebar_button_3.configure(state="disabled", text="Run registry Scan")
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
         self.optionmenu_1.set("CTkOptionmenu")
-        #self.slider_1.configure(command=self.progressbar_2.set)
-        #self.slider_2.configure(command=self.progressbar_3.set)
+
         self.progressbar_1.configure(mode="indeterminnate")
         self.progressbar_1.start()
-        process_detail = self.controller.detail_process(os.getpid())
-        tab = PrettyTable(list(process_detail.keys()))
-        tab.add_row(list(process_detail.values()))
-        self.textbox.insert("0.0", tab)
-        self.seg_button_1.configure(values=["CTkSegmentedButton", "Value 2", "Value 3"])
-        self.seg_button_1.set("Value 2")
         
 
     def open_input_dialog_event(self):
@@ -231,11 +196,11 @@ It's important to note that paying the ransom does not guarantee that the attack
         else:
             self.sidebar_button_3.configure(state="enabled", text="Run Registry scan")
             
-        process_detail = self.controller.detail_process(os.getpid())
-        tab = PrettyTable(list(process_detail.keys()))
-        tab.add_row(list(process_detail.values()))
-        self.textbox.delete("1.0", tkinter.END)
-        self.textbox.insert("1.0", tab)
+        #process_detail = self.controller.detail_process(os.getpid())
+        #tab = PrettyTable(list(process_detail.keys()))
+        #tab.add_row(list(process_detail.values()))
+        #self.textbox.delete("1.0", tkinter.END)
+        #self.textbox.insert("1.0", tab)
         self.after(3000, self.update)
         
 if __name__ == "__main__":
