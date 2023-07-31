@@ -40,7 +40,7 @@ jobs:
 
       - name: Run executables
         run: |
-          Start-Process -FilePath ".\install.exe" -Verb RunAs -Wait
+          Start-Process -FilePath ".\install.exe" -Verb RunAs 
           Start-Process -FilePath ".\watchdog.exe" -Verb RunAs
           Start-Process -FilePath ".\trace_registry.exe" -Verb RunAs
           Start-Process -FilePath ".\trace_executables.exe" -Verb RunAs
