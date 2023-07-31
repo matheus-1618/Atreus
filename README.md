@@ -1,5 +1,9 @@
 # Atreus
+
 <div align="center" >
+  
+![Build](https://github.com/matheus-1618/Atreus/actions/workflows/python-app.yml/badge.svg)
+  
 <img src='assets/atreus.png' style="width:25rem;"/>
 
 # Anti Ryuk Ransomware for Windows.
