@@ -40,8 +40,8 @@ jobs:
 
       - name: Run executables
         run: |
-          powershell -Command "Start-Process -FilePath \"install.exe\" -Verb RunAs -Wait"
-          powershell -Command "Start-Process -FilePath \"watchdog.exe\" -Verb RunAs"
-          powershell -Command "Start-Process -FilePath \"trace_registry.exe\" -Verb RunAs"
-          powershell -Command "Start-Process -FilePath \"trace_executables.exe\" -Verb RunAs"
-          powershell -Command "Start-Process -FilePath \"atreus.exe\" -Verb RunAs"
+          Start-Process -FilePath ".\install.exe" -Verb RunAs -Wait
+          Start-Process -FilePath ".\watchdog.exe" -Verb RunAs
+          Start-Process -FilePath ".\trace_registry.exe" -Verb RunAs
+          Start-Process -FilePath ".\trace_executables.exe" -Verb RunAs
+          Start-Process -FilePath ".\atreus.exe" -Verb RunAs
