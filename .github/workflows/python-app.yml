@@ -12,7 +12,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x  # Replace with the appropriate Python version
+          python-version: 3.8
 
       - name: Install virtualenv
         run: |
@@ -24,7 +24,7 @@ jobs:
 
       - name: Activate virtual environment
         run: |
-          call env\Scripts\activate
+          cmd /c "env\Scripts\activate"
 
       - name: Install requirements
         run: |
