@@ -96,3 +96,8 @@ Developed as a result of extensive undergraduate research at my university, Atre
 ![image](https://github.com/matheus-1618/Atreus/assets/71362534/f248bf39-f206-45c1-b311-9cf54e94c380)
 
 </div>
+
+## References
+
+* [SwiftOnSecurity-sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config)
+* [YJesus-AntiRansom](https://github.com/YJesus/AntiRansom)
