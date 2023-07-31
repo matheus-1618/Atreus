@@ -1,0 +1,59 @@
+name: Test Environment Setup
+on: [push, pull_request]
+
+jobs:
+  test_environment:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x  # Replace with the appropriate Python version
+
+      - name: Install virtualenv
+        run: |
+          pip install virtualenv
+
+      - name: Create virtual environment
+        run: |
+          python -m virtualenv env
+
+      - name: Activate virtual environment
+        run: |
+          call env\Scripts\activate
+
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build executables with PyInstaller
+        run: |
+          pyinstaller --onefile --distpath . --icon assets\atreus.png src\install.py
+          pyinstaller --onefile --distpath . --icon assets\atreus.png src\trace_registry.py
+          pyinstaller --onefile --distpath . --icon assets\atreus.png src\watchdog.py
+          pyinstaller --onefile --distpath . --icon assets\atreus.png src\trace_executables.py
+          pyinstaller --noconsole --onefile --distpath . --icon assets\atreus.png src\atreus.py
+
+      - name: Delete build folder
+        run: |
+          rmdir /s /q build
+
+      - name: Delete .spec files
+        run: |
+          del *.spec
+
+      - name: Delete env folder
+        run: |
+          rmdir /s /q env
+
+      - name: Run executables
+        run: |
+          powershell -Command "Start-Process -FilePath \"install.exe\" -Verb RunAs -Wait"
+          powershell -Command "Start-Process -FilePath \"watchdog.exe\" -Verb RunAs"
+          powershell -Command "Start-Process -FilePath \"trace_registry.exe\" -Verb RunAs"
+          powershell -Command "Start-Process -FilePath \"trace_executables.exe\" -Verb RunAs"
+          powershell -Command "Start-Process -FilePath \"atreus.exe\" -Verb RunAs"
