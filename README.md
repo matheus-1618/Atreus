@@ -10,6 +10,14 @@
 > [!WARNING]  
 > ### Disclaimer: Not intended to be a production Counter Measure, only a good approach to identify and mitigate Ryuk actions.
 </div>
+<br></br>
+<div align="center">
+      <h2>Atreus in action</h2>
+      <a href="https://www.youtube.com/watch?v=_PBWTkW-ZOk">
+         <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/71362534/258600176-637a3746-cfbc-45e1-91f0-b878846554b9.png" style="width:70%;">
+      </a>
+</div>
+
 
 ## Build
 
