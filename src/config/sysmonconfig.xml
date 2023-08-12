@@ -434,7 +434,6 @@
 		<!--DATA: UtcTime, SourceProcessGuid, SourceProcessId, SourceImage, TargetProcessId, TargetImage, NewThreadId, StartAddress, StartModule, StartFunction-->
 	<RuleGroup name="" groupRelation="or">
 		<CreateRemoteThread onmatch="exclude">
-			<!--COMMENT: Exclude mostly-safe sources and log anything else.-->
 			<SourceImage condition="is">C:\Windows\system32\wbem\WmiPrvSE.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\svchost.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage>
