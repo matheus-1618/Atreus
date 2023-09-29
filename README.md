@@ -28,6 +28,9 @@ To Build Atreus, run the command below
 ```bash
 setup.bat
 ```
+> [!NOTE] 
+> You can download the VM used in the the research and tests by the following [link](https://drive.google.com/file/d/1Pvok4Kl5M2Gw1HvcbEu9MRtYt_c5Gv2G/view?usp=sharing)
+
 
 ## [About Ryuk](ryuk_data)
 Ryuk ransomware is a sophisticated and notorious strain of ransomware that emerged in August 2018. 
@@ -46,6 +49,7 @@ It has some typical behaviours analysed in this [research](www.google.com), such
 * Dropping it's executable in the "C:/Users/<user_name>/Public" folder
 
 You can see more about Ryuk in the [ryuk_data](ryuk_data) folder, where you can see:
+* **A report in portuguese about the analysis**
 * Strings decoded and encoded in the dropper and payload;
 * Ransom Note;
 * Process Injection Routine in C++ used by Ryuk, discovered with Reverse Engineer with Xdbg64 and Snowman;
