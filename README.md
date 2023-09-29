@@ -40,7 +40,7 @@ Ryuk is believed to be operated by a cybercrime group known as Wizard Spider.
 The primary purpose of Ryuk ransomware is to encrypt the victim's files, making them inaccessible. 
 
 Once the files are encrypted, Ryuk displays a ransom note, typically in a "RyukReadMe.txt" file, containing instructions on how to pay the ransom to obtain the decryption key.
-It has some typical behaviours analysed in this [research](www.google.com), such as:
+It has some typical behaviours analysed in this [research](https://github.com/matheus-1618/Atreus/blob/main/ryuk_data/Report_PT.pdf), such as:
 * Multi-thread, calling CreateRemoteThread
 * Process Injection through multiples process in the Machine
 * AES256 encryption of files
