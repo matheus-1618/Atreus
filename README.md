@@ -47,7 +47,7 @@ It has some typical behaviours analysed in this [research](https://github.com/ma
 * AES256 encryption of files
 * Envelope encryptation of each AES key inside the file with RSA1 key.
 * Change of the registry keys using "svcho" for persistence
-* Dropping it's executable in the "C:/Users/<user_name>/Public" folder
+* Dropping it's executable in the "C:/Users/Public" folder
 
 You can see more about Ryuk in the [ryuk_data](ryuk_data) folder, where you can see:
 * **A report in portuguese about the analysis**
